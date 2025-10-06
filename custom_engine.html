@@ -1,0 +1,345 @@
+<!-- custom_engine.html -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>GUSSI Engine – Jaime Garrido</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- SEO -->
+    <meta name="description" content="GUSSI is a custom C++ OpenGL engine with a polished editor, ECS, deferred rendering with SSAO, multithreaded job system, and advanced graphics features. Developed by Jaime Garrido." />
+    <meta name="author" content="Jaime Garrido" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/custom_engine.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+
+      <!-- ================= HEADER ================= -->
+      <header id="header">
+        <div class="inner">
+          <a href="index.html" class="button small" style="margin:0;">← Back to Portfolio</a>
+        </div>
+      </header>
+
+      <!-- ================= MAIN ================= -->
+      <div id="main">
+        <div class="inner">
+
+          <!-- ================= HERO / TITLE ================= -->
+          <section class="reveal hero-section">
+            <h1 class="accented">
+              <a href="custom_engine.html" class="title-link">GUSSI Engine</a>
+            </h1>
+            <p class="subtitle" style="margin:0;">
+              Custom C++ OpenGL engine with real-time editor and advanced rendering
+            </p>
+            <p class="subtitle" style="margin:0; color:var(--accent-color); font-weight:600;">
+              Solo Development Project • Technical Showcase
+            </p>
+
+            <ul class="actions" style="margin-top:1em;">
+              <li><a href="https://github.com/JaimeGR23/GUSSI" target="_blank" class="button primary">View on GitHub</a></li>
+            </ul>
+
+            <div class="image main hero-wrapper">
+              <img src="images/custom_engine/hero.png" alt="Project hero image" />
+            </div>
+          </section>
+
+          <hr />
+
+          <!-- ================= OVERVIEW ================= -->
+          <section id="overview" class="reveal">
+            <h2 class="accented"><a href="#overview">Overview</a></h2>
+            <p>
+              GUSSI is a <strong>custom engine in C++/OpenGL</strong>, evolved from an academic collaboration and extended as a solo project. It demonstrates efficiency, clarity, and advanced graphics programming, serving as the base for my <strong>Distance Based Interior Mapping</strong> technique. The engine includes a full deferred pipeline with SSAO and shadow-mapped dynamic lights.
+            </p>
+            <ul>
+              <li>Platform: PC</li>
+              <li>Engine: Custom (C++ / OpenGL)</li>
+              <li>Development: Solo continuation project</li>
+              <li>Key Feature: Distance Based Interior Mapping (separate page)</li>
+            </ul>
+          </section>
+
+          <hr />
+
+          <!-- ================= FEATURES ================= -->
+          <section id="features" class="reveal">
+            <h2 class="accented"><a href="#features">Key Features</a></h2>
+            <ul>
+              <li>Multithreaded job system for asynchronous asset streaming (instant editor startup).</li>
+              <li>Entity-Component-System (ECS) for efficient runtime and editor interaction.</li>
+              <li>Deferred rendering pipeline (G-Buffer debug views, SSAO, shadow-mapped lights).</li>
+              <li>Polished ImGui-based editor: flycam, entity browser, real-time component editing, FPS graph, logging.</li>
+              <li>Shader effects: depth of field, outline blending, cubemap support, stylised rendering.</li>
+              <li>Support for custom shaders (e.g. ASCII shader converting the full render output).</li>
+            </ul>
+          </section>
+
+          <hr />
+
+          <!-- ================= DEVELOPMENT ================= -->
+          <section id="development" class="reveal">
+            <h2 class="accented"><a href="#development">Development & Tech Stack</a></h2>
+            <p>
+              GUSSI began two years ago as a joint academic project developed with a classmate. 
+              After the course, I continued the engine on my own, optimising core systems and extending 
+              its scope to implement advanced techniques such as <strong>Distance Based Interior Mapping</strong>. 
+              The majority of systems were designed and implemented by me (rendering pipeline, ECS, job system, logging, editor tools), 
+              while some shader effects (DOF + Outlines) and minor editor utilities came from collaboration. 
+              These were fully integrated and extended, ensuring I understand and could replicate them.  
+              Looking ahead, I am planning to start a new engine from scratch using <strong>Vulkan</strong> to deepen my expertise in modern graphics APIs.
+            </p>
+            <ul>
+              <li><strong>Languages & Standards:</strong> C++20</li>
+              <li><strong>Graphics API:</strong> OpenGL 3.x, GLSL</li>
+              <li><strong>Libraries & Tools:</strong> GLM, GLFW, stb_image, TinyObjLoader</li>
+              <li><strong>Editor:</strong> ImGui (custom styling and integration)</li>
+              <li><strong>Debugging & Profiling:</strong> RenderDoc, NVIDIA Nsight</li>
+              <li><strong>Development Time:</strong> 2 years (ongoing continuation project)</li>
+              <li><strong>Contributors:</strong> Shader effects (DOF/Outlines), editor utilities</li>
+            </ul>
+          </section>
+
+          <hr />
+
+          <!-- ================= MEDIA GALLERY ================= -->
+          <section id="media-gallery" class="reveal">
+            <h2 class="accented"><a href="#media-gallery">Media Gallery</a></h2>
+
+            <div class="media-split">
+              <!-- Izquierda: imagen vertical del editor -->
+              <div class="media-left" onclick="openModal('images/custom_engine/editor_inspector.png')">
+                <img src="images/custom_engine/editor_inspector.png" alt="Editor: Component Inspector" />
+                <div class="overlay">Editor: Component Inspector</div>
+              </div>
+
+              <!-- Derecha: 4 imágenes en grid 2x2 -->
+              <div class="media-right">
+                <div class="cell" onclick="openModal('images/custom_engine/deferred.png')">
+                  <img src="images/custom_engine/deferred.png" alt="Deferred Rendering Pipeline" />
+                  <div class="overlay">Deferred Rendering Pipeline</div>
+                </div>
+                <div class="cell" onclick="openModal('images/custom_engine/final.png')">
+                  <img src="images/custom_engine/final.png" alt="Lighting Test" />
+                  <div class="overlay">Lighting Test</div>
+                </div>
+                <div class="cell" onclick="openModal('images/custom_engine/stress.png')">
+                  <img src="images/custom_engine/stress.png" alt="Stress Test with 8000 Teapots" />
+                  <div class="overlay">Stress Test: 8000 Teapots</div>
+                </div>
+                <div class="cell" onclick="openModal('images/custom_engine/stylised.png')">
+                  <img src="images/custom_engine/stylised.png" alt="Stylised Render (DOF + Outlines)" />
+                  <div class="overlay">Stylised Render (DOF + Outlines)</div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <hr />
+
+          <!-- ================= SHADER COMPARISONS ================= -->
+          <section id="shader-comparisons" class="reveal">
+            <h2 class="accented"><a href="#shader-comparisons">Shader Comparisons</a></h2>
+
+            <!-- DOF + Outlines + SSAO -->
+            <div class="comparison-container" style="--pos:50%;">
+              <img class="comparison-base" src="images/custom_engine/after_shaders.png" alt="With DOF + Outlines + SSAO" />
+              <div class="comparison-overlay">
+                <img src="images/custom_engine/before_shaders.png" alt="Base Render (no effects)" />
+              </div>
+              <div class="comparison-slider"><div class="comparison-handle"></div></div>
+            </div>
+            <p class="caption">Base Render vs DOF + Outlines + SSAO</p>
+
+            <!-- ASCII Shader -->
+            <div class="comparison-container" style="--pos:50%;">
+              <img class="comparison-base" src="images/custom_engine/after_ascii.png" alt="ASCII Shader Applied" />
+              <div class="comparison-overlay">
+                <img src="images/custom_engine/before_ascii.png" alt="Original Render" />
+              </div>
+              <div class="comparison-slider"><div class="comparison-handle"></div></div>
+            </div>
+            <p class="caption">Original Render vs ASCII Shader</p>
+
+            <div style="text-align:center; margin-top:1em;">
+              <a href="https://www.youtube.com/watch?v=XA4HRj-CJVA" target="_blank" class="button small">
+                Watch ASCII Shader Showcase
+              </a>
+            </div>
+
+            <!-- Interior Mapping -->
+            <div class="comparison-container" style="--pos:50%; margin-top:2em;">
+              <div style="position:relative;">
+                <img class="comparison-base" src="images/custom_engine/interior_after.png" alt="With Interior Mapping" />
+                <span class="fps-label fps-right">803 FPS · 6 vertices</span>
+              </div>
+              <div class="comparison-overlay">
+                <div style="position:relative;">
+                  <img src="images/custom_engine/interior_before.png" alt="Without Interior Mapping" />
+                  <span class="fps-label fps-left">335 FPS · 350,622 vertices</span>
+                </div>
+              </div>
+              <div class="comparison-slider"><div class="comparison-handle"></div></div>
+            </div>
+            <p class="caption">Full Geometry vs Interior Mapping</p>
+
+            <div style="text-align:center; margin-top:1em;">
+              <a href="index.html" class="button small">Find out more</a>
+            </div>
+          </section>
+
+          <!-- ================= MODAL ================= -->
+          <div id="imageModal" class="modal" onclick="closeModal(event)">
+            <span class="close">&times;</span>
+            <span class="prev" onclick="prevImage(event)">&#10094;</span>
+            <img class="modal-content" id="modalImage" alt="">
+            <span class="next" onclick="nextImage(event)">&#10095;</span>
+          </div>
+
+          <script>
+            const images = [
+              "images/custom_engine/editor_inspector.png",
+              "images/custom_engine/deferred.png",
+              "images/custom_engine/final.png",
+              "images/custom_engine/stress.png",
+              "images/custom_engine/stylised.png"
+            ];
+            let currentIndex = 0;
+
+            function openModal(src) {
+              currentIndex = images.indexOf(src);
+              const modal = document.getElementById("imageModal");
+              const modalImg = document.getElementById("modalImage");
+              modalImg.src = src;
+              modal.classList.add("show");
+            }
+
+            function closeModal(e) {
+              if (e.target.id === "modalImage") return;
+              document.getElementById("imageModal").classList.remove("show");
+            }
+
+            function nextImage(e) {
+              e.stopPropagation();
+              currentIndex = (currentIndex + 1) % images.length;
+              document.getElementById("modalImage").src = images[currentIndex];
+            }
+
+            function prevImage(e) {
+              e.stopPropagation();
+              currentIndex = (currentIndex - 1 + images.length) % images.length;
+              document.getElementById("modalImage").src = images[currentIndex];
+            }
+
+            document.addEventListener("keydown", (e) => {
+              const modal = document.getElementById("imageModal");
+              if (!modal.classList.contains("show")) return;
+              if (e.key === "ArrowRight") nextImage(e);
+              if (e.key === "ArrowLeft") prevImage(e);
+              if (e.key === "Escape") closeModal(e);
+            });
+          </script>
+
+          <script>
+            function bindComparison(container) {
+              const slider = container.querySelector('.comparison-slider');
+              const move = (clientX) => {
+                const rect = container.getBoundingClientRect();
+                let x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
+                const percent = (x / rect.width) * 100;
+                container.style.setProperty('--pos', percent + '%');
+                slider.style.left = percent + '%';
+              };
+              let dragging = false;
+
+              const onPointerDown = (ev) => { dragging = true; move(ev.clientX); ev.preventDefault(); };
+              const onPointerMove = (ev) => { if (dragging) move(ev.clientX); };
+              const onPointerUp = () => { dragging = false; };
+
+              slider.addEventListener('mousedown', onPointerDown);
+              window.addEventListener('mousemove', onPointerMove);
+              window.addEventListener('mouseup', onPointerUp);
+
+              slider.addEventListener('touchstart', (e) => { dragging = true; move(e.touches[0].clientX); }, {passive:false});
+              window.addEventListener('touchmove', (e) => { if (dragging) move(e.touches[0].clientX); }, {passive:false});
+              window.addEventListener('touchend', () => { dragging = false; });
+            }
+
+            document.querySelectorAll('.comparison-container').forEach(bindComparison);
+          </script>
+
+          <hr />
+
+          <!-- ================= LINKS ================= -->
+          <section id="links" class="reveal">
+            <h2 class="accented"><a href="#links">Links</a></h2>
+            <ul class="actions">
+              <li><a href="https://github.com/JaimeGR23/GUSSI" target="_blank" class="button primary">View on GitHub</a></li>
+              <li><a href="interior_mapping.html" target="_blank" class="button">Interior Mapping Project</a></li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- ================= FOOTER ================= -->
+      <footer id="footer">
+        <div class="inner">
+          <section>
+            <h2>Get in Touch</h2>
+            <ul class="contact-list">
+              <li><i class="icon solid fa-envelope"></i>
+                <a href="mailto:garridoramirezjaime@gmail.com">garridoramirezjaime@gmail.com</a></li>
+              <li><i class="icon brands fa-github"></i>
+                <a href="https://github.com/JaimeGR23" target="_blank">github.com/JaimeGR23</a></li>
+              <li><i class="icon brands fa-linkedin"></i>
+                <a href="https://linkedin.com/in/JaimeGR23" target="_blank">linkedin.com/in/JaimeGR23</a></li>
+            </ul>
+            <a href="jaime_resume.pdf" target="_blank" class="button small">
+              <i class="icon solid fa-file"></i> View Resume
+            </a>
+          </section>
+          <ul class="copyright">
+            <li>&copy; 2025 Jaime Garrido</li>
+          </ul>
+        </div>
+      </footer>
+
+      <a href="#wrapper" class="back-to-top" title="Back to top">
+        <i class="icon solid fa-arrow-up"></i>
+      </a>
+
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add("active");
+          });
+        }, { threshold: 0.1 });
+        reveals.forEach(r => observer.observe(r));
+      });
+
+      document.addEventListener("scroll", () => {
+        const btn = document.querySelector(".back-to-top");
+        if (!btn) return;
+        if (window.scrollY > 400) btn.classList.add("visible");
+        else btn.classList.remove("visible");
+      });
+    </script>
+  </body>
+</html>

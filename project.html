@@ -1,0 +1,283 @@
+<!-- project.html -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Project Title – Jaime Garrido</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- SEO -->
+    <meta name="description" content="Project description for Jaime Garrido's portfolio." />
+    <meta name="author" content="Jaime Garrido" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/project.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+
+      <!-- ================= HEADER ================= -->
+      <header id="header">
+        <div class="inner">
+          <a href="index.html" class="button small" style="margin:0;">← Back to Portfolio</a>
+        </div>
+      </header>
+
+      <!-- ================= MAIN ================= -->
+      <div id="main">
+        <div class="inner">
+
+          <!-- ================= HERO / TITLE ================= -->
+          <section class="reveal hero-section">
+            <h1 class="accented">
+              <a href="project.html" class="title-link">Project Title</a>
+            </h1>
+            <p class="subtitle" style="margin:0;">
+              Short tagline: engine, platform, or genre (customisable per project).
+            </p>
+            <p class="subtitle" style="margin:0; color:var(--accent-color); font-weight:600;">
+              Highlight (e.g. Steam Release, Award, GDWC Finalist)
+            </p>
+
+            <!-- Call to action buttons -->
+            <ul class="actions" style="margin-top:1em;">
+              <li><a href="#" target="_blank" class="button primary">View Project</a></li>
+            </ul>
+
+            <!-- Hero image with optional badge -->
+            <div class="image main hero-wrapper">
+              <img src="images/pic01.jpg" alt="Project hero image" />
+              <div class="award-badge">
+                <img src="images/pic02.jpg" alt="Award Badge" />
+              </div>
+            </div>
+          </section>
+
+          <hr />
+
+          <!-- ================= OVERVIEW ================= -->
+          <section id="overview" class="reveal">
+            <h2 class="accented"><a href="#overview">Overview</a></h2>
+            <p>
+              [Brief description of the project]. Mention the <strong>engine</strong>, 
+              <strong>platform</strong>, and any <strong>key achievements</strong> 
+              (release, awards, grade, etc.).
+            </p>
+            <ul>
+              <li>Platform: PC / PS5 / etc.</li>
+              <li>Release date: YYYY</li>
+              <li>Engine: Custom / Unreal / Unity</li>
+              <li>Team: Names or roles</li>
+              <li>Development time: ~X months</li>
+              <li>Recognition: Award, Distinction, Finalist, etc.</li>
+            </ul>
+          </section>
+
+          <hr />
+
+          <!-- ================= CONTRIBUTIONS ================= -->
+          <section id="contributions" class="reveal">
+            <h2 class="acccented"><a href="#contributions">Contributions</a></h2>
+            <p>
+              As <strong>Graphics Programmer</strong> (or your role), I worked on the technical 
+              and gameplay features that shaped the project. The videos below show 
+              some <strong>highlighted features</strong>, but they represent only a part of my work.
+            </p>
+
+            <!-- Feature 1 -->
+            <div class="row gtr-uniform" style="align-items:center; margin-bottom:2em;">
+              <div class="col-4">
+                <video autoplay loop muted playsinline>
+                  <source src="images/pic03.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-8">
+                <h3>Feature One</h3>
+                <p>Brief description of the feature implemented.</p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="row gtr-uniform" style="align-items:center; margin-bottom:2em;">
+              <div class="col-8">
+                <h3>Feature Two</h3>
+                <p>Brief description of the feature implemented.</p>
+              </div>
+              <div class="col-4">
+                <video autoplay loop muted playsinline>
+                  <source src="images/pic04.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </section>
+
+          <hr />
+
+          <!-- ================= MEDIA GALLERY ================= -->
+          <section id="media-gallery" class="reveal">
+            <h2 class="accented"><a href="#media-gallery">Media Gallery</a></h2>
+            <div class="row gtr-uniform gallery">
+              <div class="col-6">
+                <div class="gallery-item" onclick="openModal('images/pic01.jpg')">
+                  <img src="images/pic01.jpg" alt="Placeholder Screenshot 1" />
+                  <div class="overlay">Placeholder 1</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="gallery-item" onclick="openModal('images/pic02.jpg')">
+                  <img src="images/pic02.jpg" alt="Placeholder Screenshot 2" />
+                  <div class="overlay">Placeholder 2</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="gallery-item" onclick="openModal('images/pic03.jpg')">
+                  <img src="images/pic03.jpg" alt="Placeholder Screenshot 3" />
+                  <div class="overlay">Placeholder 3</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="gallery-item" onclick="openModal('images/pic04.jpg')">
+                  <img src="images/pic04.jpg" alt="Placeholder Screenshot 4" />
+                  <div class="overlay">Placeholder 4</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="gallery-item" onclick="openModal('images/pic05.jpg')">
+                  <img src="images/pic05.jpg" alt="Placeholder Screenshot 5" />
+                  <div class="overlay">Placeholder 5</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ================= MODAL ================= -->
+          <div id="imageModal" class="modal" onclick="closeModal(event)">
+            <span class="close">&times;</span>
+            <span class="prev" onclick="prevImage(event)">&#10094;</span>
+            <img class="modal-content" id="modalImage" alt="">
+            <span class="next" onclick="nextImage(event)">&#10095;</span>
+          </div>
+
+          <script>
+            const images = [
+              "images/pic01.jpg",
+              "images/pic02.jpg",
+              "images/pic03.jpg",
+              "images/pic04.jpg",
+              "images/pic05.jpg"
+            ];
+            let currentIndex = 0;
+
+            function openModal(src) {
+              currentIndex = images.indexOf(src);
+              const modal = document.getElementById("imageModal");
+              const modalImg = document.getElementById("modalImage");
+              modalImg.src = src;
+              modal.classList.add("show");
+            }
+
+            function closeModal(e) {
+              if (e.target.id === "modalImage") return;
+              document.getElementById("imageModal").classList.remove("show");
+            }
+
+            function nextImage(e) {
+              e.stopPropagation();
+              currentIndex = (currentIndex + 1) % images.length;
+              document.getElementById("modalImage").src = images[currentIndex];
+            }
+
+            function prevImage(e) {
+              e.stopPropagation();
+              currentIndex = (currentIndex - 1 + images.length) % images.length;
+              document.getElementById("modalImage").src = images[currentIndex];
+            }
+
+            document.addEventListener("keydown", (e) => {
+              const modal = document.getElementById("imageModal");
+              if (!modal.classList.contains("show")) return;
+              if (e.key === "ArrowRight") nextImage(e);
+              if (e.key === "ArrowLeft") prevImage(e);
+              if (e.key === "Escape") closeModal(e);
+            });
+          </script>
+
+
+          <hr />
+
+          <!-- ================= LINKS ================= -->
+          <section id="links" class="reveal">
+            <h2 class="accented"><a href="#links">Links</a></h2>
+            <ul class="actions">
+              <li><a href="#" target="_blank" class="button primary">View on Steam</a></li>
+              <li><a href="#" target="_blank" class="button">Watch Trailer</a></li>
+              <li><a href="#" target="_blank" class="button">Other Link</a></li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- ================= FOOTER ================= -->
+      <footer id="footer">
+        <div class="inner">
+          <section>
+            <h2>Get in Touch</h2>
+            <ul class="contact-list">
+              <li><i class="icon solid fa-envelope"></i>
+                <a href="mailto:garridoramirezjaime@gmail.com">garridoramirezjaime@gmail.com</a></li>
+              <li><i class="icon brands fa-github"></i>
+                <a href="https://github.com/JaimeGR23" target="_blank">github.com/JaimeGR23</a></li>
+              <li><i class="icon brands fa-linkedin"></i>
+                <a href="https://linkedin.com/in/JaimeGR23" target="_blank">linkedin.com/in/JaimeGR23</a></li>
+            </ul>
+            <a href="jaime_resume.pdf" target="_blank" class="button small">
+              <i class="icon solid fa-file"></i> View Resume
+            </a>
+          </section>
+          <ul class="copyright">
+            <li>&copy; 2025 Jaime Garrido</li>
+          </ul>
+        </div>
+      </footer>
+
+      <!-- ================= BACK TO TOP ================= -->
+      <a href="#wrapper" class="back-to-top" title="Back to top">
+        <i class="icon solid fa-arrow-up"></i>
+      </a>
+
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Reveal on scroll -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add("active");
+          });
+        }, { threshold: 0.1 });
+        reveals.forEach(r => observer.observe(r));
+      });
+    </script>
+
+    <!-- Back to Top toggle -->
+    <script>
+      document.addEventListener("scroll", () => {
+        const btn = document.querySelector(".back-to-top");
+        if (!btn) return;
+        if (window.scrollY > 400) btn.classList.add("visible");
+        else btn.classList.remove("visible");
+      });
+    </script>
+  </body>
+</html>

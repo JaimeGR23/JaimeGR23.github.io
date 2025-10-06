@@ -1,0 +1,336 @@
+/* katto.css – ajustes mínimos para la página Katto */
+
+/* --- Redefinición del color de acento --- */
+:root {
+  --accent-color: #01bfbb;  /* color específico para Katto */
+  --accent-color2: #01adab; /* segundo tono si lo necesitas */
+}
+
+/* Forzar bullets de listas a usar el color de acento */
+ul li::marker { color: var(--accent-color); }
+
+/* --- Hero Badge animado --- */
+.hero-wrapper .award-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  max-width: 180px;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInBadge 1.2s ease forwards;
+  animation-delay: 0.5s;
+}
+@keyframes fadeInBadge {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* --- Vídeos con mismo acabado que imágenes --- */
+video {
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* --- Reveal (igual que index.html) --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   SUBRAYADO ANIMADO EN TÍTULOS (sin dobles líneas)
+   -> Se elimina cualquier pseudo-elemento del contenedor
+      y se aplica SOLO al <a> interno en hover/focus.
+   ========================================================= */
+
+/* 1) Anula cualquier línea del contenedor (main.css u otros) */
+h1.accented::after,
+h2.accented::after {
+  content: none !important;  /* mata el pseudo-elemento base */
+}
+
+/* 2) Estilo del link dentro del título */
+h1.accented > a,
+h2.accented > a {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+/* 3) La línea vive SOLO en el <a> */
+h1.accented > a::after,
+h2.accented > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--accent-color);
+  transition: width 0.28s ease;
+}
+
+/* 4) Hover/Focus = animación */
+h1.accented > a:hover::after,
+h1.accented > a:focus-visible::after,
+h2.accented > a:hover::after,
+h2.accented > a:focus-visible::after {
+  width: 100%;
+}
+
+/* 5) Si algún script añade .visible, no expandas la línea */
+h1.accented.visible > a::after,
+h2.accented.visible > a::after {
+  width: 0 !important;
+}
+
+/* --- Textos hero --- */
+.hero-section .subtitle { margin: 0.3em 0; color: #bbb; }
+.hero-section .actions { margin-top: 1em; }
+
+/* --- Tarjetas y features (mantenemos tu diseño) --- */
+.feature-card {
+  background: #111;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+.feature-card video { border-radius: 4px; margin-bottom: 1em; }
+
+/* --- Key Features --- */
+.key-feature {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 1.5em;
+  border-radius: 6px;
+  margin-bottom: 2em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(
+    to right,
+    rgba(1,191,187,0.12),
+    rgba(1,191,187,0.03) 70%,
+    transparent 100%
+  );
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.key-feature:nth-of-type(even) {
+  background: linear-gradient(
+    to left,
+    rgba(1,191,187,0.12),
+    rgba(1,191,187,0.03) 70%,
+    transparent 100%
+  );
+}
+@media (hover:hover) {
+  .key-feature:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  }
+}
+.key-feature video {
+  border-radius: 4px;
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+.key-feature video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  filter: brightness(1.1);
+}
+
+/* Responsive Key Features */
+@media (max-width: 768px) {
+  .key-feature { flex-direction: column; text-align: center; }
+  .key-feature .col-3, .key-feature .col-9 { width: 100%; }
+  .key-feature video { max-height: 200px; margin-bottom: 1em; }
+}
+
+/* --- Modal de vídeo --- */
+.video-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+.video-content { position: relative; max-width: 80%; max-height: 80%; }
+.video-content video { width: 100%; height: auto; border-radius: 6px; }
+.video-content .close {
+  position: absolute; top: -35px; right: -10px;
+  color: #fff; font-size: 2rem; cursor: pointer; font-weight: bold;
+}
+
+/* --- Media Gallery --- */
+.gallery-item { position: relative; cursor: pointer; overflow: hidden; border-radius: 4px; }
+.gallery-item img { width: 100%; height: auto; transition: transform 0.3s ease; display: block; }
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-item .overlay {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: rgba(0, 0, 0, 0.55); color: #fff; font-size: 0.9em;
+  text-align: center; padding: 0.4em;
+}
+
+/* --- Fix hover underline when .visible is present --- */
+h1.accented.visible > a:hover::after,
+h1.accented.visible > a:focus-visible::after,
+h2.accented.visible > a:hover::after,
+h2.accented.visible > a:focus-visible::after {
+  width: 100% !important;
+}
+
+footer {
+  position: relative; /* el footer se convierte en referencia */
+}
+
+.footer-character-peek {
+  position: absolute;
+  bottom: 0;       /* siempre abajo del footer */
+  right: 120px;    /* separada del borde derecho */
+  z-index: 5;
+}
+
+.footer-character-peek img {
+  max-height: 120px;
+  max-width: 120px;
+  display: block;
+}
+
+/* ================= MODALS ================= */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.modal.show { display: flex; }
+
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  display: none; /* oculto por defecto */
+}
+.modal.show .close { display: block; }
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+/* Video modal */
+.video-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.video-modal.show { display: flex; }
+
+.video-content { position: relative; max-width: 80%; max-height: 80%; }
+.video-content video { width: 100%; height: auto; border-radius: 6px; }
+
+.video-modal .close {
+  position: absolute;
+  top: -35px;
+  right: -10px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  display: none; /* oculto por defecto */
+}
+.video-modal.show .close { display: block; }
+
+/* ================= IMAGE MODAL WITH NAVIGATION + ANIMATION ================= */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.modal.show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+.modal.show .modal-content {
+  transform: scale(1);
+}
+
+/* Close button */
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Navigation arrows */
+.modal .prev,
+.modal .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 0.3em;
+  transition: color 0.3s ease;
+}
+.modal .prev:hover,
+.modal .next:hover {
+  color: var(--accent-color);
+}
+.modal .prev { left: 20px; }
+.modal .next { right: 20px; }

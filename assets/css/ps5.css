@@ -1,0 +1,219 @@
+/* ps5.css – estilos específicos PS5 */
+
+/* Accent del proyecto */
+:root {
+  --accent-color: #07077d; /* azul oscuro */
+  --accent-color2: #050569;
+}
+
+/* Hero image */
+.hero-wrapper img {
+  border-radius: 6px;
+}
+
+/* Placeholders */
+.ph {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #1e1e1e;
+  background-image: url("../../images/pic02.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  min-height: 240px;
+}
+.ph-hero   { aspect-ratio: 16 / 9; min-height: 360px; }
+.ph-video  { aspect-ratio: 16 / 9; min-height: 320px; }
+.ph-media  { aspect-ratio: 16 / 9; min-height: 240px; }
+.ph-shot-lg{ aspect-ratio: 16 / 9; min-height: 300px; }
+.ph-shot-sm{ aspect-ratio: 16 / 9; min-height: 200px; }
+
+/* Tarjetas contribuciones */
+.feature-card {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr);
+  gap: 1.5em;
+  align-items: center;
+  margin-bottom: 2.5em;
+  padding: 1.5em;
+  border-radius: 8px;
+  background: rgba(10, 61, 98, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+.feature-card .feature-text h3 {
+  margin-top: 0;
+  margin-bottom: 0.4em;
+}
+.feature-card .feature-media { width: 100%; }
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .feature-card { grid-template-columns: 1fr; }
+  .ph-hero { min-height: 300px; }
+}
+@media (max-width: 736px) {
+  .ph-hero  { min-height: 220px; }
+  .ph-video { min-height: 220px; }
+  .ph-shot-lg { min-height: 200px; }
+}
+
+/* Enlaces en títulos */
+h1 a, h2 a, h3 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+h1 a:hover, h2 a:hover, h3 a:hover {
+  color: var(--accent-color);
+}
+.subtitle.accented {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.feature-video img,
+.feature-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Títulos con línea animada */
+h2.accented {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+h2.accented::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+h2.accented.visible::after { width: 100%; }
+
+/* --- Galería con hover --- */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+.gallery-item .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding: 0.5em;
+  font-size: 0.9em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.modal {
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  display: flex; /* siempre flex, pero invisible */
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+  transform: scale(1);
+}
+
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Flechas de navegación en modal */
+.modal .prev,
+.modal .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  padding: 0 0.3em;
+  transition: color 0.3s ease;
+}
+.modal .prev:hover,
+.modal .next:hover {
+  color: var(--accent-color);
+}
+.modal .prev {
+  left: 20px;
+}
+.modal .next {
+  right: 20px;
+}

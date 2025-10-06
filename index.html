@@ -1,114 +1,318 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!DOCTYPE HTML>
+<html>
+	<head>
+  <title>Jaime Garrido - Portfolio</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jaime Garrido — Portfolio</title>
-  <!-- Bootstrap CDN for quick styling -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    /* Simple custom styles */
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-    .hero { min-height: 60vh; display:flex; align-items:center; }
-    .project-card { transition: transform .15s ease; }
-    .project-card:hover { transform: translateY(-6px); }
-    footer { padding: 2rem 0; background:#f8f9fa; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <!-- SEO -->
+  <meta name="description" content="Jaime Garrido – C++ Graphics Programmer specialising in real-time rendering, custom engines, and shader programming. Experience with PS5 Devkit, Unreal, and Unity." />
+  <meta name="keywords" content="C++, Graphics Programmer, OpenGL, Shader Programming, Engine Development, PS5 Devkit, Unreal Engine, Unity, Real-Time Rendering, Portfolio" />
+  <meta name="author" content="Jaime Garrido" />
+
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="Jaime Garrido – C++ Graphics Programmer" />
+  <meta property="og:description" content="Portfolio of Jaime Garrido, specialising in real-time rendering, custom engines, shader techniques, and performance optimisation. Experienced with PS5 Devkit, Unreal, and Unity." />
+  <meta property="og:image" content="images/preview.png" />
+  <meta property="og:url" content="https://tu-dominio.dev/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jaime Garrido – C++ Graphics Programmer" />
+  <meta name="twitter:description" content="Portfolio of Jaime Garrido, specialising in real-time rendering, custom engines, shader techniques, and performance optimisation." />
+  <meta name="twitter:image" content="images/preview.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">Jaime Garrido</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#nav" aria-controls="nav" aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="nav" class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Hero -->
-  <header class="hero bg-light">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-7">
-          <h1 class="display-5">Hi — I'm Jaime<br/><small class="text-muted">C++ & graphics programmer</small></h1>
-          <p class="lead">I build graphics experiments and small engines. Here are some projects and demos.</p>
-          <p>
-            <a href="#projects" class="btn btn-primary">See projects</a>
-            <a href="#contact" class="btn btn-outline-secondary">Contact</a>
-          </p>
-        </div>
-        <div class="col-md-5 text-center">
-          <!-- Replace with your image or avatar -->
-          <img src="https://via.placeholder.com/250" alt="avatar" class="img-fluid rounded-circle shadow-sm" />
-        </div>
-      </div>
-    </div>
-  </header>
+	<body class="is-preload">
+		<div id="wrapper">
 
-  <!-- Projects -->
-  <section id="projects" class="py-5">
-    <div class="container">
-      <h2 class="mb-4">Selected Projects</h2>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card project-card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Interior Mapping demo</h5>
-              <p class="card-text">An OpenGL technique that simulates rooms using cubemaps and parallax. Built in C++.</p>
-              <a href="#" class="stretched-link">View repo</a>
-            </div>
-            <div class="card-footer text-muted">C++, OpenGL</div>
-          </div>
-        </div>
+			<!-- Header -->
+			<header id="header">
+			<div class="inner">
+				
+			</div>
+			</header>
 
-        <div class="col-md-6">
-          <div class="card project-card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Deferred Renderer</h5>
-              <p class="card-text">Small engine prototype with deferred shading and basic PBR workflow.</p>
-              <a href="#" class="stretched-link">View repo</a>
-            </div>
-            <div class="card-footer text-muted">C++, OpenGL</div>
-          </div>
-        </div>
+			
 
-      </div>
-    </div>
-  </section>
 
-  <!-- About -->
-  <section id="about" class="py-5 bg-white">
-    <div class="container">
-      <h2>About</h2>
-      <p>I am a graphics programmer with experience in C++ and OpenGL. I focus on performance and clean code.</p>
-    </div>
-  </section>
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<header>
+						<h1>
+						<span class="intro">Hello, I'm</span>
+						<a href="index.html" class="reload-title">Jaime Garrido</a>
+						</h1>
 
-  <!-- Contact -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>If you'd like to work with me or see more, reach me at <strong>your.email@example.com</strong>.</p>
-      <p>GitHub: <a href="https://github.com/tuusuario">github.com/tuusuario</a></p>
-    </div>
-  </section>
+						<p class="subtitle">C++ Graphics Programmer — Real-Time Rendering | Engine Development | PS5 Devkit Experience</p>
+						<p class="tagline">Building efficient engines and polished gameplay experiences.</p>
+						<div class="social-icons">
+							<a href="jaime_resume.pdf" target="_blank" title="Download CV"><i class="icon solid fa-file"></i></a>
+							<a href="https://github.com/JaimeGR23" target="_blank" title="GitHub"><i class="icon brands fa-github"></i></a>
+							<a href="https://www.linkedin.com/in/jaimegr23/" target="_blank" title="LinkedIn"><i class="icon brands fa-linkedin"></i></a>
+						</div>
+					</header>
 
-  <footer class="text-center">
-    <div class="container">
-      <small>&copy; 2025 Jaime Garrido</small>
-    </div>
-  </footer>
+					<!-- Projects -->
+					<section class="tiles">
+						<article class="style3 reveal">
+							<span class="image"><img src="images/katto01.jpg" alt="" /></span>
+							<a href="katto.html">
+								<h2>Katto: Rising Tides</h2>
+								<span class="badge steam">Steam Release</span>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+
+								<div class="content">
+									<p>Unreal Engine 5 project released on Steam, finalist at GDWC 2024 (Best Hobby Game).</p>
+								</div>
+							</a>
+						</article>
+
+						<article class="style6 reveal">
+							<span class="image"><img src="images/bg_che22.jpeg" alt="" /></span>
+							<a href="ps5.html">
+								<h2>Che22 – PS5 Devkit</h2>
+								<span class="badge featured">Featured</span>
+								<div class="content">
+									<p>A PS5 game built from scratch with a custom engine, expanding traditional chess with new pieces and dynamic maps.</p>
+								</div>
+							</a>
+						</article>
+
+						<article class="style1 reveal">
+							<span class="image"><img src="images/ss01.png" alt="" /></span>
+							<a href="custom_engine.html">
+								<h2>Custom Game Engine</h2>
+								<span class="badge featured">Featured</span>
+								<div class="content">
+									<p>Built in C++ with OpenGL, featuring an advanced editor, real-time lighting and shadows, and a wide range of shader techniques.</p>
+								</div>
+							</a>
+						</article>
+
+						<article class="style4 reveal">
+							<span class="image"><img src="images/interior01.png" alt="" /></span>
+							<a href="generic.html">
+								<h2>Interior Mapping</h2>
+								<div class="content">
+									<p>A graphics technique that simulates detailed 3D interiors inside simple geometry using cubemaps and parallax.</p>
+								</div>
+							</a>
+						</article>
+
+						<article class="style2 reveal">
+							<span class="image"><img src="images/encestoide01.png" alt="" /></span>
+							<a href="generic.html">
+								<h2>Encestoide</h2>
+								<div class="content">
+									<p>A clean and polished Unity basketball game about precision shooting and quick, accessible fun.</p>
+								</div>
+							</a>
+						</article>
+
+						<article class="style5 reveal">
+							<span class="image"><img src="images/carromaton_00.jpeg" alt="" /></span>
+							<a href="generic.html">
+								<h2>Carromaton</h2>
+								<div class="content">
+									<p>A polished Unity game focused on smooth drifting mechanics with simple yet engaging gameplay.</p>
+								</div>
+							</a>
+						</article>
+
+						<article class="style2 reveal">
+							<span class="image"><img src="images/fluid00.jpeg" alt="" /></span>
+							<a href="generic.html">
+								<h2>Real-Time Fluid Simulation</h2>
+								<div class="content">
+									<p>Implemented with SPH in C++ and optimised through multithreading, rendered using Direct2D.</p>
+								</div>
+							</a>
+						</article>
+
+						<article class="style3 reveal">
+							<span class="image"><img src="images/salamander01.jpeg" alt="" /></span>
+							<a href="generic.html">
+								<h2>Salamander AI Simulation</h2>
+								<div class="content">
+									<p>Physics-based creature simulation built in C++ with raylib, featuring autonomous behaviour, inverse kinematics, and a physics-driven tail.</p>
+								</div>
+							</a>
+						</article>
+
+						<article class="style1 reveal">
+							<span class="image"><img src="images/galaxian00.jpeg" alt="" /></span>
+							<a href="generic.html">
+								<h2>Galaxian Remake</h2>
+								<div class="content">
+									<p>A polished recreation of the classic arcade shooter, featuring authentic enemy attack patterns, lives system, and scoring mechanics, built with a lightweight sprite library.</p>
+								</div>
+							</a>
+						</article>
+					</section>
+				</div>
+			</div>
+
+			<!-- About -->
+			<section id="about" class="reveal">
+				<div class="inner">
+					<hr />
+					<h2>About Me</h2>
+					<div class="row aln-top">
+						<div class="col-8 col-12-medium">
+							<p>I'm Jaime Garrido, a graphics programmer passionate about real-time rendering,
+							mathematics, and optimisation. I specialise in C++ and OpenGL, and have built
+							custom engines with advanced editors, shader techniques, and real-time lighting
+							and shadows. I also work fluently with both Unreal Engine (4 & 5) and Unity,
+							and have hands-on experience with the PS5 devkit.</p>
+							<p>My work includes published projects, such as a Steam release that reached the
+							finals of the GDWC Hobby Game category. Regardless of scope, I take pride in
+							delivering polished results — even in the simplest prototypes, I dedicate time
+							to refinement so they feel complete and enjoyable.</p>
+						</div>
+						<div class="col-4 col-12-medium">
+							<ul class="alt">
+								<li><strong>C++ & OpenGL</strong> specialist</li>
+								<li><strong>PS5 Devkit</strong> experience</li>
+								<li><strong>Steam release</strong> finalist GDWC 2024</li>
+								<li><strong>Engines</strong>: Unity & Unreal 4/5</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Skills -->
+			<section id="skills" class="reveal">
+				
+				<div class="inner">
+					<h2>Skills</h2>
+					<div class="skills-grid">
+						<div>
+							<h3><i class="icon solid fa-code"></i> Programming</h3>
+							<ul>
+								<li>C, C++</li>
+								<li>Multithreading</li>
+								<li>Algorithms & Mathematics</li>
+								<li>HLSL & Shader Programming</li>
+							</ul>
+						</div>
+						<div>
+							<h3><i class="icon solid fa-cogs"></i> Engines & APIs</h3>
+							<ul>
+								<li>OpenGL</li>
+								<li>PS5 Devkit</li>
+								<li>Custom Engines</li>
+								<li>Unity & Unreal Engine 4/5</li>
+							</ul>
+						</div>
+						<div>
+							<h3><i class="icon solid fa-wrench"></i> Tools</h3>
+							<ul>
+								<li>Visual Studio</li>
+								<li>RenderDoc</li>
+								<li>Git & Perforce</li>
+								<li>NVIDIA Nsight</li>
+							</ul>
+						</div>
+						<div>
+							<h3><i class="icon solid fa-star"></i> Strengths</h3>
+							<ul>
+								<li>Optimisation</li>
+								<li>Real-Time Rendering</li>
+								<li>Clean & Maintainable Code</li>
+								<li>Game Polish & Refinement</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer" class="reveal">
+				<div class="inner">
+					<section>
+						<h2>Get in Touch</h2>
+						<p>Actively seeking opportunities in programming and software development. Let’s connect!</p>
+						<ul class="contact-list">
+							<li>
+								<i class="icon solid fa-envelope"></i>
+								<a href="mailto:garridoramirezjaime@gmail.com">garridoramirezjaime@gmail.com</a>
+							</li>
+							<li>
+								<i class="icon brands fa-github"></i>
+								<a href="https://github.com/JaimeGR23" target="_blank">github.com/JaimeGR23</a>
+							</li>
+							<li>
+								<i class="icon brands fa-linkedin"></i>
+								<a href="https://linkedin.com/in/JaimeGR23" target="_blank">linkedin.com/in/JaimeGR23</a>
+							</li>
+						</ul>
+						<a href="jaime_resume.pdf" target="_blank" class="button small">
+							<i class="icon solid fa-file"></i> View Resume
+						</a>
+					</section>
+					<ul class="copyright">
+						<li>&copy; 2025 Jaime Garrido</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Reveal on scroll -->
+		<script>
+		  document.addEventListener("DOMContentLoaded", () => {
+		    const reveals = document.querySelectorAll(".reveal");
+		    const observer = new IntersectionObserver((entries) => {
+		      entries.forEach(entry => {
+		        if (entry.isIntersecting) {
+		          entry.target.classList.add("active");
+		        }
+		      });
+		    }, { threshold: 0.1 });
+		    reveals.forEach(r => observer.observe(r));
+		  });
+		</script>
+
+		<script>
+		document.addEventListener("scroll", () => {
+			const btn = document.querySelector(".back-to-top");
+			if (window.scrollY > 400) { // aparece tras hacer scroll
+			btn.classList.add("visible");
+			} else {
+			btn.classList.remove("visible");
+			}
+		});
+		</script>
+
+		<script>
+		document.body.classList.add("is-preload");
+
+		window.addEventListener("load", () => {
+			document.body.classList.remove("is-preload");
+			document.body.classList.add("loaded");
+		});
+		</script>
+
+
+
+		<!-- Back to Top Button -->
+		<a href="#wrapper" class="back-to-top" title="Back to top">
+		<i class="icon solid fa-arrow-up"></i>
+		</a>
+
+	</body>
 </html>
