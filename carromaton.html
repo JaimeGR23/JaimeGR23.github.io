@@ -1,18 +1,18 @@
-<!-- encestoide.html -->
+<!-- carromaton.html -->
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Encestoide – Jaime Garrido</title>
+    <title>Carromaton – Jaime Garrido</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
     <!-- SEO -->
-    <meta name="description" content="Encestoide – A minimalistic basketball game in Unity by Jaime Garrido, featuring polished visuals, precision-based mechanics, Cinemachine cameras, and fluid controls." />
+    <meta name="description" content="Carromaton – A Unity drift racing prototype controlled exclusively with two joysticks, developed by Jaime Garrido and teammate. Features polished driving feel, Cinemachine transitions, dynamic environments, and creative control constraints." />
     <meta name="author" content="Jaime Garrido" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/encestoide.css" />
+    <link rel="stylesheet" href="assets/css/carromaton.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   </head>
   <body class="is-preload">
@@ -32,24 +32,24 @@
           <!-- ================= HERO / TITLE ================= -->
           <section class="reveal hero-section">
             <h1 class="accented">
-              <a href="encestoide.html" class="title-link">Encestoide</a>
+              <a href="carromaton.html" class="title-link">Carromaton</a>
             </h1>
             <p class="subtitle" style="margin:0;">
-              <strong>Unity Basketball Game · Solo Development</strong>
+              <strong>Unity Drift Game · Two-Person Team</strong>
             </p>
             <p class="subtitle" style="margin:0; color:var(--accent-color); font-weight:600;">
-              Precision Mechanics · Cinemachine Cameras · Particle FX
+              Dual Joystick Control · Cinemachine Cameras · Atmospheric Worlds
             </p>
             <p class="subtitle" style="margin:0.25em 0 0; opacity:.85;">
-              <strong>Role:</strong> Solo Dev · <strong>Engine:</strong> Unity · <strong>Scope:</strong> Gameplay/FX/Camera · <strong>Year:</strong> 2023
+              <strong>Role:</strong> Co-Dev · <strong>Engine:</strong> Unity · <strong>Scope:</strong> Gameplay/Camera/Polish · <strong>Year:</strong> 2023
             </p>
 
             <ul class="actions" style="margin-top:1em;">
-              <li><a href="https://youtu.be/v9FtPDAnQ70" target="_blank" class="button primary">Watch Gameplay</a></li>
+              <li><a href="#" target="_blank" class="button primary">Watch Gameplay</a></li>
             </ul>
 
             <div class="image main hero-wrapper">
-              <img src="images/encestoide/hero.png" alt="Encestoide — Hero Screenshot" loading="lazy" decoding="async" />
+              <img src="images/encestoide/hero.png" alt="Carromaton — Hero Screenshot" loading="lazy" decoding="async" />
             </div>
           </section>
 
@@ -59,11 +59,11 @@
           <section id="overview" class="reveal">
             <h2 class="accented"><a href="#overview">Overview</a></h2>
             <p>
-              <strong>Encestoide</strong> is a complete prototype in <strong>Unity</strong> focused on
-              <strong>math-driven shooting mechanics</strong> (sinusoidal timing bar +
-              <strong>accuracy-scaled error vector</strong>), <strong>fluid movement</strong> with
-              <strong>SLERP</strong>, <strong>Cinemachine</strong> cameras, and <strong>particle FX</strong>.
-              Goal: a <strong>closed gameplay loop</strong>, <strong>clear feedback</strong>, and <strong>visual polish</strong> in a solo project.
+              <strong>Carromaton</strong> is a <strong>Unity drift racing prototype</strong> built under strict constraints:
+              the game is <strong>fully controlled only with two joysticks</strong>. Developed by two programmers over
+              three months, the project delivers <strong>responsive drift mechanics</strong>, <strong>engine audio + skid FX</strong>,
+              <strong>Cinemachine transitions</strong>, and two distinct environments: a <strong>forest drift circuit</strong>
+              and a <strong>city at night lit by glowing mushrooms</strong>.
             </p>
           </section>
 
@@ -73,8 +73,7 @@
           <section class="reveal" id="features">
             <h2 class="accented"><a href="#features">Key Features</a></h2>
             <p>
-              I developed <strong>all aspects</strong> of the game: gameplay systems, camera control, and user interface.
-              The highlights below showcase the most relevant features.
+              Both developers contributed equally to all aspects of the project. The highlights below showcase the most relevant features.
             </p>
 
             <!-- Feature 1 -->
@@ -85,10 +84,10 @@
                 </video>
               </div>
               <div class="col-9">
-                <h3>Sinusoidal Precision Bar + Scaled Error Vector</h3>
+                <h3>Dual Joystick Exclusive Controls</h3>
                 <p>
-                  Implemented a <strong>3D sinusoidal precision bar</strong>. Releasing at centre guarantees a perfect shot;
-                  deviation injects an <strong>error vector</strong> scaled to inaccuracy.
+                  The entire game is designed to be played only with two joysticks. One press switches between <strong>third-person</strong>
+                  and <strong>top-down views</strong> smoothly using <strong>Cinemachine</strong>; the other joystick press returns the player to the lobby hub.
                 </p>
               </div>
             </div>
@@ -96,10 +95,10 @@
             <!-- Feature 2 -->
             <div class="key-feature">
               <div class="col-9">
-                <h3>8-Way Movement with SLERP + Force Pull FX</h3>
+                <h3>Forest Drift Circuit</h3>
                 <p>
-                  Direction changes smoothed via <strong>Quaternion SLERP</strong> for natural 8-way movement.
-                  Ball retrieval uses a “<strong>force pull</strong>” mechanic with <strong>particle FX</strong>.
+                  A compact <strong>daytime drift track</strong> surrounded by stylised forest visuals. Focus on <strong>lap records</strong>,
+                  rewarding precise control and polished driving feel with <strong>skid marks</strong> and <strong>engine sound FX</strong>.
                 </p>
               </div>
               <div class="col-3">
@@ -117,16 +116,17 @@
                 </video>
               </div>
               <div class="col-9">
-                <h3>Cinemachine Camera Rigs + Minimal Pause UI</h3>
+                <h3>Night City with Luminous Mushrooms</h3>
                 <p>
-                  Dynamic camera transitions using <strong>Cinemachine</strong>. Minimal <strong>pause menu</strong> (play/resume, exit) for usability.
+                  The second world is <strong>larger</strong> and set at <strong>night</strong>. Cars switch on headlights,
+                  and the environment is filled with <strong>bioluminescent mushrooms</strong>, creating a distinct aesthetic atmosphere.
                 </p>
               </div>
             </div>
 
             <div style="margin-top:1rem; font-size:.95em; opacity:.95;">
-              <strong>Tech keywords:</strong> Unity C#, Cinemachine, Transform/Quaternion SLERP, time-based input timing, Particle System,
-              simple respawn logic, UI Canvas.
+              <strong>Tech keywords:</strong> Unity C#, Cinemachine, physics-based drift handling, skid FX, audio design,
+              environment lighting, joystick input constraints.
             </div>
           </section>
 
@@ -138,38 +138,38 @@
             <div class="row gtr-uniform gallery">
               <div class="col-6">
                 <div class="gallery-item" onclick="openModal('images/encestoide/court.png')">
-                  <img src="images/encestoide/court.png" alt="Encestoide — Court at Sunset" loading="lazy" decoding="async" />
-                  <div class="overlay">Court at Sunset</div>
+                  <img src="images/encestoide/court.png" alt="Carromaton — Forest Circuit" loading="lazy" decoding="async" />
+                  <div class="overlay">Forest Circuit</div>
                 </div>
               </div>
               <div class="col-6">
                 <div class="gallery-item" onclick="openModal('images/encestoide/shooting_bar.png')">
-                  <img src="images/encestoide/shooting_bar.png" alt="Encestoide — Shooting Bar Mechanic" loading="lazy" decoding="async" />
-                  <div class="overlay">Shooting Bar Mechanic</div>
+                  <img src="images/encestoide/shooting_bar.png" alt="Carromaton — Joystick Controls" loading="lazy" decoding="async" />
+                  <div class="overlay">Joystick Controls</div>
                 </div>
               </div>
               <div class="col-4">
                 <div class="gallery-item" onclick="openModal('images/encestoide/shot.jpeg')">
-                  <img src="images/encestoide/shot.jpeg" alt="Encestoide — Shot in Action" loading="lazy" decoding="async" />
-                  <div class="overlay">Shot in Action</div>
+                  <img src="images/encestoide/shot.jpeg" alt="Carromaton — Drift Action" loading="lazy" decoding="async" />
+                  <div class="overlay">Drift Action</div>
                 </div>
               </div>
               <div class="col-4">
                 <div class="gallery-item" onclick="openModal('images/encestoide/force_pull.jpeg')">
-                  <img src="images/encestoide/force_pull.jpeg" alt="Encestoide — Force Pull Particles" loading="lazy" decoding="async" />
-                  <div class="overlay">Force Pull Particles</div>
+                  <img src="images/encestoide/force_pull.jpeg" alt="Carromaton — Skid Marks" loading="lazy" decoding="async" />
+                  <div class="overlay">Skid Marks</div>
                 </div>
               </div>
               <div class="col-4">
                 <div class="gallery-item" onclick="openModal('images/encestoide/pause.png')">
-                  <img src="images/encestoide/pause.png" alt="Encestoide — Pause Menu" loading="lazy" decoding="async" />
-                  <div class="overlay">Pause Menu</div>
+                  <img src="images/encestoide/pause.png" alt="Carromaton — Night City" loading="lazy" decoding="async" />
+                  <div class="overlay">Night City</div>
                 </div>
               </div>
             </div>
           </section>
 
-          <!-- ================= IMAGE MODAL (GALLERY) ================= -->
+          <!-- IMAGE MODAL -->
           <div id="imageModal" class="modal" onclick="closeModal(event)">
             <span class="close">&times;</span>
             <span class="prev" onclick="prevImage(event)">&#10094;</span>
@@ -185,9 +185,7 @@
               "images/encestoide/force_pull.jpeg",
               "images/encestoide/pause.png"
             ];
-
             let currentIndex = 0;
-
             function openModal(src) {
               currentIndex = images.indexOf(src);
               const modal = document.getElementById("imageModal");
@@ -195,24 +193,20 @@
               modalImg.src = src;
               modal.classList.add("show");
             }
-
             function closeModal(e) {
               if (e.target && e.target.id === "modalImage") return;
               document.getElementById("imageModal").classList.remove("show");
             }
-
             function nextImage(e) {
               e.stopPropagation();
               currentIndex = (currentIndex + 1) % images.length;
               document.getElementById("modalImage").src = images[currentIndex];
             }
-
             function prevImage(e) {
               e.stopPropagation();
               currentIndex = (currentIndex - 1 + images.length) % images.length;
               document.getElementById("modalImage").src = images[currentIndex];
             }
-
             document.addEventListener("keydown", (e) => {
               const modal = document.getElementById("imageModal");
               if (!modal.classList.contains("show")) return;
@@ -228,8 +222,8 @@
           <section id="links" class="reveal">
             <h2 class="accented"><a href="#links">Links</a></h2>
             <ul class="actions">
-              <li><a href="https://youtu.be/v9FtPDAnQ70" target="_blank" class="button primary">Watch Gameplay</a></li>
-              <li><a href="https://drive.google.com/uc?export=download&id=1RO3IiF9X-C4FeCtcFCKZIopyi5e2RdlY" target="_blank" class="button">Download Build</a></li>
+              <li><a href="#" target="_blank" class="button primary">Watch Gameplay</a></li>
+              <li><a href="#" target="_blank" class="button">Download Build</a></li>
             </ul>
           </section>
 
@@ -272,6 +266,7 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <!-- REVEAL ACTIVATION -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const reveals = document.querySelectorAll(".reveal");
@@ -290,47 +285,5 @@
         else btn.classList.remove("visible");
       });
     </script>
-
-    <!-- ================= VIDEO MODAL (FEATURE VIDEOS) ================= -->
-    <div id="videoModal" class="video-modal">
-      <div class="video-content">
-        <span class="close">&times;</span>
-        <video id="modalVideo" controls autoplay loop muted playsinline>
-          <source src="" type="video/mp4">
-        </video>
-      </div>
-    </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const modal = document.getElementById("videoModal");
-        const modalVideo = document.getElementById("modalVideo");
-        const modalSource = modalVideo.querySelector("source");
-        const closeBtn = modal.querySelector(".close");
-
-        document.querySelectorAll(".key-feature video").forEach(video => {
-          video.addEventListener("click", () => {
-            modal.classList.add("show");
-            modalSource.src = video.querySelector("source").src;
-            modalVideo.load();
-            modalVideo.play();
-          });
-        });
-
-        const closeModalVideo = () => {
-          modal.classList.remove("show");
-          modalVideo.pause();
-          modalSource.src = "";
-          modalVideo.load();
-        };
-
-        closeBtn.addEventListener("click", closeModalVideo);
-        modal.addEventListener("click", (e) => { if (e.target === modal) closeModalVideo(); });
-        window.addEventListener("keydown", (e) => {
-          if (e.key === "Escape" && modal.classList.contains("show")) closeModalVideo();
-        });
-      });
-    </script>
-
   </body>
 </html>
