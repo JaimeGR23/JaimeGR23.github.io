@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interior Mapping Shader</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <pre><code class="language-glsl">
+#version 430 core
+
+in vec2 texCoord;
+in vec3 FragPos;
+
+out vec4 color;
+
+uniform samplerCube cubemap;
+uniform vec3 cameraPos;
+uniform mat4 model;           // Transformation matrix of the quad (from local to world space)
+uniform mat4 inverse_model;   // From World to Local
+
+void main() {
+
+    // room entrance position in local space.
+    // texCoord             : UVs from [-1, 1]
+    // -roomDepth, -1.0     : coordinates Z and W, indicates the starting position is in the frontal face of the cube
+    vec4 pos = vec4(texCoord, -1.0, 0.0);
+
+    // Convert camera position and fragment position to the quad's local space.
+    // localCameraPos       : Camera position in quad's local space
+    // localFragPos         : Fragment position in quad's local space
+    // localRayDirection    : Direction of the ray from the camera to the fragment in the quad's local space
+    vec3 localCameraPos = vec3(inverse_model * vec4(cameraPos, 1.0));
+    vec3 localFragPos = vec3(inverse_model * vec4(FragPos, 1.0));
+    vec3 localRayDirection = normalize(localFragPos - localCameraPos);
+
+    // Ray-box intersection in local space.
+    // invDir   : Inverse of each component of the ray direction (1/x), efficient for ray-cube intersection
+    // k        : Calculates intersection time for each axis (x, y, z) between the ray and the cube walls
+    // kMin     : Selects the axis (x, y, z) where the intersection occurs first
+    vec3 invDir = 1.0 / localRayDirection;
+    vec3 k = (abs(invDir) - pos.xyz * invDir);
+    float kMin = min(min(k.x, k.y), k.z);
+
+    // Adjust ray position.
+    // Moves the position (pos) from the entrance of the room to the exact point where the ray intersects one of the cube walls
+    pos.xyz += kMin * localRayDirection;
+
+    // invert X axis because the cubemap is loaded mirrored
+    pos *= vec4(-1.0, 1.0, 1.0, 1.0);
+
+    // Sample the cubemap.
+    // The cubemap is sampled at the position (pos) where the ray intersects one of the cube walls.
+    // The result is the color of the cubemap at that point, simulating the interior of the room
+    vec4 roomColor = texture(cubemap, pos.xyz);
+
+    // Assign the final color to the fragment.
+    color = vec4(roomColor.rgb, 1.0);
+}
+
+/*
+    Detailed explanation of the cube intersection:
+
+    The ray-box intersection is used to compute where a ray starting from a position hits the walls of a cube.
+
+    1. First, we calculate the **inverse direction** of the ray by computing '1.0 / localRayDirection' for each component.
+       This gives us the reciprocal of the direction, which is useful for determining the intersection more efficiently.
+
+    2. The vector 'invDir' contains these reciprocal values for each axis (X, Y, Z). Then, the vector 'k' is computed
+       as the difference between 'abs(invDir)' and the product of 'pos.xyz * invDir'. This part is determining how 
+       far along the ray we have to travel before intersecting each axis-aligned wall of the cube. Essentially, it's
+       using a simplified mathematical approach to compute the point of intersection.
+
+    3. The scalar 'kMin' is the minimum value among the components of 'k'. It represents the intersection time or distance
+       along the ray to the nearest wall of the cube. We find the minimum because we want to know which axis the ray hits first
+       when moving from the entrance of the cube to any of its walls.
+
+    4. Finally, the intersection point ('pos.xyz') is calculated by adding 'kMin * localRayDirection' to 'pos.xyz', moving
+       the point along the ray direction until it hits one of the cube walls.
+
+    By using the reciprocal of the direction, this technique avoids division in the intersection tests, making it computationally efficient.
+*/
+
+  </code></pre>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-glsl.min.js"></script>
+</body>
+</html>

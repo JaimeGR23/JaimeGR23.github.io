@@ -1,0 +1,382 @@
+<!-- interior_mapping.html -->
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Distance Based Interior Mapping (DBIP) – Jaime Garrido</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <!-- SEO -->
+  <meta name="description" content="Distance Based Interior Mapping (DBIP), a rendering technique developed in my custom OpenGL engine to optimise performance while maintaining visual fidelity." />
+  <meta name="author" content="Jaime Garrido" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/project.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+<div id="wrapper">
+
+  <!-- ================= HEADER ================= -->
+<head>
+  <title>Distance Based Interior Mapping (DBIP) – Jaime Garrido</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <!-- SEO -->
+  <meta name="description" content="Distance Based Interior Mapping (DBIP), a rendering technique developed in my custom OpenGL engine to optimise performance while maintaining visual fidelity." />
+  <meta name="author" content="Jaime Garrido" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/project.css" />
+  <link rel="stylesheet" href="assets/css/interior_mapping.css" /> <!-- AÑADIDO: CSS con sliders -->
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<!-- Header -->
+      <header id="header">
+        <div class="inner">
+          <a href="index.html" class="button small" style="margin:0;">← Back to Portfolio</a>
+        </div>
+      </header>
+
+  <!-- ================= MAIN ================= -->
+  <div id="main">
+    <div class="inner">
+
+<!-- ================= HERO / TITLE ================= -->
+<section class="reveal hero-section">
+  <h1 class="accented">
+    <a href="interior_mapping.html" class="title-link">Distance Based Interior Mapping</a>
+  </h1>
+  <p class="subtitle" style="margin:0;">
+    Real-time interior illusion using cubemaps and parallax mapping
+  </p>
+  <p class="subtitle" style="margin:0; color:var(--accent-color); font-weight:600;">
+    Custom Engine Project • Performance Showcase
+  </p>
+
+  <!-- Call to action buttons -->
+  <ul class="actions" style="margin-top:1em;">
+    <li><a href="https://github.com/JaimeGR23/GUSSI" target="_blank" class="button primary">View on GitHub</a></li>
+  </ul>
+
+  <!-- Hero image -->
+  <div class="image main hero-wrapper">
+    <img src="images/interior_mapping/hero.png" alt="Interior Mapping Hero Render" />
+  </div>
+
+  <!-- Hero caption -->
+  <p class="caption" style="text-align:center; margin-top:0.8em; font-size:0.95em; color:#666;">
+    50×50 quads using Interior Mapping vs a single fully rendered room – same visual fidelity, radically different cost.
+  </p>
+</section>
+
+
+      <hr />
+
+<!-- ================= OVERVIEW ================= -->
+<section id="overview" class="reveal">
+  <h2 class="accented"><a href="#overview">Overview</a></h2>
+  <p>
+    Distance Based Interior Mapping is a <strong>real-time rendering technique</strong> implemented in my 
+    <strong>custom C++/OpenGL engine</strong>. It creates the illusion of fully modelled interiors by 
+    projecting <strong>cubemaps with parallax correction</strong> onto simple quads, reducing thousands of 
+    vertices to a single polygon.  
+  </p>
+  <p>
+    The project demonstrates how <strong>visual fidelity can be preserved while cutting rendering cost dramatically</strong>, 
+    achieving performance jumps from hundreds to thousands of FPS in complex scenes.
+  </p>
+  <ul>
+    <li><strong>Platform:</strong> PC</li>
+    <li><strong>Engine:</strong> Custom (C++ / OpenGL)</li>
+    <li><strong>Development time:</strong> ~2 months</li>
+    <li><strong>Key result:</strong> ~15× performance improvement (300 FPS → 4,500+ FPS)</li>
+  </ul>
+</section>
+
+
+<!-- ================= TECHNICAL DETAILS ================= -->
+<section id="technical-details" class="reveal">
+  <h2 class="accented"><a href="#technical-details">Technical Details</a></h2>
+  <p>
+    The core of this project is a <strong>GLSL shader</strong> that projects cubemaps with parallax correction 
+    inside a quad, creating the illusion of a full 3D room at a fraction of the cost.  
+    The cubemaps are generated from fully rendered rooms and then applied to simple quads in real time.
+  </p>
+
+  <!-- Video demo -->
+  <div style="text-align:center; margin:1.5em 0;">
+    <video autoplay loop muted playsinline style="max-width:90%; border-radius:8px; box-shadow:0 6px 14px rgba(0,0,0,0.2);">
+      <source src="images/interior_mapping/interior_demo.mp4" type="video/mp4">
+    </video>
+    <p class="caption">Live demo of Interior Mapping running inside my custom engine.</p>
+  </div>
+
+  <!-- Snippet -->
+  <pre><code>// GLSL snippet: parallax projection inside the quad
+vec3 localRayDirection = normalize(localFragPos - localCameraPos);
+vec3 invDir = 1.0 / localRayDirection;
+float kMin = min(min(k.x, k.y), k.z);
+pos.xyz += kMin * localRayDirection;
+color = texture(cubemap, pos.xyz);
+</code></pre>
+</section>
+
+
+      <hr />
+
+      <!-- ================= MEDIA GALLERY ================= -->
+      <section id="media-gallery" class="reveal">
+        <h2 class="accented"><a href="#media-gallery">Media Gallery</a></h2>
+        <div class="row gtr-uniform gallery">
+          <div class="col-6">
+            <div class="gallery-item" onclick="openModal('images/interior_mapping/media1.png')">
+              <img src="images/interior_mapping/media1.png" alt="Interior Mapping showcase 1" />
+              <div class="overlay">Wireframed Render</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="gallery-item" onclick="openModal('images/interior_mapping/media2.png')">
+              <img src="images/interior_mapping/media2.png" alt="Hybrid Technique showcase" />
+              <div class="overlay">50x50 Interior Mapped quads</div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="gallery-item" onclick="openModal('images/interior_mapping/media3.png')">
+              <img src="images/interior_mapping/media3.png" alt="Cubemap generation" />
+              <div class="overlay">Real Geometry Room</div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="gallery-item" onclick="openModal('images/interior_mapping/media4.png')">
+              <img src="images/interior_mapping/media4.png" alt="Shader test" />
+              <div class="overlay">Interior Mapped Room</div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="gallery-item" onclick="openModal('images/interior_mapping/media5.png')">
+              <img src="images/interior_mapping/media5.png" alt="Performance Benchmark" />
+              <div class="overlay">Cubemap Generation</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+
+<!-- ================= SHADER COMPARISONS ================= -->
+<section id="shader-comparisons" class="reveal">
+  <h2 class="accented"><a href="#shader-comparisons">Technique Comparisons</a></h2>
+
+  <!-- Room A -->
+  <div class="comparison-container" style="--pos:50%; margin-top:2em;">
+    <!-- Fully Rendered (base) -->
+    <div style="position:relative;">
+      <img class="comparison-base" src="images/custom_engine/interior_before.png" alt="Fully Rendered (Room A)" />
+      <span class="fps-label fps-left">300 FPS · 350,622 vertices</span>
+    </div>
+    <!-- Interior Mapping (overlay) -->
+    <div class="comparison-overlay">
+      <div style="position:relative;">
+        <img src="images/custom_engine/interior_after.png" alt="Interior Mapping (Room A)" />
+        <span class="fps-label fps-right">4,482 FPS · 6 vertices</span>
+      </div>
+    </div>
+    <div class="comparison-slider"><div class="comparison-handle"></div></div>
+  </div>
+  <p class="caption">Room A – <strong>Real Geometry</strong> (350k vertices) vs <strong>Interior Mapping</strong> (6 vertices)</p>
+
+  <!-- Room B -->
+  <div class="comparison-container" style="--pos:50%; margin-top:2em;">
+    <!-- Fully Rendered (base) -->
+    <div style="position:relative;">
+      <img class="comparison-base" src="images/interior_mapping/space_before.png" alt="Fully Rendered (Room B)" />
+      <span class="fps-label fps-left">1,152 FPS · 7,392 vertices</span>
+    </div>
+    <!-- Interior Mapping (overlay) -->
+    <div class="comparison-overlay">
+      <div style="position:relative;">
+        <img src="images/interior_mapping/space_after.png" alt="Interior Mapping (Room B)" />
+        <span class="fps-label fps-right">4,497 FPS · 6 vertices</span>
+      </div>
+    </div>
+    <div class="comparison-slider"><div class="comparison-handle"></div></div>
+  </div>
+  <p class="caption">Room B – <strong>Real Geometry</strong> (7.3k vertices) vs <strong>Interior Mapping</strong> (6 vertices)</p>
+
+  <!-- Technical Note -->
+   
+  <p style="text-align:center; margin-top:1em; font-size:0.9em; color:#666; max-width:800px; margin-left:auto; margin-right:auto;">
+    The cubemaps were generated from the fully rendered rooms with SSAO and lighting enabled,  
+    so the <strong>Interior Mapping version preserves these visual effects</strong> while <strong>removing their runtime cost</strong>.  
+    Regardless of the original scene complexity or effects applied, <strong>Interior Mapping always consumes the same resources at runtime</strong>,  
+    since it only renders a single quad.
+  </p>
+
+  <div style="text-align:center; margin-top:1em;">
+    <a href="https://www.youtube.com/watch?v=YQVHtlVEirs" target="_blank" class="button small">
+      Watch Spider-Man Example
+    </a>
+  </div>
+</section>
+
+
+
+
+<!-- ================= MODAL ================= -->
+<div id="imageModal" class="modal" onclick="closeModal(event)">
+  <span class="close">&times;</span>
+  <span class="prev" onclick="prevImage(event)">&#10094;</span>
+  <img class="modal-content" id="modalImage" alt="">
+  <span class="next" onclick="nextImage(event)">&#10095;</span>
+</div>
+
+<script>
+  // Modal simple (si ya lo tienes, conserva uno solo)
+  const images = [
+    "images/interior_mapping/media1.png",
+    "images/interior_mapping/media2.png",
+    "images/interior_mapping/media3.png",
+    "images/interior_mapping/media4.png",
+    "images/interior_mapping/media5.png"
+  ];
+  let currentIndex = 0;
+
+  function openModal(src) {
+    currentIndex = images.indexOf(src);
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modalImg.src = src;
+    modal.classList.add("show");
+  }
+  function closeModal(e) {
+    if (e.target.id === "modalImage") return;
+    document.getElementById("imageModal").classList.remove("show");
+  }
+  function nextImage(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById("modalImage").src = images[currentIndex];
+  }
+  function prevImage(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById("modalImage").src = images[currentIndex];
+  }
+</script>
+
+<script>
+// Bind del slider robusto: arrastra en cualquier parte del contenedor.
+// Requiere .comparison-overlay con pointer-events:none en el CSS.
+function bindComparison(container) {
+  const slider = container.querySelector('.comparison-slider');
+
+  const move = (clientX) => {
+    const rect = container.getBoundingClientRect();
+    let x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
+    const percent = (x / rect.width) * 100;
+    container.style.setProperty('--pos', percent + '%');
+    if (slider) slider.style.left = percent + '%';
+  };
+
+  let dragging = false;
+
+  const onDown = (ev) => { dragging = true; move(ev.clientX ?? ev.touches?.[0]?.clientX); ev.preventDefault?.(); };
+  const onMove = (ev) => { if (!dragging) return; move(ev.clientX ?? ev.touches?.[0]?.clientX); };
+  const onUp   = () => { dragging = false; };
+
+  // Click/drag en todo el contenedor
+  container.addEventListener('mousedown', onDown);
+  window.addEventListener('mousemove', onMove);
+  window.addEventListener('mouseup', onUp);
+
+  // Touch
+  container.addEventListener('touchstart', onDown, {passive:false});
+  window.addEventListener('touchmove', onMove, {passive:false});
+  window.addEventListener('touchend', onUp);
+}
+
+// Inicializa cuando el DOM está listo
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.comparison-container').forEach(bindComparison);
+});
+</script>
+
+
+
+      <hr />
+
+      <!-- ================= LINKS ================= -->
+      <section id="links" class="reveal">
+        <h2 class="accented"><a href="#links">Links</a></h2>
+        <ul class="actions">
+          <li><a href="https://gist.github.com/JaimeGR23/78fa31856a53edee2783ea26451295d0" target="_blank" class="button primary">View Code</a></li>
+          <li><a href="https://github.com/JaimeGR23/GUSSI" target="_blank" class="button">Project's GitHub</a></li>
+          <li><a href="custom_engine.html" target="_blank" class="button">Engine Used</a></li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="footer">
+    <div class="inner">
+      <section>
+        <h2>Get in Touch</h2>
+        <ul class="contact-list">
+          <li><i class="icon solid fa-envelope"></i> <a href="mailto:garridoramirezjaime@gmail.com">garridoramirezjaime@gmail.com</a></li>
+          <li><i class="icon brands fa-github"></i> <a href="https://github.com/JaimeGR23" target="_blank">github.com/JaimeGR23</a></li>
+          <li><i class="icon brands fa-linkedin"></i> <a href="https://linkedin.com/in/JaimeGR23" target="_blank">linkedin.com/in/JaimeGR23</a></li>
+        </ul>
+        <a href="jaime_resume.pdf" target="_blank" class="button small">
+          <i class="icon solid fa-file"></i> View Resume
+        </a>
+      </section>
+      <ul class="copyright">
+        <li>&copy; 2025 Jaime Garrido</li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ================= BACK TO TOP ================= -->
+  <a href="#wrapper" class="back-to-top" title="Back to top">
+    <i class="icon solid fa-arrow-up"></i>
+  </a>
+
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- Reveal on scroll -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("active");
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+});
+</script>
+
+<!-- Back to Top toggle -->
+<script>
+document.addEventListener("scroll", () => {
+  const btn = document.querySelector(".back-to-top");
+  if (!btn) return;
+  if (window.scrollY > 400) btn.classList.add("visible");
+  else btn.classList.remove("visible");
+});
+</script>
+</body>
+</html>

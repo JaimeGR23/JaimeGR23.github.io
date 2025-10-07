@@ -1,0 +1,93 @@
+/* interior_mapping.css – slider fijo (reemplaza todo este archivo) */
+
+/* ================= COLORS ================= */
+:root {
+  --accent-color: #00b818;
+  --accent-color2: #008a12;
+}
+
+/* ================= HERO BADGE ================= */
+.hero-wrapper .award-badge {
+  position: absolute;
+  top: 20px; right: 20px;
+  max-width: 180px;
+  opacity: 0; transform: scale(0.9);
+  animation: fadeInBadge 1.2s ease forwards;
+  animation-delay: 0.5s;
+}
+@keyframes fadeInBadge {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ================= GALLERY ================= */
+.gallery-item { position: relative; overflow: hidden; border-radius: 6px; cursor: pointer; box-shadow: 0 6px 14px rgba(0,0,0,0.2); transition: transform .3s ease, box-shadow .3s ease; }
+.gallery-item img { width: 100%; height: 240px; object-fit: cover; display: block; border-radius: 6px; transition: transform .3s ease; }
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-item .overlay { position: absolute; bottom:0; left:0; right:0; background: rgba(0,0,0,.55); color:#fff; padding:.5em; font-size:.9em; text-align:center; opacity:0; transition: opacity .3s ease; }
+.gallery-item:hover .overlay { opacity:1; }
+
+/* ================= MODAL ================= */
+.modal { position: fixed; z-index: 2000; inset: 0; background: rgba(0,0,0,0.8); display:flex; justify-content:center; align-items:center; opacity:0; pointer-events:none; transition: opacity .3s ease; }
+.modal.show { opacity:1; pointer-events:auto; }
+.modal-content { max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,.4); transform: scale(.9); transition: transform .3s ease; }
+.modal.show .modal-content { transform: scale(1); }
+.modal .close { position:absolute; top:20px; right:40px; color:#fff; font-size:2em; cursor:pointer; user-select:none; }
+.modal .prev, .modal .next { position:absolute; top:50%; transform:translateY(-50%); color:#fff; font-size:2.5em; font-weight:bold; cursor:pointer; user-select:none; padding:0 .3em; transition: color .3s ease; }
+.modal .prev:hover, .modal .next:hover { color: var(--accent-color); }
+.modal .prev { left:20px; } .modal .next { right:20px; }
+
+/* ================= COMPARISON SLIDER ================= */
+.comparison-container{
+  position:relative;
+  --pos:50%; /* valor por defecto para la cuchilla */
+  width:100%;
+  max-width:980px;
+  margin:2em auto;
+  border-radius:8px;
+  box-shadow:0 6px 14px rgba(0,0,0,0.2);
+  overflow:hidden;
+  cursor:ew-resize;
+}
+.comparison-base{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.comparison-overlay {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 0 0 var(--pos,50%));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.comparison-overlay img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.comparison-slider{
+  position:absolute;
+  top:0; height:100%;
+  left:var(--pos);
+  width:3px;
+  background:var(--accent-color);
+  transform:translateX(-1.5px);
+  z-index:2; /* por encima del overlay */
+}
+.comparison-handle{
+  position:absolute;
+  top:50%; left:50%;
+  width:20px; height:20px;
+  transform:translate(-50%,-50%);
+  background:#fff;
+  border:2px solid var(--accent-color);
+  border-radius:50%;
+  box-shadow:0 2px 8px rgba(0,0,0,0.25);
+}
+
+/* ================= CAPTION + LABELS ================= */
+.caption{ text-align:center; font-size:.9em; margin-top:.5em; color:#666; }
+.fps-label { position:absolute; bottom:8px; background:rgba(0,0,0,.75); color:#fff; font-size:.8em; padding:4px 8px; border-radius:4px; font-weight:500; pointer-events:none; white-space:nowrap; }
+.fps-left { left:12px; text-align:left; } .fps-right { right:12px; text-align:right; }
