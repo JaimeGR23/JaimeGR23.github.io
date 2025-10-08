@@ -1,0 +1,272 @@
+<!-- salamander.html -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Procedural Salamander AI – Jaime Garrido</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- SEO -->
+    <meta name="description" content="Procedural Salamander AI – A 2D simulation built with Raylib in C++ by Jaime Garrido and teammates, featuring procedural animation, inverse kinematics, and simple AI-driven agents." />
+    <meta name="author" content="Jaime Garrido" />
+  
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/icon.png" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/salamander.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+
+      <!-- ================= HEADER ================= -->
+      <header id="header">
+        <div class="inner">
+          <a href="index.html" class="button small" style="margin:0;">← Back to Portfolio</a>
+        </div>
+      </header>
+
+      <!-- ================= MAIN ================= -->
+      <div id="main">
+        <div class="inner">
+
+          <!-- ================= HERO / TITLE ================= -->
+          <section class="reveal hero-section">
+            <h1 class="accented">
+              <a href="salamander.html" class="title-link">Procedural Salamander AI</a>
+            </h1>
+            <p class="subtitle" style="margin:0;">
+              <strong>2D AI Simulation · Three-Person Team</strong>
+            </p>
+            <p class="subtitle" style="margin:0; color:var(--accent-color); font-weight:600;">
+              Procedural Animation · Inverse Kinematics · Reactive Agents
+            </p>
+            <p class="subtitle" style="margin:0.25em 0 0; opacity:.85;">
+              <strong>Role:</strong> Team Member · <strong>Engine:</strong> Raylib (C++) · <strong>Scope:</strong> AI/Animation · <strong>Year:</strong> 2023/24
+            </p>
+
+            <div class="image main hero-wrapper">
+              <img src="images/salamander/hero.jpeg" alt="Procedural Salamander AI — Hero Screenshot" loading="lazy" decoding="async" />
+            </div>
+          </section>
+
+          <hr />
+
+          <!-- ================= OVERVIEW ================= -->
+          <section id="overview" class="reveal">
+            <h2 class="accented"><a href="#overview">Overview</a></h2>
+            <p>
+              This project is a <strong>2D simulation</strong> built in <strong>C++ with Raylib</strong> by a three-person team.
+              Inspired by procedural animation in games such as <em>Rain World</em>, our goal was to explore how 
+              <strong>inverse kinematics</strong>, <strong>procedural motion</strong>, and <strong>simple AI agents</strong> 
+              could generate lifelike and emergent behaviours.
+            </p>
+            <p>
+              The simulation features a salamander that roams its environment, animated procedurally rather than with sprites. 
+              It uses <strong>IK for limbs</strong>, a <strong>spring-mass system for the tail</strong>, and a 
+              <strong>field-of-view perception system</strong> to detect and react to flies. 
+              The flies themselves follow randomized patterns and flee when approached, producing dynamic interactions.
+            </p>
+          </section>
+
+          <hr />
+
+          <!-- ================= KEY FEATURES ================= -->
+          <section class="reveal" id="features">
+            <h2 class="accented"><a href="#features">Key Features</a></h2>
+            <p>
+              We collaborated equally on all aspects of the project. These are the main highlights:
+            </p>
+
+            <!-- Feature 1 -->
+            <div class="key-feature">
+              <div class="col-3">
+                <video autoplay loop muted playsinline>
+                  <source src="images/salamander/ik.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-9">
+                <h3>Inverse Kinematics for Limbs</h3>
+                <p>
+                  Implemented custom <strong>2D IK algorithms</strong> to animate the salamander’s legs without keyframes, 
+                  ensuring smooth, realistic poses and avoiding unnatural overlaps.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="key-feature">
+              <div class="col-9">
+                <h3>Procedural Tail and Body Motion</h3>
+                <p>
+                  Built a <strong>spring-mass physics system</strong> to simulate the salamander’s tail and freeform movement, 
+                  giving the creature a fluid, snake-like feel.
+                </p>
+              </div>
+              <div class="col-3">
+                <video autoplay loop muted playsinline>
+                  <source src="images/salamander/tail.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="key-feature">
+              <div class="col-3">
+                <video autoplay loop muted playsinline>
+                  <source src="images/salamander/flies.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-9">
+                <h3>Reactive Fly Behaviour</h3>
+                <p>
+                  Flies move with <strong>randomized AI</strong> and flee when the salamander approaches its 
+                  <strong>field of view</strong>, producing emergent predator-prey interactions.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <hr />
+
+        <!-- ================= PROJECT DEMO ================= -->
+        <section id="project-demo" class="reveal">
+        <h2 class="accented"><a href="#project-demo">Project Demo</a></h2>
+        <div class="video-embed-wrapper">
+            <iframe 
+            src="https://www.youtube.com/embed/J9gdxA2Qmjw" 
+            title="Procedural Salamander AI Demo"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+            </iframe>
+        </div>
+        </section>
+
+
+          <hr />
+
+          <!-- ================= TAKEAWAYS ================= -->
+        <section id="takeaways" class="reveal">
+        <h2 class="accented"><a href="#takeaways">Takeaways</a></h2>
+        <p>
+            Building this simulation deepened my understanding of <strong>procedural animation</strong> 
+            and <strong>AI-driven behaviours</strong>. Developing our own inverse kinematics and physics 
+            systems showed how expressive math-driven motion can be, and highlighted the value of 
+            <strong>collaboration in a small team</strong>.  
+            More than a technical exercise, it reinforced how creativity and constraints can combine 
+            to produce <strong>believable and engaging simulations</strong>.
+        </p>
+        </section>
+
+
+        </div>
+      </div>
+
+      <!-- ================= FOOTER ================= -->
+<footer id="footer">
+  <div class="inner">
+    <section>
+      <h2>Get in Touch</h2>
+      <ul class="contact-list">
+        <li><i class="icon solid fa-envelope"></i>
+          <a href="mailto:garridoramirezjaime@gmail.com">garridoramirezjaime@gmail.com</a></li>
+        <li><i class="icon brands fa-github"></i>
+          <a href="https://github.com/JaimeGR23" target="_blank">github.com/JaimeGR23</a></li>
+        <li><i class="icon brands fa-linkedin"></i>
+          <a href="https://linkedin.com/in/JaimeGR23" target="_blank">linkedin.com/in/JaimeGR23</a></li>
+      </ul>
+      <a href="jaime_resume.pdf" target="_blank" class="button small">
+        <i class="icon solid fa-file"></i> View Resume
+      </a>
+    </section>
+
+    <!-- Easter egg image -->
+    <div class="footer-easter-egg">
+      <img src="images/salamander/easter_egg.png" alt="Salamander Easter Egg" />
+    </div>
+
+    <ul class="copyright">
+      <li>&copy; 2025 Jaime Garrido</li>
+    </ul>
+  </div>
+</footer>
+
+
+      <a href="#wrapper" class="back-to-top" title="Back to top">
+        <i class="icon solid fa-arrow-up"></i>
+      </a>
+
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- REVEAL ACTIVATION -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add("active");
+          });
+        }, { threshold: 0.1 });
+        reveals.forEach(r => observer.observe(r));
+      });
+
+      document.addEventListener("scroll", () => {
+        const btn = document.querySelector(".back-to-top");
+        if (!btn) return;
+        if (window.scrollY > 400) btn.classList.add("visible");
+        else btn.classList.remove("visible");
+      });
+    </script>
+
+    <!-- ================= VIDEO MODAL (FEATURE VIDEOS) ================= -->
+    <div id="videoModal" class="video-modal">
+      <div class="video-content">
+        <span class="close">&times;</span>
+        <video id="modalVideo" controls autoplay loop muted playsinline>
+          <source src="" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("videoModal");
+        const modalVideo = document.getElementById("modalVideo");
+        const modalSource = modalVideo.querySelector("source");
+        const closeBtn = modal.querySelector(".close");
+
+        document.querySelectorAll(".key-feature video").forEach(video => {
+          video.addEventListener("click", () => {
+            modal.classList.add("show");
+            modalSource.src = video.querySelector("source").src;
+            modalVideo.load();
+            modalVideo.play();
+          });
+        });
+
+        const closeModalVideo = () => {
+          modal.classList.remove("show");
+          modalVideo.pause();
+          modalSource.src = "";
+          modalVideo.load();
+        };
+
+        closeBtn.addEventListener("click", closeModalVideo);
+        modal.addEventListener("click", (e) => { if (e.target === modal) closeModalVideo(); });
+        window.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && modal.classList.contains("show")) closeModalVideo();
+        });
+      });
+    </script>
+  </body>
+</html>

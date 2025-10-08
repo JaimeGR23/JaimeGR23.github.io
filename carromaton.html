@@ -9,7 +9,8 @@
     <!-- SEO -->
     <meta name="description" content="Carromaton – A Unity drift racing prototype controlled exclusively with two joysticks, developed by Jaime Garrido and teammate. Features polished driving feel, Cinemachine transitions, dynamic environments, and creative control constraints." />
     <meta name="author" content="Jaime Garrido" />
-
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/icon.png" />
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/carromaton.css" />
@@ -45,11 +46,11 @@
             </p>
 
             <ul class="actions" style="margin-top:1em;">
-              <li><a href="#" target="_blank" class="button primary">Watch Gameplay</a></li>
+              <li><a href="https://youtu.be/GBNCnHWVNxw" target="_blank" class="button primary">Watch Gameplay</a></li>
             </ul>
 
             <div class="image main hero-wrapper">
-              <img src="images/encestoide/hero.png" alt="Carromaton — Hero Screenshot" loading="lazy" decoding="async" />
+              <img src="images/carromaton/hero.jpeg" alt="Carromaton — Hero Screenshot" loading="lazy" decoding="async" />
             </div>
           </section>
 
@@ -80,7 +81,7 @@
             <div class="key-feature">
               <div class="col-3">
                 <video autoplay loop muted playsinline>
-                  <source src="images/encestoide/3d_bar.mp4" type="video/mp4">
+                  <source src="images/carromaton/controls.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="col-9">
@@ -103,7 +104,7 @@
               </div>
               <div class="col-3">
                 <video autoplay loop muted playsinline>
-                  <source src="images/encestoide/movement.mp4" type="video/mp4">
+                  <source src="images/carromaton/drift.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
@@ -112,7 +113,7 @@
             <div class="key-feature">
               <div class="col-3">
                 <video autoplay loop muted playsinline>
-                  <source src="images/encestoide/cameras.mp4" type="video/mp4">
+                  <source src="images/carromaton/night.mp4" type="video/mp4">
                 </video>
               </div>
               <div class="col-9">
@@ -123,11 +124,6 @@
                 </p>
               </div>
             </div>
-
-            <div style="margin-top:1rem; font-size:.95em; opacity:.95;">
-              <strong>Tech keywords:</strong> Unity C#, Cinemachine, physics-based drift handling, skid FX, audio design,
-              environment lighting, joystick input constraints.
-            </div>
           </section>
 
           <hr />
@@ -137,33 +133,33 @@
             <h2 class="accented"><a href="#media-gallery">Media Gallery</a></h2>
             <div class="row gtr-uniform gallery">
               <div class="col-6">
-                <div class="gallery-item" onclick="openModal('images/encestoide/court.png')">
-                  <img src="images/encestoide/court.png" alt="Carromaton — Forest Circuit" loading="lazy" decoding="async" />
+                <div class="gallery-item" onclick="openModal('images/carromaton/forest_map.jpeg')">
+                  <img src="images/carromaton/forest_map.jpeg" alt="Carromaton — Forest Circuit" loading="lazy" decoding="async" />
                   <div class="overlay">Forest Circuit</div>
                 </div>
               </div>
               <div class="col-6">
-                <div class="gallery-item" onclick="openModal('images/encestoide/shooting_bar.png')">
-                  <img src="images/encestoide/shooting_bar.png" alt="Carromaton — Joystick Controls" loading="lazy" decoding="async" />
-                  <div class="overlay">Joystick Controls</div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="gallery-item" onclick="openModal('images/encestoide/shot.jpeg')">
-                  <img src="images/encestoide/shot.jpeg" alt="Carromaton — Drift Action" loading="lazy" decoding="async" />
-                  <div class="overlay">Drift Action</div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="gallery-item" onclick="openModal('images/encestoide/force_pull.jpeg')">
-                  <img src="images/encestoide/force_pull.jpeg" alt="Carromaton — Skid Marks" loading="lazy" decoding="async" />
+                <div class="gallery-item" onclick="openModal('images/carromaton/skid_marks.jpeg')">
+                  <img src="images/carromaton/skid_marks.jpeg" alt="Carromaton — Skid Marks" loading="lazy" decoding="async" />
                   <div class="overlay">Skid Marks</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="gallery-item" onclick="openModal('images/encestoide/pause.png')">
-                  <img src="images/encestoide/pause.png" alt="Carromaton — Night City" loading="lazy" decoding="async" />
+                <div class="gallery-item" onclick="openModal('images/carromaton/lobby1.jpeg')">
+                  <img src="images/carromaton/lobby1.jpeg" alt="Carromaton — Lobby" loading="lazy" decoding="async" />
+                  <div class="overlay">Lobby</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="gallery-item" onclick="openModal('images/carromaton/night_map.jpeg')">
+                  <img src="images/carromaton/night_map.jpeg" alt="Carromaton — Night City" loading="lazy" decoding="async" />
                   <div class="overlay">Night City</div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="gallery-item" onclick="openModal('images/carromaton/lobby2.jpeg')">
+                  <img src="images/carromaton/lobby2.jpeg" alt="Carromaton — Lobby" loading="lazy" decoding="async" />
+                  <div class="overlay">Lobby</div>
                 </div>
               </div>
             </div>
@@ -179,11 +175,11 @@
 
           <script>
             const images = [
-              "images/encestoide/court.png",
-              "images/encestoide/shooting_bar.png",
-              "images/encestoide/shot.jpeg",
-              "images/encestoide/force_pull.jpeg",
-              "images/encestoide/pause.png"
+              "images/carromaton/forest_map.jpeg",
+              "images/carromaton/skid_marks.jpeg",
+              "images/carromaton/lobby1.jpeg",
+              "images/carromaton/lobby2.jpeg",
+              "images/carromaton/night_map.jpeg"
             ];
             let currentIndex = 0;
             function openModal(src) {
@@ -222,8 +218,7 @@
           <section id="links" class="reveal">
             <h2 class="accented"><a href="#links">Links</a></h2>
             <ul class="actions">
-              <li><a href="#" target="_blank" class="button primary">Watch Gameplay</a></li>
-              <li><a href="#" target="_blank" class="button">Download Build</a></li>
+              <li><a href="https://youtu.be/GBNCnHWVNxw?si=StBNywF33O2stiRY" target="_blank" class="button primary">Watch Gameplay</a></li>
             </ul>
           </section>
 
@@ -285,5 +280,48 @@
         else btn.classList.remove("visible");
       });
     </script>
+
+        <!-- ================= VIDEO MODAL (FEATURE VIDEOS) ================= -->
+    <div id="videoModal" class="video-modal">
+      <div class="video-content">
+        <span class="close">&times;</span>
+        <video id="modalVideo" controls autoplay loop muted playsinline>
+          <source src="" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("videoModal");
+        const modalVideo = document.getElementById("modalVideo");
+        const modalSource = modalVideo.querySelector("source");
+        const closeBtn = modal.querySelector(".close");
+
+        // al hacer click en cualquier video de .key-feature
+        document.querySelectorAll(".key-feature video").forEach(video => {
+          video.addEventListener("click", () => {
+            modal.classList.add("show");
+            modalSource.src = video.querySelector("source").src;
+            modalVideo.load();
+            modalVideo.play();
+          });
+        });
+
+        const closeModalVideo = () => {
+          modal.classList.remove("show");
+          modalVideo.pause();
+          modalSource.src = "";
+          modalVideo.load();
+        };
+
+        closeBtn.addEventListener("click", closeModalVideo);
+        modal.addEventListener("click", (e) => { if (e.target === modal) closeModalVideo(); });
+        window.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && modal.classList.contains("show")) closeModalVideo();
+        });
+      });
+    </script>
+
   </body>
 </html>
