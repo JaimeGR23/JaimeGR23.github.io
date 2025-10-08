@@ -1,0 +1,255 @@
+<!-- fluid_sph.html -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Fluid Simulation (SPH) – Jaime Garrido</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- SEO -->
+    <meta name="description" content="Fluid Simulation using multi-threaded Smooth Particle Hydrodynamics (SPH) in C++ with Direct2D. Focus on concurrency, optimisation, and interactive features such as reacting to window movement and dynamic particle management." />
+    <meta name="author" content="Jaime Garrido" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/icon.png" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/fluid_sph.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+
+      <!-- ================= HEADER ================= -->
+      <header id="header">
+        <div class="inner">
+          <a href="index.html" class="button small" style="margin:0;">← Back to Portfolio</a>
+        </div>
+      </header>
+
+      <!-- ================= MAIN ================= -->
+      <div id="main">
+        <div class="inner">
+
+          <!-- ================= HERO / TITLE ================= -->
+          <section class="reveal hero-section">
+            <h1 class="accented">
+              <a href="fluid_sph.html" class="title-link">Fluid Simulation (SPH)</a>
+            </h1>
+            <p class="subtitle" style="margin:0;">
+              <strong>C++ · Multi-threaded Smooth Particle Hydrodynamics</strong>
+            </p>
+            <p class="subtitle" style="margin:0; color:var(--accent-color); font-weight:600;">
+              Direct2D Rendering · Thread Pool · Spatial Grid
+            </p>
+            <p class="subtitle" style="margin:0.25em 0 0; opacity:.85;">
+              <strong>Role:</strong> Solo Developer · <strong>Tech:</strong> C++/Direct2D · <strong>Focus:</strong> Physics, Concurrency, Optimisation · <strong>Year:</strong> 2023
+            </p>
+
+            <ul class="actions" style="margin-top:1em;">
+              <li><a href="https://youtu.be/v9FtPDAnQ70" target="_blank" class="button primary">Watch Simulation</a></li>
+              <li><a href="https://github.com/JaimeGR23/Fluid-Simulation-SPH/releases/download/v1.0/Engine2D.exe" target="_blank" class="button">Download Executable (.exe)</a></li>
+            </ul>
+
+            <div class="image main hero-wrapper">
+              <img src="images/fluid_sph/hero.png" alt="SPH Simulation — Hero Screenshot" loading="lazy" decoding="async" />
+            </div>
+          </section>
+
+          <hr />
+
+          <!-- ================= OVERVIEW ================= -->
+          <section id="overview" class="reveal">
+            <h2 class="accented"><a href="#overview">Overview</a></h2>
+            <p>
+              This project implements a <strong>2D fluid simulation</strong> using <strong>Smooth Particle Hydrodynamics (SPH)</strong> in <strong>C++ with Direct2D</strong>. 
+              It features a dedicated <strong>multi-threaded simulation loop</strong>, a reusable <strong>thread pool</strong>, and a <strong>pre-allocated spatial grid</strong> for neighbour queries. 
+              The simulation runs in real time (~2 ms per frame with 1000+ particles) and includes <strong>interactive behaviour</strong>: particles react to <strong>window movement</strong> as if in a glass container, and can be <strong>added or removed dynamically</strong> via input.
+            </p>
+          </section>
+
+          <hr />
+
+          <!-- ================= KEY FEATURES ================= -->
+          <section class="reveal" id="features">
+            <h2 class="accented"><a href="#features">Key Features</a></h2>
+            <p>
+              Developed entirely in <strong>modern C++</strong>, focused on solving <strong>multi-threading race conditions</strong>, optimising <strong>memory usage</strong>, and enabling <strong>interactive fluid behaviour</strong>.
+            </p>
+
+            <!-- Feature 1 -->
+            <div class="key-feature">
+              <div class="col-3">
+                <video autoplay loop muted playsinline>
+                  <source src="images/fluid_sph/window_reaction.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-9">
+                <h3>Interactive Window Reaction</h3>
+                <p>
+                  The fluid <strong>responds to window movement</strong>, simulating the effect of shaking a <strong>glass box filled with liquid</strong>. 
+                  Achieved by decoupling from the OS message loop and running simulation/render in a <strong>dedicated thread</strong>.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="key-feature">
+              <div class="col-9">
+                <h3>Thread Pool with Safe Synchronisation</h3>
+                <p>
+                  A persistent <strong>thread pool</strong> reduces overhead, while an 
+                  <strong>even/odd column update pass</strong> guarantees no two neighbouring 
+                  cells are processed simultaneously. This avoids <strong>race conditions</strong> 
+                  and keeps the simulation stable in real time.
+                </p>
+<pre><code>// Parallel processing of grid columns
+for (int x = 0; x < N_CELLS; x += 2) 
+{
+    _ThreadPool.launch([=]() { compute_column(x); });
+}
+_ThreadPool.wait();
+
+for (int x = 1; x < N_CELLS; x += 2) 
+{
+    _ThreadPool.launch([=]() { compute_column(x); });
+}
+_ThreadPool.wait();
+</code></pre>
+
+              </div>
+              <div class="col-3">
+                <video autoplay loop muted playsinline>
+                  <source src="images/fluid_sph/dynamic_particles.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </section>
+
+          <hr />
+
+          <!-- ================= TECHNOLOGIES ================= -->
+          <section id="tech" class="reveal">
+            <h2 class="accented"><a href="#tech">Technologies Used</a></h2>
+            <ul>
+              <li><strong>Language:</strong> C++ (modern features, concurrency)</li>
+              <li><strong>Graphics API:</strong> Direct2D</li>
+              <li><strong>Algorithm:</strong> Smooth Particle Hydrodynamics (SPH)</li>
+              <li><strong>Parallelism:</strong> Multi-threading with Thread Pool</li>
+              <li><strong>Data Structures:</strong> Pre-allocated Spatial Grid, ID-based indexing</li>
+            </ul>
+          </section>
+
+          <hr />
+
+          <!-- ================= LINKS ================= -->
+          <section id="links" class="reveal">
+            <h2 class="accented"><a href="#links">Links</a></h2>
+            <ul class="actions">
+              <li><a href="https://youtu.be/v9FtPDAnQ70" target="_blank" class="button primary">Watch Simulation</a></li>
+              <li><a href="https://github.com/JaimeGR23/Fluid-Simulation-SPH/releases/download/v1.0/Engine2D.exe" target="_blank" class="button">Download Executable (.exe)</a></li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- ================= FOOTER ================= -->
+      <footer id="footer">
+        <div class="inner">
+          <section>
+            <h2>Get in Touch</h2>
+            <ul class="contact-list">
+              <li><i class="icon solid fa-envelope"></i>
+                <a href="mailto:garridoramirezjaime@gmail.com">garridoramirezjaime@gmail.com</a></li>
+              <li><i class="icon brands fa-github"></i>
+                <a href="https://github.com/JaimeGR23" target="_blank">github.com/JaimeGR23</a></li>
+              <li><i class="icon brands fa-linkedin"></i>
+                <a href="https://linkedin.com/in/JaimeGR23" target="_blank">linkedin.com/in/JaimeGR23</a></li>
+            </ul>
+            <a href="jaime_resume.pdf" target="_blank" class="button small">
+              <i class="icon solid fa-file"></i> View Resume
+            </a>
+          </section>
+          <ul class="copyright">
+            <li>&copy; 2025 Jaime Garrido</li>
+          </ul>
+        </div>
+      </footer>
+
+      <a href="#wrapper" class="back-to-top" title="Back to top">
+        <i class="icon solid fa-arrow-up"></i>
+      </a>
+
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add("active");
+          });
+        }, { threshold: 0.1 });
+        reveals.forEach(r => observer.observe(r));
+      });
+
+      document.addEventListener("scroll", () => {
+        const btn = document.querySelector(".back-to-top");
+        if (!btn) return;
+        if (window.scrollY > 400) btn.classList.add("visible");
+        else btn.classList.remove("visible");
+      });
+    </script>
+
+    <!-- ================= VIDEO MODAL ================= -->
+    <div id="videoModal" class="video-modal">
+      <div class="video-content">
+        <span class="close">&times;</span>
+        <video id="modalVideo" controls autoplay loop muted playsinline>
+          <source src="" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("videoModal");
+        const modalVideo = document.getElementById("modalVideo");
+        const modalSource = modalVideo.querySelector("source");
+        const closeBtn = modal.querySelector(".close");
+
+        document.querySelectorAll(".key-feature video").forEach(video => {
+          video.addEventListener("click", () => {
+            modal.classList.add("show");
+            modalSource.src = video.querySelector("source").src;
+            modalVideo.load();
+            modalVideo.play();
+          });
+        });
+
+        const closeModalVideo = () => {
+          modal.classList.remove("show");
+          modalVideo.pause();
+          modalSource.src = "";
+          modalVideo.load();
+        };
+
+        closeBtn.addEventListener("click", closeModalVideo);
+        modal.addEventListener("click", (e) => { if (e.target === modal) closeModalVideo(); });
+        window.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && modal.classList.contains("show")) closeModalVideo();
+        });
+      });
+    </script>
+
+  </body>
+</html>

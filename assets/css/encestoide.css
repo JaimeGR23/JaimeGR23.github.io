@@ -6,8 +6,8 @@
   --accent-color2: #6a4279;
 
   /* RGB precomputados para usar en rgba() */
-  --accent-rgb: 132, 82, 151;   /* #845297 */
-  --accent2-rgb: 106, 66, 121;  /* #6a4279 */
+  --accent-rgb: 132, 82, 151;
+  --accent2-rgb: 106, 66, 121;
 }
 
 /* ================= KEY FEATURES (estilo Katto) ================= */
