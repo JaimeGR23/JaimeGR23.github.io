@@ -1,0 +1,310 @@
+<!-- galaxian.html -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Galaxian Remake – Jaime Garrido</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- SEO -->
+    <meta name="description" content="Galaxian Remake: A faithful recreation of the classic arcade game, programmed in C during my first year of coding. Features original sprites, intro cinematics, convoy attacks, scoring system, lives system, and extra pause functionality." />
+    <meta name="author" content="Jaime Garrido" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/icon.png" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/galaxian.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+
+      <!-- ================= HEADER ================= -->
+      <header id="header">
+        <div class="inner">
+          <a href="index.html" class="button small" style="margin:0;">← Back to Portfolio</a>
+        </div>
+      </header>
+
+      <!-- ================= MAIN ================= -->
+      <div id="main">
+        <div class="inner">
+
+          <!-- ================= HERO / TITLE ================= -->
+          <section class="reveal hero-section">
+            <h1 class="accented">
+              <a href="galaxian.html" class="title-link">Galaxian Remake</a>
+            </h1>
+            <p class="subtitle" style="margin:0;">
+              <strong>C · 2D Sprite Library · Arcade Replica</strong>
+            </p>
+            <p class="subtitle" style="margin:0; color:var(--accent-color); font-weight:600;">
+              Classic Gameplay · Intro Cinematics · Scoring System
+            </p>
+            <p class="subtitle" style="margin:0.25em 0 0; opacity:.85;">
+              <strong>Role:</strong> Solo Developer · <strong>Tech:</strong> C · <strong>Focus:</strong> 2D Graphics, Game Logic · <strong>Year:</strong> 2021
+            </p>
+
+            <ul class="actions" style="margin-top:1em;">
+              <li><a href="https://youtu.be/GAqK-Tr6gFA" target="_blank" class="button primary">Watch on YouTube</a></li>
+              <li><a href="https://github.com/JaimeGR23/galaxian-remake/releases/download/v1.0/galaxian-remake.zip" target="_blank" class="button">Download Executable (.zip)</a></li>
+            </ul>
+
+            <!-- Embedded Gameplay Video -->
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/GAqK-Tr6gFA" 
+                title="Galaxian Remake Gameplay" frameborder="0" allowfullscreen>
+              </iframe>
+            </div>
+          </section>
+
+          <hr />
+
+          <!-- ================= OVERVIEW ================= -->
+          <section id="overview" class="reveal">
+            <h2 class="accented"><a href="#overview">Overview</a></h2>
+            <p>
+              <strong>Galaxian Remake</strong> is a faithful recreation of the classic arcade shooter. 
+              Programmed in <strong>C</strong> during my first year of coding, it uses a simple <strong>2D sprite library</strong> and a global <strong>spritesheet</strong> for all characters and animations. 
+              Despite being an early project, the game was polished to deliver a near-exact replica of the original.  
+              I also added a small extra feature not present in the original: the ability to <strong>pause the game</strong> with the P key.
+            </p>
+          </section>
+
+          <hr />
+
+          <!-- ================= KEY FEATURES ================= -->
+          <section class="reveal" id="features">
+            <h2 class="accented"><a href="#features">Key Features</a></h2>
+
+            <!-- Feature 1 -->
+            <div class="key-feature">
+              <div class="col-3">
+                <video autoplay loop muted playsinline>
+                  <source src="images/galaxian/intro.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-9">
+                <h3>Intro Cinematics & Enemy Showcase</h3>
+                <p>
+                  The game opens with <strong>cinematic sequences</strong> that introduce enemies and explain their unique attack behaviours, 
+                  staying true to the <strong>arcade original</strong>.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="key-feature">
+              <div class="col-9">
+                <h3>Convoy Attacks & Score System</h3>
+                <p>
+                  Implemented <strong>enemy convoy attack patterns</strong> along with a <strong>scoring system</strong> based on accuracy and 
+                  type of enemy destroyed, recreating the progression and challenge of the original game.
+                </p>
+              </div>
+              <div class="col-3">
+                <video autoplay loop muted playsinline>
+                  <source src="images/galaxian/convoy.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="key-feature">
+              <div class="col-3">
+                <div class="gallery-item" data-src="images/galaxian/menu.png">
+                  <img src="images/galaxian/menu.png" alt="Galaxian Remake — Menu Screen" loading="lazy" decoding="async" />
+                  <div class="overlay">Menu Screen</div>
+                </div>
+              </div>
+              <div class="col-9">
+                <h3>Menu & Pause Functionality</h3>
+                <p>
+                  Includes a <strong>menu screen</strong> for starting the game.  
+                  I also added an extra feature not present in the original: the ability to <strong>pause the game</strong> with the P key.
+                </p>
+              </div>
+            </div>
+
+          </section>
+
+          <hr />
+
+          <!-- ================= TECHNOLOGIES ================= -->
+          <section id="tech" class="reveal">
+            <h2 class="accented"><a href="#tech">Technologies Used</a></h2>
+            <ul>
+              <li><strong>Language:</strong> C</li>
+              <li><strong>Graphics:</strong> Simple 2D Sprite Library (University-provided)</li>
+              <li><strong>Assets:</strong> Global Spritesheet (original Galaxian sprites)</li>
+              <li><strong>Gameplay:</strong> Convoy AI, Score System, Cinematics, Extra Pause Functionality</li>
+            </ul>
+          </section>
+
+          <hr />
+
+          <!-- ================= LINKS ================= -->
+          <section id="links" class="reveal">
+            <h2 class="accented"><a href="#links">Links</a></h2>
+            <ul class="actions">
+              <li><a href="https://youtu.be/GAqK-Tr6gFA" target="_blank" class="button primary">Watch on YouTube</a></li>
+              <li><a href="https://github.com/JaimeGR23/galaxian-remake/releases/download/v1.0/galaxian-remake.zip" target="_blank" class="button">Download Executable (.zip)</a></li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- ================= FOOTER ================= -->
+      <footer id="footer">
+        <div class="inner">
+          <section>
+            <h2>Get in Touch</h2>
+            <ul class="contact-list">
+              <li><i class="icon solid fa-envelope"></i>
+                <a href="mailto:garridoramirezjaime@gmail.com">garridoramirezjaime@gmail.com</a></li>
+              <li><i class="icon brands fa-github"></i>
+                <a href="https://github.com/JaimeGR23" target="_blank">github.com/JaimeGR23</a></li>
+              <li><i class="icon brands fa-linkedin"></i>
+                <a href="https://linkedin.com/in/JaimeGR23" target="_blank">linkedin.com/in/JaimeGR23</a></li>
+            </ul>
+            <a href="jaime_resume.pdf" target="_blank" class="button small">
+              <i class="icon solid fa-file"></i> View Resume
+            </a>
+          </section>
+          <ul class="copyright">
+            <li>&copy; 2025 Jaime Garrido</li>
+          </ul>
+        </div>
+      </footer>
+
+      <a href="#wrapper" class="back-to-top" title="Back to top">
+        <i class="icon solid fa-arrow-up"></i>
+      </a>
+
+    </div>
+
+    <!-- ================= SCRIPTS ================= -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- REVEAL SCRIPT -->
+    <script>
+    (function () {
+      const activate = el => el.classList.add('active');
+      function init() {
+        const els = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window)) {
+          els.forEach(activate);
+          return;
+        }
+        const io = new IntersectionObserver((entries) => {
+          for (const e of entries) if (e.isIntersecting) activate(e.target);
+        }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+        els.forEach(el => io.observe(el));
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+    </script>
+
+    <!-- IMAGE MODAL -->
+    <div id="imageModal" class="modal" onclick="closeImageModal(event)">
+      <span class="close">&times;</span>
+      <span class="prev" onclick="prevImage(event)">&#10094;</span>
+      <img class="modal-content" id="modalImage" alt="">
+      <span class="next" onclick="nextImage(event)">&#10095;</span>
+    </div>
+
+    <!-- VIDEO MODAL -->
+    <div id="videoModal" class="video-modal">
+      <div class="video-content">
+        <span class="close" onclick="closeVideoModal()">&times;</span>
+        <video id="modalVideo" controls autoplay loop muted playsinline>
+          <source id="modalVideoSrc" src="" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <script>
+      // ----- IMAGE MODAL -----
+      const imageList = [ "images/galaxian/menu.png" ];
+      let imgIndex = 0;
+
+      function openImageModal(src) {
+        imgIndex = Math.max(0, imageList.indexOf(src));
+        const m = document.getElementById("imageModal");
+        const img = document.getElementById("modalImage");
+        img.src = src;
+        m.classList.add("show");
+      }
+      function closeImageModal(e) {
+        if (e.target && e.target.id === "modalImage") return;
+        document.getElementById("imageModal").classList.remove("show");
+      }
+      function nextImage(e) {
+        e.stopPropagation();
+        imgIndex = (imgIndex + 1) % imageList.length;
+        document.getElementById("modalImage").src = imageList[imgIndex];
+      }
+      function prevImage(e) {
+        e.stopPropagation();
+        imgIndex = (imgIndex - 1 + imageList.length) % imageList.length;
+        document.getElementById("modalImage").src = imageList[imgIndex];
+      }
+
+      // Hook para elementos clicables
+      document.addEventListener("click", (e) => {
+        const gi = e.target.closest(".gallery-item");
+        if (gi && gi.dataset && gi.dataset.src) {
+          openImageModal(gi.dataset.src);
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        const m = document.getElementById("imageModal");
+        if (!m.classList.contains("show")) return;
+        if (e.key === "ArrowRight") nextImage(e);
+        if (e.key === "ArrowLeft") prevImage(e);
+        if (e.key === "Escape") closeImageModal(e);
+      });
+
+      // ----- VIDEO MODAL -----
+      const videoModal = document.getElementById("videoModal");
+      const modalVideo = document.getElementById("modalVideo");
+      const modalVideoSrc = document.getElementById("modalVideoSrc");
+
+      function openVideoModal(src) {
+        modalVideo.pause();
+        modalVideoSrc.src = src;
+        modalVideo.load();
+        videoModal.classList.add("show");
+        modalVideo.play().catch(()=>{});
+      }
+      function closeVideoModal() {
+        videoModal.classList.remove("show");
+        modalVideo.pause();
+        modalVideoSrc.src = "";
+        modalVideo.load();
+      }
+      document.querySelectorAll(".key-feature video").forEach(v => {
+        v.addEventListener("click", () => {
+          const s = v.querySelector("source");
+          if (s && s.src) openVideoModal(s.src);
+        });
+      });
+      videoModal.addEventListener("click", (e) => { if (e.target === videoModal) closeVideoModal(); });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && videoModal.classList.contains("show")) closeVideoModal();
+      });
+    </script>
+  </body>
+</html>
