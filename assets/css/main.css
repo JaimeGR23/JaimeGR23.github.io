@@ -2703,32 +2703,44 @@ input, select, textarea {
 					opacity: 0;
 				}
 
-					.tiles article > a .content > :last-child {
-						margin-bottom: 0;
-					}
+			.tiles article > a .content > :last-child {
+				margin-bottom: 0;
+			}
 
 			.tiles article.style1 > .image:before {
-				background-color: #f2849e83;
+				background-color: #01bfbc9a;
 			}
 
 			.tiles article.style2 > .image:before {
-				background-color: #7ecaf681;
+				background-color: #07077db4;
 			}
 
 			.tiles article.style3 > .image:before {
-				background-color: #01bfbc8e;
+				background-color: #a8000065;
 			}
 
 			.tiles article.style4 > .image:before {
-				background-color: #c75b9c85;
+				background-color: #1ca0a577;
 			}
 
 			.tiles article.style5 > .image:before {
-				background-color: #ae85ca8f;
+				background-color: #804d947c;
 			}
 
 			.tiles article.style6 > .image:before {
-				background-color: #8499e783;
+				background-color: #52973d9c;
+			}
+
+			.tiles article.style7 > .image:before {
+				background-color: #2a82b5b2;
+			}
+
+			.tiles article.style8 > .image:before {
+				background-color: #4ade80af;
+			}
+
+			.tiles article.style9 > .image:before {
+				background-color: rgba(37, 149, 190, 0.548)
 			}
 
 			body:not(.is-touch) .tiles article:hover > .image {

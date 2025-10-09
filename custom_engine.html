@@ -1,23 +1,32 @@
 <!-- custom_engine.html -->
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>GUSSI Engine – Jaime Garrido</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<head>
+  <title>GUSSI Engine – Jaime Garrido</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-    <!-- SEO -->
-    <meta name="description" content="GUSSI is a custom C++ OpenGL engine with a polished editor, ECS, deferred rendering with SSAO, multithreaded job system, and advanced graphics features. Developed by Jaime Garrido." />
-    <meta name="author" content="Jaime Garrido" />
+  <!-- SEO -->
+  <meta name="description" content="C++20 OpenGL engine with ECS, async asset loading, custom editor, logger and advanced techniques like Interior Mapping." />
+  <meta name="author" content="Jaime Garrido" />
+  <link rel="canonical" href="custom_engine.html" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/icon.png" />
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/custom_engine.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-  </head>
+  <!-- Open Graph -->
+  <meta property="og:title" content="GUSSI Engine – Jaime Garrido" />
+  <meta property="og:description" content="C++20 OpenGL engine with ECS, async systems and advanced rendering techniques, developed with editor integration." />
+  <meta property="og:image" content="images/gussi_preview.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="custom_engine.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/icon.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/custom_engine.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
   <body class="is-preload">
     <div id="wrapper">
 
@@ -145,56 +154,71 @@
           </section>
           <hr />
 
-          <!-- ================= SHADER COMPARISONS ================= -->
-          <section id="shader-comparisons" class="reveal">
-            <h2 class="accented"><a href="#shader-comparisons">Shader Comparisons</a></h2>
+<!-- ================= SHADER COMPARISONS ================= -->
+<section id="shader-comparisons" class="reveal">
+  <h2 class="accented"><a href="#shader-comparisons">Shader Comparisons</a></h2>
 
-            <!-- DOF + Outlines + SSAO -->
-            <div class="comparison-container" style="--pos:50%;">
-              <img class="comparison-base" src="images/custom_engine/after_shaders.png" alt="With DOF + Outlines + SSAO" />
-              <div class="comparison-overlay">
-                <img src="images/custom_engine/before_shaders.png" alt="Base Render (no effects)" />
-              </div>
-              <div class="comparison-slider"><div class="comparison-handle"></div></div>
-            </div>
-            <p class="caption">Base Render vs DOF + Outlines + SSAO</p>
+  <!-- DOF + Outlines + SSAO -->
+  <div class="comparison-container" style="--pos:50%;">
+    <!-- With DOF + Outlines + SSAO (base) -->
+    <div style="position:relative;">
+      <img class="comparison-base" src="images/custom_engine/after_shaders.png" alt="With DOF + Outlines + SSAO" />
+    </div>
+    <!-- Base Render (overlay) -->
+    <div class="comparison-overlay">
+      <div style="position:relative;">
+        <img src="images/custom_engine/before_shaders.png" alt="Base Render (no effects)" />
+      </div>
+    </div>
+    <div class="comparison-slider"><div class="comparison-handle"></div></div>
+  </div>
+  <p class="caption">Base Render vs DOF + Outlines + SSAO</p>
 
-            <!-- ASCII Shader -->
-            <div class="comparison-container" style="--pos:50%;">
-              <img class="comparison-base" src="images/custom_engine/after_ascii.png" alt="ASCII Shader Applied" />
-              <div class="comparison-overlay">
-                <img src="images/custom_engine/before_ascii.png" alt="Original Render" />
-              </div>
-              <div class="comparison-slider"><div class="comparison-handle"></div></div>
-            </div>
-            <p class="caption">Original Render vs ASCII Shader</p>
+  <!-- ASCII Shader -->
+  <div class="comparison-container" style="--pos:50%;">
+    <!-- With ASCII Shader (base) -->
+    <div style="position:relative;">
+      <img class="comparison-base" src="images/custom_engine/after_ascii.png" alt="ASCII Shader Applied" />
+    </div>
+    <!-- Original Render (overlay) -->
+    <div class="comparison-overlay">
+      <div style="position:relative;">
+        <img src="images/custom_engine/before_ascii.png" alt="Original Render" />
+      </div>
+    </div>
+    <div class="comparison-slider"><div class="comparison-handle"></div></div>
+  </div>
+  <p class="caption">Original Render vs ASCII Shader</p>
 
-            <div style="text-align:center; margin-top:1em;">
-              <a href="https://www.youtube.com/watch?v=XA4HRj-CJVA" target="_blank" class="button small">
-                Watch ASCII Shader Showcase
-              </a>
-            </div>
+  <div style="text-align:center; margin-top:1em;">
+    <a href="https://www.youtube.com/watch?v=XA4HRj-CJVA" target="_blank" class="button small">
+      Watch ASCII Shader Showcase
+    </a>
+  </div>
 
-            <!-- Interior Mapping -->
-            <div class="comparison-container" style="--pos:50%; margin-top:2em;">
-              <div style="position:relative;">
-                <img class="comparison-base" src="images/custom_engine/interior_after.png" alt="With Interior Mapping" />
-                <span class="fps-label fps-right">4400 FPS · 6 vertices</span>
-              </div>
-              <div class="comparison-overlay">
-                <div style="position:relative;">
-                  <img src="images/custom_engine/interior_before.png" alt="Without Interior Mapping" />
-                  <span class="fps-label fps-left">335 FPS · 350,622 vertices</span>
-                </div>
-              </div>
-              <div class="comparison-slider"><div class="comparison-handle"></div></div>
-            </div>
-            <p class="caption">Full Geometry vs Interior Mapping</p>
+  <!-- Interior Mapping -->
+  <div class="comparison-container" style="--pos:50%; margin-top:2em;">
+    <!-- With Interior Mapping (base) -->
+    <div style="position:relative;">
+      <img class="comparison-base" src="images/custom_engine/interior_after.png" alt="With Interior Mapping" />
+      <span class="fps-label fps-right">4400 FPS · 6 vertices</span>
+    </div>
+    <!-- Without Interior Mapping (overlay) -->
+    <div class="comparison-overlay">
+      <div style="position:relative;">
+        <img src="images/custom_engine/interior_before.png" alt="Without Interior Mapping" />
+        <span class="fps-label fps-left">335 FPS · 350,622 vertices</span>
+      </div>
+    </div>
+    <div class="comparison-slider"><div class="comparison-handle"></div></div>
+  </div>
+  <p class="caption">Full Geometry vs Interior Mapping</p>
 
-            <div style="text-align:center; margin-top:1em;">
-              <a href="interior_mapping.html" class="button small">Find out more</a>
-            </div>
-          </section>
+  <div style="text-align:center; margin-top:1em;">
+    <a href="interior_mapping.html" class="button small">Find out more</a>
+  </div>
+</section>
+
 
           <!-- ================= MODAL ================= -->
           <div id="imageModal" class="modal" onclick="closeModal(event)">
@@ -326,6 +350,42 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <script>
+// Bind del slider robusto: arrastra en cualquier parte del contenedor.
+// Requiere .comparison-overlay con pointer-events:none en el CSS.
+function bindComparison(container) {
+  const slider = container.querySelector('.comparison-slider');
+
+  const move = (clientX) => {
+    const rect = container.getBoundingClientRect();
+    let x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
+    const percent = (x / rect.width) * 100;
+    container.style.setProperty('--pos', percent + '%');
+    if (slider) slider.style.left = percent + '%';
+  };
+
+  let dragging = false;
+
+  const onDown = (ev) => { dragging = true; move(ev.clientX ?? ev.touches?.[0]?.clientX); ev.preventDefault?.(); };
+  const onMove = (ev) => { if (!dragging) return; move(ev.clientX ?? ev.touches?.[0]?.clientX); };
+  const onUp   = () => { dragging = false; };
+
+  // Click/drag en todo el contenedor
+  container.addEventListener('mousedown', onDown);
+  window.addEventListener('mousemove', onMove);
+  window.addEventListener('mouseup', onUp);
+
+  // Touch
+  container.addEventListener('touchstart', onDown, {passive:false});
+  window.addEventListener('touchmove', onMove, {passive:false});
+  window.addEventListener('touchend', onUp);
+}
+
+// Inicializa cuando el DOM está listo
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.comparison-container').forEach(bindComparison);
+});
+</script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const reveals = document.querySelectorAll(".reveal");

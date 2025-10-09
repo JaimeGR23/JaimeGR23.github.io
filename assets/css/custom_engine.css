@@ -360,3 +360,7 @@
   height: 600px;   /* la altura que acordamos */
   width: auto;
 }
+
+.comparison-overlay {
+  pointer-events: none;
+}
