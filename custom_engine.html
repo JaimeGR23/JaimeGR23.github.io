@@ -14,7 +14,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="GUSSI Engine – Jaime Garrido" />
   <meta property="og:description" content="C++20 OpenGL engine with ECS, async systems and advanced rendering techniques, developed with editor integration." />
-  <meta property="og:image" content="images/gussi_preview.png" />
+  <meta property="og:image" content="images/hero.webp" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="custom_engine.html" />
 
@@ -58,7 +58,7 @@
             </ul>
 
             <div class="image main hero-wrapper">
-              <img src="images/custom_engine/hero.png" alt="Project hero image" />
+              <img src="images/custom_engine/hero.webp" alt="Project hero image" />
             </div>
           </section>
 
@@ -126,27 +126,27 @@
 
             <div class="media-split">
               <!-- Izquierda: imagen vertical del editor -->
-              <div class="media-left" onclick="openModal('images/custom_engine/editor_inspector.png')">
-                <img src="images/custom_engine/editor_inspector.png" alt="Editor: Component Inspector" />
+              <div class="media-left" onclick="openModal('images/custom_engine/editor_inspector.webp')">
+                <img src="images/custom_engine/editor_inspector.webp" alt="Editor: Component Inspector" />
                 <div class="overlay">Editor: Component Inspector</div>
               </div>
 
               <!-- Derecha: 4 imágenes en grid 2x2 -->
               <div class="media-right">
-                <div class="cell" onclick="openModal('images/custom_engine/deferred.png')">
-                  <img src="images/custom_engine/deferred.png" alt="Deferred Rendering Pipeline" />
+                <div class="cell" onclick="openModal('images/custom_engine/deferred.webp')">
+                  <img src="images/custom_engine/deferred.webp" alt="Deferred Rendering Pipeline" />
                   <div class="overlay">Deferred Rendering Pipeline</div>
                 </div>
-                <div class="cell" onclick="openModal('images/custom_engine/final.png')">
-                  <img src="images/custom_engine/final.png" alt="Lighting Test" />
+                <div class="cell" onclick="openModal('images/custom_engine/final.webp')">
+                  <img src="images/custom_engine/final.webp" alt="Lighting Test" />
                   <div class="overlay">Lighting Test</div>
                 </div>
-                <div class="cell" onclick="openModal('images/custom_engine/stress.png')">
-                  <img src="images/custom_engine/stress.png" alt="Stress Test with 8000 Teapots" />
+                <div class="cell" onclick="openModal('images/custom_engine/stress.webp')">
+                  <img src="images/custom_engine/stress.webp" alt="Stress Test with 8000 Teapots" />
                   <div class="overlay">Stress Test: 8000 Teapots</div>
                 </div>
-                <div class="cell" onclick="openModal('images/custom_engine/stylised.png')">
-                  <img src="images/custom_engine/stylised.png" alt="Stylised Render (DOF + Outlines)" />
+                <div class="cell" onclick="openModal('images/custom_engine/stylised.webp')">
+                  <img src="images/custom_engine/stylised.webp" alt="Stylised Render (DOF + Outlines)" />
                   <div class="overlay">Stylised Render (DOF + Outlines)</div>
                 </div>
               </div>
@@ -162,12 +162,12 @@
   <div class="comparison-container" style="--pos:50%;">
     <!-- With DOF + Outlines + SSAO (base) -->
     <div style="position:relative;">
-      <img class="comparison-base" src="images/custom_engine/after_shaders.png" alt="With DOF + Outlines + SSAO" />
+      <img class="comparison-base" src="images/custom_engine/after_shaders.webp" alt="With DOF + Outlines + SSAO" />
     </div>
     <!-- Base Render (overlay) -->
     <div class="comparison-overlay">
       <div style="position:relative;">
-        <img src="images/custom_engine/before_shaders.png" alt="Base Render (no effects)" />
+        <img src="images/custom_engine/before_shaders.webp" alt="Base Render (no effects)" />
       </div>
     </div>
     <div class="comparison-slider"><div class="comparison-handle"></div></div>
@@ -178,12 +178,12 @@
   <div class="comparison-container" style="--pos:50%;">
     <!-- With ASCII Shader (base) -->
     <div style="position:relative;">
-      <img class="comparison-base" src="images/custom_engine/after_ascii.png" alt="ASCII Shader Applied" />
+      <img class="comparison-base" src="images/custom_engine/after_ascii.webp" alt="ASCII Shader Applied" />
     </div>
     <!-- Original Render (overlay) -->
     <div class="comparison-overlay">
       <div style="position:relative;">
-        <img src="images/custom_engine/before_ascii.png" alt="Original Render" />
+        <img src="images/custom_engine/before_ascii.webp" alt="Original Render" />
       </div>
     </div>
     <div class="comparison-slider"><div class="comparison-handle"></div></div>
@@ -200,13 +200,13 @@
   <div class="comparison-container" style="--pos:50%; margin-top:2em;">
     <!-- With Interior Mapping (base) -->
     <div style="position:relative;">
-      <img class="comparison-base" src="images/custom_engine/interior_after.png" alt="With Interior Mapping" />
+      <img class="comparison-base" src="images/custom_engine/interior_after.webp" alt="With Interior Mapping" />
       <span class="fps-label fps-right">4400 FPS · 6 vertices</span>
     </div>
     <!-- Without Interior Mapping (overlay) -->
     <div class="comparison-overlay">
       <div style="position:relative;">
-        <img src="images/custom_engine/interior_before.png" alt="Without Interior Mapping" />
+        <img src="images/custom_engine/interior_before.webp" alt="Without Interior Mapping" />
         <span class="fps-label fps-left">335 FPS · 350,622 vertices</span>
       </div>
     </div>
@@ -230,11 +230,11 @@
 
           <script>
             const images = [
-              "images/custom_engine/editor_inspector.png",
-              "images/custom_engine/deferred.png",
-              "images/custom_engine/final.png",
-              "images/custom_engine/stress.png",
-              "images/custom_engine/stylised.png"
+              "images/custom_engine/editor_inspector.webp",
+              "images/custom_engine/deferred.webp",
+              "images/custom_engine/final.webp",
+              "images/custom_engine/stress.webp",
+              "images/custom_engine/stylised.webp"
             ];
             let currentIndex = 0;
 
