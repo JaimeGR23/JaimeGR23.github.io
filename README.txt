@@ -62,7 +62,7 @@ All source code and written content © 2025 **Jaime Garrido**.
 You’re welcome to explore and take inspiration from the structure,  
 but please credit or link back to this repository if you reuse parts of it.
 
-**Template Attribution:**  
+**Template Attribution:**
 Base layout originally adapted from the **Phantom** template by [HTML5 UP](https://html5up.net/phantom),  
 under the *Creative Commons Attribution 3.0* license.
 
