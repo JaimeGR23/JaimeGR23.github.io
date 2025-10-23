@@ -1,6 +1,6 @@
 <!-- interior_mapping.html -->
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
   <title>Distance Based Interior Mapping (DBIP) – Jaime Garrido</title>
   <meta charset="utf-8" />
@@ -9,17 +9,20 @@
   <!-- SEO -->
   <meta name="description" content="C++ OpenGL project implementing Distance Based Interior Mapping with LOD, optimising performance while maintaining visual fidelity." />
   <meta name="author" content="Jaime Garrido" />
-  <link rel="canonical" href="interior_mapping.html" />
+  <link rel="canonical" href="https://jaimegr23.github.io/interior_mapping.html" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Distance Based Interior Mapping (DBIP) – Jaime Garrido" />
   <meta property="og:description" content="Custom OpenGL engine project showcasing Interior Mapping with LOD to increase FPS while preserving detail." />
-  <meta property="og:image" content="images/interior_mapping_preview.png" />
+  <meta property="og:image" content="images/interior_mapping/hero.webp" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="interior_mapping.html" />
+  <meta property="og:url" content="https://jaimegr23.github.io/interior_mapping.html" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/icon.png" />
+
+  <!-- Preload -->
+  <link rel="preload" as="image" href="images/interior_mapping/hero.webp">
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
@@ -55,12 +58,17 @@
 
   <!-- Call to action buttons -->
   <ul class="actions" style="margin-top:1em;">
-    <li><a href="https://github.com/JaimeGR23/GUSSI" target="_blank" class="button primary">View on GitHub</a></li>
+    <li><a href="https://gist.github.com/JaimeGR23/78fa31856a53edee2783ea26451295d0" target="_blank" class="button primary">View Code</a></li>
+    <!--<li><a href="https://github.com/JaimeGR23/GUSSI" target="_blank" class="button primary">View on GitHub</a></li>-->
   </ul>
 
   <!-- Hero image -->
   <div class="image main hero-wrapper">
-    <img src="images/interior_mapping/hero.png" alt="Interior Mapping Hero Render" />
+    <img src="images/interior_mapping/hero.webp"
+     alt="Interior Mapping Hero Render"
+     width="1280" height="720"
+     fetchpriority="high">
+
   </div>
 
   <!-- Hero caption -->
@@ -106,7 +114,7 @@
   <!-- Video demo -->
   <div style="text-align:center; margin:1.5em 0;">
     <video autoplay loop muted playsinline style="max-width:90%; border-radius:8px; box-shadow:0 6px 14px rgba(0,0,0,0.2);">
-      <source src="images/interior_mapping/interior_demo.mp4" type="video/mp4">
+      <source src="images/interior_mapping/interior_demo.mp4" type="video/mp4" loading="lazy">
     </video>
     <p class="caption">Live demo of Interior Mapping running inside my custom engine.</p>
   </div>
@@ -129,32 +137,39 @@ color = texture(cubemap, pos.xyz);
         <h2 class="accented"><a href="#media-gallery">Media Gallery</a></h2>
         <div class="row gtr-uniform gallery">
           <div class="col-6">
-            <div class="gallery-item" onclick="openModal('images/interior_mapping/media1.png')">
-              <img src="images/interior_mapping/media1.png" alt="Interior Mapping showcase 1" />
+            <div class="gallery-item" onclick="openModal('images/interior_mapping/media1.webp')">
+              <img src="images/interior_mapping/media1.webp" 
+                alt="Interior Mapping showcase 1" 
+                width="640" height="360" 
+                loading="lazy">
               <div class="overlay">Wireframed Render</div>
             </div>
           </div>
           <div class="col-6">
-            <div class="gallery-item" onclick="openModal('images/interior_mapping/media2.png')">
-              <img src="images/interior_mapping/media2.png" alt="Hybrid Technique showcase" />
+            <div class="gallery-item" onclick="openModal('images/interior_mapping/media2.webp')">
+              <img src="images/interior_mapping/media2.webp" alt="Hybrid Technique showcase" width="640" height="360" 
+                loading="lazy">
               <div class="overlay">50x50 Interior Mapped quads</div>
             </div>
           </div>
           <div class="col-4">
-            <div class="gallery-item" onclick="openModal('images/interior_mapping/media3.png')">
-              <img src="images/interior_mapping/media3.png" alt="Cubemap generation" />
+            <div class="gallery-item" onclick="openModal('images/interior_mapping/media3.webp')">
+              <img src="images/interior_mapping/media3.webp" alt="Cubemap generation" width="640" height="360" 
+                loading="lazy">
               <div class="overlay">Real Geometry Room</div>
             </div>
           </div>
           <div class="col-4">
-            <div class="gallery-item" onclick="openModal('images/interior_mapping/media4.png')">
-              <img src="images/interior_mapping/media4.png" alt="Shader test" />
+            <div class="gallery-item" onclick="openModal('images/interior_mapping/media4.webp')">
+              <img src="images/interior_mapping/media4.webp" alt="Shader test" width="640" height="360" 
+                loading="lazy">
               <div class="overlay">Interior Mapped Room</div>
             </div>
           </div>
           <div class="col-4">
-            <div class="gallery-item" onclick="openModal('images/interior_mapping/media5.png')">
-              <img src="images/interior_mapping/media5.png" alt="Performance Benchmark" />
+            <div class="gallery-item" onclick="openModal('images/interior_mapping/media5.webp')">
+              <img src="images/interior_mapping/media5.webp" alt="Performance Benchmark" width="640" height="360" 
+                loading="lazy">
               <div class="overlay">Cubemap Generation</div>
             </div>
           </div>
@@ -170,13 +185,13 @@ color = texture(cubemap, pos.xyz);
   <div class="comparison-container" style="--pos:50%; margin-top:2em;">
     <!-- Fully Rendered (base) -->
     <div style="position:relative;">
-      <img class="comparison-base" src="images/custom_engine/interior_before.png" alt="Fully Rendered (Room A)" />
+      <img class="comparison-base" src="images/custom_engine/interior_before.webp" alt="Fully Rendered (Room A)" />
       <span class="fps-label fps-left">300 FPS · 350,622 vertices</span>
     </div>
     <!-- Interior Mapping (overlay) -->
     <div class="comparison-overlay">
       <div style="position:relative;">
-        <img src="images/custom_engine/interior_after.png" alt="Interior Mapping (Room A)" />
+        <img src="images/custom_engine/interior_after.webp" alt="Interior Mapping (Room A)" />
         <span class="fps-label fps-right">4,482 FPS · 6 vertices</span>
       </div>
     </div>
@@ -188,13 +203,13 @@ color = texture(cubemap, pos.xyz);
   <div class="comparison-container" style="--pos:50%; margin-top:2em;">
     <!-- Fully Rendered (base) -->
     <div style="position:relative;">
-      <img class="comparison-base" src="images/interior_mapping/space_before.png" alt="Fully Rendered (Room B)" />
+      <img class="comparison-base" src="images/interior_mapping/space_before.webp" alt="Fully Rendered (Room B)" />
       <span class="fps-label fps-left">1,152 FPS · 7,392 vertices</span>
     </div>
     <!-- Interior Mapping (overlay) -->
     <div class="comparison-overlay">
       <div style="position:relative;">
-        <img src="images/interior_mapping/space_after.png" alt="Interior Mapping (Room B)" />
+        <img src="images/interior_mapping/space_after.webp" alt="Interior Mapping (Room B)" />
         <span class="fps-label fps-right">4,497 FPS · 6 vertices</span>
       </div>
     </div>
@@ -232,11 +247,11 @@ color = texture(cubemap, pos.xyz);
 <script>
   // Modal simple (si ya lo tienes, conserva uno solo)
   const images = [
-    "images/interior_mapping/media1.png",
-    "images/interior_mapping/media2.png",
-    "images/interior_mapping/media3.png",
-    "images/interior_mapping/media4.png",
-    "images/interior_mapping/media5.png"
+    "images/interior_mapping/media1.webp",
+    "images/interior_mapping/media2.webp",
+    "images/interior_mapping/media3.webp",
+    "images/interior_mapping/media4.webp",
+    "images/interior_mapping/media5.webp"
   ];
   let currentIndex = 0;
 
@@ -309,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h2 class="accented"><a href="#links">Links</a></h2>
         <ul class="actions">
           <li><a href="https://gist.github.com/JaimeGR23/78fa31856a53edee2783ea26451295d0" target="_blank" class="button primary">View Code</a></li>
-          <li><a href="https://github.com/JaimeGR23/GUSSI" target="_blank" class="button">Project's GitHub</a></li>
+          <!--<li><a href="https://github.com/JaimeGR23/GUSSI" target="_blank" class="button">Project's GitHub</a></li>-->
           <li><a href="custom_engine.html" target="_blank" class="button">Engine Used</a></li>
         </ul>
       </section>

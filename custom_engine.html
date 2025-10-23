@@ -1,6 +1,6 @@
 <!-- custom_engine.html -->
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
   <title>GUSSI Engine – Jaime Garrido</title>
   <meta charset="utf-8" />
@@ -9,17 +9,20 @@
   <!-- SEO -->
   <meta name="description" content="C++20 OpenGL engine with ECS, async asset loading, custom editor, logger and advanced techniques like Interior Mapping." />
   <meta name="author" content="Jaime Garrido" />
-  <link rel="canonical" href="custom_engine.html" />
+  <link rel="canonical" href="https://jaimegr23.github.io/custom_engine.html" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="GUSSI Engine – Jaime Garrido" />
   <meta property="og:description" content="C++20 OpenGL engine with ECS, async systems and advanced rendering techniques, developed with editor integration." />
-  <meta property="og:image" content="images/hero.webp" />
+  <meta property="og:image" content="images/custom_engine/.webp" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="custom_engine.html" />
+  <meta property="og:url" content="https://jaimegr23.github.io/custom_engine.html" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/icon.png" />
+
+    <!-- Preload -->
+  <link rel="preload" as="image" href="images/custom_engine/hero.webp">
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
@@ -344,11 +347,11 @@
     </div>
 
     <!-- ================= SCRIPTS ================= -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/browser.min.js" defer></script>
+    <script src="assets/js/breakpoints.min.js" defer></script>
+    <script src="assets/js/util.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 
     <script>
 // Bind del slider robusto: arrastra en cualquier parte del contenedor.
