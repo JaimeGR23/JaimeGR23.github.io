@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
   <title>Che22 – PS5 Devkit Project – Jaime Garrido</title>
   <meta charset="utf-8" />
@@ -8,17 +8,20 @@
   <!-- SEO -->
   <meta name="description" content="Custom engine and strategy game developed from scratch on PlayStation 5 devkits using Sony’s official API. Awarded First Class at Sheffield Hallam University." />
   <meta name="author" content="Jaime Garrido" />
-  <link rel="canonical" href="ps5.html" />
+  <link rel="canonical" href="https://jaimegr23.github.io/ps5.html" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Che22 – PS5 Devkit Project – Jaime Garrido" />
   <meta property="og:description" content="Custom engine and game created entirely on PlayStation 5 devkits with Sony’s API, achieving a First Class grade." />
-  <meta property="og:image" content="images/ps5_preview.png" />
+  <meta property="og:image" content="images/ps5/hero.webp" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="ps5.html" />
+  <meta property="og:url" content="https://jaimegr23.github.io/ps5.html" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/icon.png" />
+
+  <!-- Preload -->
+  <link rel="preload" as="image" href="images/ps5/hero.webp">
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
@@ -52,7 +55,9 @@
             </p>
 
             <div class="image main hero-wrapper">
-              <img src="images/ps5/hero.png" alt="PS5 Project Hero Image" />
+              <img src="images/ps5/hero.webp"
+              alt="PS5 Project Hero Image"
+              fetchpriority="high" decoding="async">
             </div>
           </section>
 
@@ -100,7 +105,7 @@
             <!-- Feature 1 -->
             <div class="feature-card">
               <div class="feature-video">
-                <video autoplay loop muted playsinline>
+                <video autoplay loop muted playsinline preload="none" loading="lazy">
                   <source src="images/ps5/turn-transition.mp4" type="video/mp4">
                 </video>
               </div>
@@ -116,7 +121,7 @@
             <!-- Feature 2 -->
             <div class="feature-card">
               <div class="feature-video">
-                <video autoplay loop muted playsinline>
+                <video autoplay loop muted playsinline preload="none" loading="lazy">
                   <source src="images/ps5/postprocess.mp4" type="video/mp4">
                 </video>
               </div>
@@ -133,7 +138,7 @@
             <!-- Feature 3 -->
             <div class="feature-card">
               <div class="feature-video">
-                <img src="images/ps5/pbr-pistol.jpg" alt="PBR and retro aesthetic test" />
+                <img src="images/ps5/pbr-pistol.webp" alt="PBR and retro aesthetic test" />
               </div>
               <div class="feature-text">
                 <h3>PBR + Retro Hybrid Rendering</h3>
@@ -148,7 +153,7 @@
             <!-- Feature 4 -->
             <div class="feature-card">
               <div class="feature-video">
-                <video autoplay loop muted playsinline>
+                <video autoplay loop muted playsinline preload="none" loading="lazy">
                   <source src="images/ps5/gameplay-logic.mp4" type="video/mp4">
                 </video>
               </div>
@@ -170,32 +175,32 @@
             <h2 class="accented"><a href="#media-gallery">Media Gallery</a></h2>
             <div class="row gtr-uniform gallery">
               <div class="col-6">
-                <div class="gallery-item" onclick="openModal('images/ps5/menu.jpeg')">
-                  <img src="images/ps5/menu.jpeg" alt="Main Menu Screenshot" />
+                <div class="gallery-item" onclick="openModal('images/ps5/menu.webp')">
+                  <img src="images/ps5/menu.webp" alt="Main Menu Screenshot" loading="lazy"/>
                   <div class="overlay">Main Menu</div>
                 </div>
               </div>
               <div class="col-6">
-                <div class="gallery-item" onclick="openModal('images/ps5/credits.jpeg')">
-                  <img src="images/ps5/credits.jpeg" alt="Credits Screenshot" />
+                <div class="gallery-item" onclick="openModal('images/ps5/credits.webp')">
+                  <img src="images/ps5/credits.webp" alt="Credits Screenshot" loading="lazy"/>
                   <div class="overlay">Credits</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="gallery-item" onclick="openModal('images/ps5/gameplay1.jpeg')">
-                  <img src="images/ps5/gameplay1.jpeg" alt="Gameplay Screenshot 1" />
+                <div class="gallery-item" onclick="openModal('images/ps5/gameplay1.webp')">
+                  <img src="images/ps5/gameplay1.webp" alt="Gameplay Screenshot 1" loading="lazy"/>
                   <div class="overlay">Gameplay 1</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="gallery-item" onclick="openModal('images/ps5/gameplay2.png')">
-                  <img src="images/ps5/gameplay2.png" alt="Gameplay Screenshot 2" />
+                <div class="gallery-item" onclick="openModal('images/ps5/gameplay2.webp')">
+                  <img src="images/ps5/gameplay2.webp" alt="Gameplay Screenshot 2" loading="lazy"/>
                   <div class="overlay">Gameplay 2</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="gallery-item" onclick="openModal('images/ps5/gameplay3.jpeg')">
-                  <img src="images/ps5/gameplay3.jpeg" alt="Gameplay Screenshot 3" />
+                <div class="gallery-item" onclick="openModal('images/ps5/gameplay3.webp')">
+                  <img src="images/ps5/gameplay3.webp" alt="Gameplay Screenshot 3" loading="lazy"/>
                   <div class="overlay">Gameplay 3</div>
                 </div>
               </div>
@@ -246,11 +251,12 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/browser.min.js" defer></script>
+    <script src="assets/js/breakpoints.min.js" defer></script>
+    <script src="assets/js/util.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+
 
     <!-- Reveal on scroll -->
     <script>
@@ -285,11 +291,11 @@
 
 <script>
   const images = [
-    "images/ps5/menu.jpeg",
-    "images/ps5/credits.jpeg",
-    "images/ps5/gameplay1.jpeg",
-    "images/ps5/gameplay2.png",
-    "images/ps5/gameplay3.jpeg"
+    "images/ps5/menu.webp",
+    "images/ps5/credits.webp",
+    "images/ps5/gameplay1.webp",
+    "images/ps5/gameplay2.webp",
+    "images/ps5/gameplay3.webp"
   ];
   let currentIndex = 0;
 
