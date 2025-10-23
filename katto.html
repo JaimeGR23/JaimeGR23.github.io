@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
  <head>
   <title>Katto: Rising Tides – Jaime Garrido</title>
   <meta charset="utf-8" />
@@ -8,17 +8,20 @@
   <!-- SEO -->
   <meta name="description" content="3D platformer released on Steam and finalist at GDWC 2024. Developed in Unreal Engine 5 with shaders, VFX and camera systems." />
   <meta name="author" content="Jaime Garrido" />
-  <link rel="canonical" href="katto.html" />
+  <link rel="canonical" href="https://jaimegr23.github.io/katto.html" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Katto: Rising Tides – Jaime Garrido" />
   <meta property="og:description" content="Unreal Engine 5 platformer finalist at GDWC 2024, featuring dynamic platforms, particle VFX, shaders and camera systems." />
-  <meta property="og:image" content="images/katto_preview.png" />
+  <meta property="og:image" content="images/katto_hero.webp" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="katto.html" />
+  <meta property="og:url" content="https://jaimegr23.github.io/katto.html" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/icon.png" />
+
+  <!-- Preload -->
+  <link rel="preload" as="image" href="images/katto/katto_hero.webp">
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
@@ -57,9 +60,12 @@
             </ul>
 
             <div class="image main hero-wrapper">
-              <img src="images/katto/katto_hero.jpg" alt="Katto: Rising Tides hero image" />
+              <img src="images/katto/katto_hero.webp"
+                alt="Katto: Rising Tides hero image"
+                fetchpriority="high" decoding="async">
               <div class="award-badge">
-                <img src="images/katto/gdwc.webp" alt="GDWC 2024 Finalist Badge" />
+                <img src="images/katto/gdwc.webp" alt="GDWC 2024 Finalist Badge"
+                width="120" height="120" loading="lazy">
               </div>
             </div>
           </section>
@@ -98,7 +104,7 @@
             <!-- Highlight 1 -->
             <div class="key-feature">
               <div class="col-3">
-                <video autoplay loop muted playsinline>
+                <video preload="none" loading="lazy" playsinline muted autoplay loop>
                   <source src="images/katto/platforms.mp4" type="video/mp4">
                 </video>
               </div>
@@ -115,7 +121,7 @@
                 <p>Developed cinematic sequences, dynamic follow cameras, and trigger-based guiding cameras to improve gameplay flow and player orientation.</p>
               </div>
               <div class="col-3">
-                <video autoplay loop muted playsinline>
+                <video preload="none" loading="lazy" playsinline muted autoplay loop>
                   <source src="images/katto/camera.mp4" type="video/mp4">
                 </video>
               </div>
@@ -124,7 +130,7 @@
             <!-- Highlight 3 -->
             <div class="key-feature">
               <div class="col-3">
-                <video autoplay loop muted playsinline>
+                <video preload="none" loading="lazy" playsinline muted autoplay loop>
                   <source src="images/katto/particles.mp4" type="video/mp4">
                 </video>
               </div>
@@ -167,8 +173,10 @@
 
   <!-- Trailer -->
   <div class="video-container" style="margin-bottom:2em;">
-    <iframe width="100%" height="480" src="https://www.youtube.com/embed/V4q9WDnBvYk"
-      title="Katto: Rising Tides Trailer" frameborder="0"
+    <iframe width="100%" height="480"
+      src="https://www.youtube.com/embed/V4q9WDnBvYk"
+      title="Katto: Rising Tides Trailer"
+      frameborder="0" loading="lazy"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
     </iframe>
@@ -180,13 +188,14 @@
   <div class="row gtr-uniform" style="margin-bottom:2.5em;">
     <div class="col-6">
       <div class="gallery-item" onclick="openModal('images/katto/media2.webp')">
-        <img src="images/katto/media2.webp" alt="Level 3: The Katsha's Temple" />
+        <img src="images/katto/media2.webp" alt="Level 3: Katsha's Temple"
+          width="800" height="450" loading="lazy">
         <div class="overlay">Level 3: The Katsha's Temple</div>
       </div>
     </div>
     <div class="col-6">
       <div class="gallery-item" onclick="openModal('images/katto/media_boss.webp')">
-        <img src="images/katto/media_boss.webp" alt="Boss Level: Confronting Skarran" />
+        <img src="images/katto/media_boss.webp" alt="Boss Level: Confronting Skarran" width="800" height="450" loading="lazy">
         <div class="overlay">Boss Level: Confronting Skarran</div>
       </div>
     </div>
@@ -196,25 +205,24 @@
   <div class="row gtr-uniform" style="margin-top:1.5em;">
     <div class="col-4">
       <div class="gallery-item" onclick="openModal('images/katto/media1.webp')">
-        <img src="images/katto/media1.webp" alt="Level 3: The Katsha's Temple (alternate)" />
+        <img src="images/katto/media1.webp" alt="Level 3: The Katsha's Temple (alternate)" width="400" height="300" loading="lazy">
         <div class="overlay">Level 3: The Katsha's Temple</div>
       </div>
     </div>
     <div class="col-4">
       <div class="gallery-item" onclick="openModal('images/katto/media3.webp')">
-        <img src="images/katto/media3.webp" alt="Level 2: The Felyn Gardens" />
+        <img src="images/katto/media3.webp" alt="Level 2: The Felyn Gardens" width="400" height="300" loading="lazy">
         <div class="overlay">Level 2: The Felyn Gardens</div>
       </div>
     </div>
     <div class="col-4">
       <div class="gallery-item" onclick="openModal('images/katto/katto_water_el.webp')">
-        <img src="images/katto/katto_water_el.webp" alt="Water-Based Gameplay Segment" />
+        <img src="images/katto/katto_water_el.webp" alt="Water-Based Gameplay Segment" width="400" height="300" loading="lazy">
         <div class="overlay">Water-Based Gameplay Segment</div>
       </div>
     </div>
   </div>
 </section>
-
 
           <hr />
 
@@ -266,7 +274,7 @@
 
       <!-- Character Easter Egg (peeking) -->
       <div class="footer-character-peek">
-        <img src="images/katto/character.webp" alt="Katto Character" />
+        <img src="images/katto/character.webp" alt="Katto Character" loading="lazy" />
       </div>
     </footer>
 
@@ -274,11 +282,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/browser.min.js" defer></script>
+    <script src="assets/js/breakpoints.min.js" defer></script>
+    <script src="assets/js/util.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 
     <script>
     document.addEventListener("DOMContentLoaded", () => {
