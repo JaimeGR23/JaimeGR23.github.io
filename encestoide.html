@@ -1,17 +1,35 @@
 <!-- encestoide.html -->
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
     <title>Encestoide – Jaime Garrido</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
     <!-- SEO -->
-    <meta name="description" content="Encestoide – A minimalistic basketball game in Unity by Jaime Garrido, featuring polished visuals, precision-based mechanics, Cinemachine cameras, and fluid controls." />
+    <meta name="description" content="Encestoide is a minimalistic Unity basketball game by Jaime Garrido featuring precision-based shooting mechanics, Cinemachine cameras, and particle FX for polished, responsive gameplay." />
     <meta name="author" content="Jaime Garrido" />
+    <link rel="canonical" href="https://jaimegr23.github.io/encestoide.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Encestoide – Unity Basketball Game by Jaime Garrido" />
+    <meta property="og:description" content="A polished Unity basketball prototype featuring precision shooting, Cinemachine cameras, and particle FX. Developed solo by Jaime Garrido." />
+    <meta property="og:image" content="images/encestoide/hero.webp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jaimegr23.github.io/encestoide.html" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Encestoide – Unity Basketball Game by Jaime Garrido" />
+    <meta name="twitter:description" content="Precision mechanics, Cinemachine cameras, and particle FX — a minimalistic Unity basketball game developed solo by Jaime Garrido." />
+    <meta name="twitter:image" content="images/encestoide/hero.webp" />
+
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/icon.png" />
+
+    <!-- Preload -->
+    <link rel="preload" as="image" href="images/encestoide/hero.webp">
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -52,7 +70,9 @@
             </ul>
 
             <div class="image main hero-wrapper">
-              <img src="images/encestoide/hero.png" alt="Encestoide — Hero Screenshot" loading="lazy" decoding="async" />
+              <img src="images/encestoide/hero.webp" alt="Encestoide — Hero Screenshot"
+              width="1280" height="720"
+              decoding="async" fetchpriority="high" />
             </div>
           </section>
 
@@ -84,7 +104,7 @@
             <div class="key-feature">
               <div class="col-3">
                 <video autoplay loop muted playsinline>
-                  <source src="images/encestoide/3d_bar.mp4" type="video/mp4">
+                  <source src="images/encestoide/3d_bar.mp4" type="video/mp4" loading="lazy">
                 </video>
               </div>
               <div class="col-9">
@@ -107,7 +127,7 @@
               </div>
               <div class="col-3">
                 <video autoplay loop muted playsinline>
-                  <source src="images/encestoide/movement.mp4" type="video/mp4">
+                  <source src="images/encestoide/movement.mp4" type="video/mp4" loading="lazy">
                 </video>
               </div>
             </div>
@@ -116,7 +136,7 @@
             <div class="key-feature">
               <div class="col-3">
                 <video autoplay loop muted playsinline>
-                  <source src="images/encestoide/cameras.mp4" type="video/mp4">
+                  <source src="images/encestoide/cameras.mp4" type="video/mp4" loading="lazy">
                 </video>
               </div>
               <div class="col-9">
@@ -140,32 +160,32 @@
             <h2 class="accented"><a href="#media-gallery">Media Gallery</a></h2>
             <div class="row gtr-uniform gallery">
               <div class="col-6">
-                <div class="gallery-item" onclick="openModal('images/encestoide/court.png')">
-                  <img src="images/encestoide/court.png" alt="Encestoide — Court at Sunset" loading="lazy" decoding="async" />
+                <div class="gallery-item" onclick="openModal('images/encestoide/court.webp')">
+                  <img src="images/encestoide/court.webp" alt="Encestoide — Court at Sunset" loading="lazy" decoding="async" />
                   <div class="overlay">Court at Sunset</div>
                 </div>
               </div>
               <div class="col-6">
-                <div class="gallery-item" onclick="openModal('images/encestoide/shooting_bar.png')">
-                  <img src="images/encestoide/shooting_bar.png" alt="Encestoide — Shooting Bar Mechanic" loading="lazy" decoding="async" />
+                <div class="gallery-item" onclick="openModal('images/encestoide/shooting_bar.webp')">
+                  <img src="images/encestoide/shooting_bar.webp" alt="Encestoide — Shooting Bar Mechanic" loading="lazy" decoding="async" />
                   <div class="overlay">Shooting Bar Mechanic</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="gallery-item" onclick="openModal('images/encestoide/shot.jpeg')">
-                  <img src="images/encestoide/shot.jpeg" alt="Encestoide — Shot in Action" loading="lazy" decoding="async" />
+                <div class="gallery-item" onclick="openModal('images/encestoide/shot.webp')">
+                  <img src="images/encestoide/shot.webp" alt="Encestoide — Shot in Action" loading="lazy" decoding="async" />
                   <div class="overlay">Shot in Action</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="gallery-item" onclick="openModal('images/encestoide/force_pull.jpeg')">
-                  <img src="images/encestoide/force_pull.jpeg" alt="Encestoide — Force Pull Particles" loading="lazy" decoding="async" />
+                <div class="gallery-item" onclick="openModal('images/encestoide/force_pull.webp')">
+                  <img src="images/encestoide/force_pull.webp" alt="Encestoide — Force Pull Particles" loading="lazy" decoding="async" />
                   <div class="overlay">Force Pull Particles</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="gallery-item" onclick="openModal('images/encestoide/pause.png')">
-                  <img src="images/encestoide/pause.png" alt="Encestoide — Pause Menu" loading="lazy" decoding="async" />
+                <div class="gallery-item" onclick="openModal('images/encestoide/pause.webp')">
+                  <img src="images/encestoide/pause.webp" alt="Encestoide — Pause Menu" loading="lazy" decoding="async" />
                   <div class="overlay">Pause Menu</div>
                 </div>
               </div>
@@ -182,11 +202,11 @@
 
           <script>
             const images = [
-              "images/encestoide/court.png",
-              "images/encestoide/shooting_bar.png",
-              "images/encestoide/shot.jpeg",
-              "images/encestoide/force_pull.jpeg",
-              "images/encestoide/pause.png"
+              "images/encestoide/court.webp",
+              "images/encestoide/shooting_bar.webp",
+              "images/encestoide/shot.webp",
+              "images/encestoide/force_pull.webp",
+              "images/encestoide/pause.webp"
             ];
 
             let currentIndex = 0;
@@ -299,7 +319,7 @@
       <div class="video-content">
         <span class="close">&times;</span>
         <video id="modalVideo" controls autoplay loop muted playsinline>
-          <source src="" type="video/mp4">
+          <source src="" type="video/mp4" loading="lazy">
         </video>
       </div>
     </div>
