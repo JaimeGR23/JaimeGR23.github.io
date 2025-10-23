@@ -1,22 +1,38 @@
 <!-- galaxian.html -->
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
   <title>Galaxian Remake – Jaime Garrido</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
   <!-- SEO -->
-  <meta name="description" content="Remake of the arcade classic Galaxian, built with a custom 2D sprite library. Playable release with resources and gameplay video." />
+  <meta name="description" content="Galaxian Remake is a faithful recreation of the arcade classic, built in C using a custom 2D sprite library. Includes intro cinematics, convoy attack patterns, and a downloadable playable version." />
   <meta name="author" content="Jaime Garrido" />
-  <link rel="canonical" href="galaxian.html" />
+  <link rel="canonical" href="https://jaimegr23.github.io/galaxian.html" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Galaxian Remake – Jaime Garrido" />
-  <meta property="og:description" content="Arcade-inspired Galaxian remake using a custom 2D engine. Includes downloadable release and gameplay showcase." />
-  <meta property="og:image" content="images/galaxian_preview.png" />
+  <meta property="og:description" content="Arcade-style Galaxian remake built in C with a custom 2D engine. Includes intro cinematics, scoring system, and a playable downloadable build." />
+  <meta property="og:image" content="images/galaxian/hero.webp" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="galaxian.html" />
+  <meta property="og:url" content="https://jaimegr23.github.io/galaxian.html" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Galaxian Remake – Jaime Garrido" />
+  <meta name="twitter:description" content="C-based remake of the arcade classic Galaxian, featuring convoy attacks, intro cinematics, and a polished playable release." />
+  <meta name="twitter:image" content="images/galaxian/hero.webp" />
+ 
+  <!-- Preload -->
+  <link rel="preload" as="image" href="images/galaxian/hero.webp">
+
+  <!-- Preconnect to YouTube for faster iframe load -->
+  <link rel="preconnect" href="https://www.youtube.com">
+  <link rel="preconnect" href="https://www.google.com">
+  <link rel="preconnect" href="https://i.ytimg.com">
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://i.ytimg.com">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/icon.png" />
@@ -63,9 +79,14 @@
 
             <!-- Embedded Gameplay Video -->
             <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/GAqK-Tr6gFA" 
-                title="Galaxian Remake Gameplay" frameborder="0" allowfullscreen>
-              </iframe>
+              <iframe
+              src="https://www.youtube.com/embed/GAqK-Tr6gFA"
+              title="Galaxian Remake Gameplay"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              fetchpriority="high">
+            </iframe>
             </div>
           </section>
 
@@ -91,7 +112,7 @@
             <!-- Feature 1 -->
             <div class="key-feature">
               <div class="col-3">
-                <video autoplay loop muted playsinline>
+                <video title="Intro Cinematics & Enemy Showcase" autoplay loop muted playsinline>
                   <source src="images/galaxian/intro.mp4" type="video/mp4">
                 </video>
               </div>
@@ -114,7 +135,7 @@
                 </p>
               </div>
               <div class="col-3">
-                <video autoplay loop muted playsinline>
+                <video title="Enemy Convoy Showcase" autoplay loop muted playsinline>
                   <source src="images/galaxian/convoy.mp4" type="video/mp4">
                 </video>
               </div>
@@ -123,8 +144,8 @@
             <!-- Feature 3 -->
             <div class="key-feature">
               <div class="col-3">
-                <div class="gallery-item" data-src="images/galaxian/menu.png">
-                  <img src="images/galaxian/menu.png" alt="Galaxian Remake — Menu Screen" loading="lazy" decoding="async" />
+                <div class="gallery-item" data-src="images/galaxian/menu.webp">
+                  <img src="images/galaxian/menu.webp" alt="Galaxian Remake — Menu Screen" loading="lazy" decoding="async" />
                   <div class="overlay">Menu Screen</div>
                 </div>
               </div>
@@ -196,11 +217,30 @@
     </div>
 
     <!-- ================= SCRIPTS ================= -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/browser.min.js" defer></script>
+    <script src="assets/js/breakpoints.min.js" defer></script>
+    <script src="assets/js/util.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add("active");
+          });
+        }, { threshold: 0.1 });
+        reveals.forEach(r => observer.observe(r));
+      });
+
+      document.addEventListener("scroll", () => {
+        const btn = document.querySelector(".back-to-top");
+        if (!btn) return;
+        if (window.scrollY > 400) btn.classList.add("visible");
+        else btn.classList.remove("visible");
+      });
+    </script>
 
     <!-- REVEAL SCRIPT -->
     <script>
@@ -245,7 +285,7 @@
 
     <script>
       // ----- IMAGE MODAL -----
-      const imageList = [ "images/galaxian/menu.png" ];
+      const imageList = [ "images/galaxian/menu.webp" ];
       let imgIndex = 0;
 
       function openImageModal(src) {
