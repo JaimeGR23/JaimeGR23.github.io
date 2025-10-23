@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
   <title>Jaime Garrido – C++ Graphics Programmer Portfolio</title>
   <meta charset="utf-8" />
@@ -8,7 +8,8 @@
   <!-- SEO -->
   <meta name="description" content="Portfolio of Jaime Garrido, C++ Graphics Programmer. Showcasing custom engines, OpenGL/Vulkan projects, PS5 devkit work, and published games on Steam." />
   <meta name="author" content="Jaime Garrido" />
-  <link rel="canonical" href="index.html" />
+  <link rel="canonical" href="https://jaimegr23.github.io/" />
+
 
   <!-- Open Graph -->
   <meta property="og:title" content="Jaime Garrido – C++ Graphics Programmer Portfolio" />
@@ -22,7 +23,6 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="assets/css/index.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
@@ -57,102 +57,132 @@
 					</header>
 
 					<!-- Projects -->
-					<section class="tiles">
-						<article class="style1 reveal">
-							<span class="image"><img src="images/main_page/katto.webp" alt="" /></span>
-							<a href="katto.html">
-								<h2>Katto: Rising Tides</h2>
-								<span class="badge steam">Steam Release</span>
+<section class="tiles">
 
+  <!-- Primera fila: visibles al abrir la página (prioridad alta) -->
+  <article class="style1 reveal">
+    <span class="image">
+      <img src="images/main_page/katto.webp" alt="Katto: Rising Tides project preview"
+           width="412" height="381" fetchpriority="high">
+    </span>
+    <a href="katto.html">
+      <h2>Katto: Rising Tides</h2>
+      <span class="badge steam">Steam Release</span>
+      <div class="content">
+        <p>Unreal Engine 5 project released on Steam, finalist at GDWC 2024 (Best Hobby Game).</p>
+      </div>
+    </a>
+  </article>
 
-								<div class="content">
-									<p>Unreal Engine 5 project released on Steam, finalist at GDWC 2024 (Best Hobby Game).</p>
-								</div>
-							</a>
-						</article>
+  <article class="style2 reveal">
+    <span class="image">
+      <img src="images/main_page/ps5.webp" alt="Che22 – PS5 Devkit project preview"
+           width="412" height="381" fetchpriority="high">
+    </span>
+    <a href="ps5.html">
+      <h2>Che22 – PS5 Devkit</h2>
+      <span class="badge featured">Featured</span>
+      <div class="content">
+        <p>A PS5 game built from scratch with a custom engine, expanding traditional chess with new pieces and dynamic maps.</p>
+      </div>
+    </a>
+  </article>
 
-						<article class="style2 reveal">
-							<span class="image"><img src="images/main_page/ps5.webp" alt="" /></span>
-							<a href="ps5.html">
-								<h2>Che22 – PS5 Devkit</h2>
-								<span class="badge featured">Featured</span>
-								<div class="content">
-									<p>A PS5 game built from scratch with a custom engine, expanding traditional chess with new pieces and dynamic maps.</p>
-								</div>
-							</a>
-						</article>
+  <article class="style3 reveal">
+    <span class="image">
+      <img src="images/main_page/gussi.webp" alt="Custom Game Engine project preview"
+           width="412" height="381" fetchpriority="high">
+    </span>
+    <a href="custom_engine.html">
+      <h2>Custom Game Engine</h2>
+      <span class="badge featured">Featured</span>
+      <div class="content">
+        <p>Built in C++ with OpenGL, featuring an advanced editor, real-time lighting and shadows, and a wide range of shader techniques.</p>
+      </div>
+    </a>
+  </article>
 
-						<article class="style3 reveal">
-							<span class="image"><img src="images/main_page/gussi.webp" alt="" /></span>
-							<a href="custom_engine.html">
-								<h2>Custom Game Engine</h2>
-								<span class="badge featured">Featured</span>
-								<div class="content">
-									<p>Built in C++ with OpenGL, featuring an advanced editor, real-time lighting and shadows, and a wide range of shader techniques.</p>
-								</div>
-							</a>
-						</article>
+  <!-- Segunda y tercera fila: lazy loading -->
+  <article class="style4 reveal">
+    <span class="image">
+      <img src="images/main_page/interior.webp" alt="Interior Mapping project preview"
+           width="412" height="381" loading="lazy" fetchpriority="low">
+    </span>
+    <a href="interior_mapping.html">
+      <h2>Interior Mapping</h2>
+      <div class="content">
+        <p>A graphics technique that simulates detailed 3D interiors inside simple geometry using cubemaps and parallax.</p>
+      </div>
+    </a>
+  </article>
 
-						<article class="style4 reveal">
-							<span class="image"><img src="images/main_page/interior.webp" alt="" /></span>
-							<a href="interior_mapping.html">
-								<h2>Interior Mapping</h2>
-								<div class="content">
-									<p>A graphics technique that simulates detailed 3D interiors inside simple geometry using cubemaps and parallax.</p>
-								</div>
-							</a>
-						</article>
+  <article class="style5 reveal">
+    <span class="image">
+      <img src="images/main_page/encestoide.webp" alt="Encestoide Unity basketball game preview"
+           width="412" height="381" loading="lazy" fetchpriority="low">
+    </span>
+    <a href="encestoide.html">
+      <h2>Encestoide</h2>
+      <div class="content">
+        <p>A clean and polished Unity basketball game about precision shooting and quick, accessible fun.</p>
+      </div>
+    </a>
+  </article>
 
-						<article class="style5 reveal">
-							<span class="image"><img src="images/main_page/encestoide.webp" alt="" /></span>
-							<a href="encestoide.html">
-								<h2>Encestoide</h2>
-								<div class="content">
-									<p>A clean and polished Unity basketball game about precision shooting and quick, accessible fun.</p>
-								</div>
-							</a>
-						</article>
+  <article class="style6 reveal">
+    <span class="image">
+      <img src="images/main_page/carromaton.webp" alt="Carromaton Unity drifting game preview"
+           width="412" height="381" loading="lazy" fetchpriority="low">
+    </span>
+    <a href="carromaton.html">
+      <h2>Carromaton</h2>
+      <div class="content">
+        <p>A polished Unity game focused on smooth drifting mechanics with simple yet engaging gameplay.</p>
+      </div>
+    </a>
+  </article>
 
-						<article class="style6 reveal">
-							<span class="image"><img src="images/main_page/carromaton.webp" alt="" /></span>
-							<a href="carromaton.html">
-								<h2>Carromaton</h2>
-								<div class="content">
-									<p>A polished Unity game focused on smooth drifting mechanics with simple yet engaging gameplay.</p>
-								</div>
-							</a>
-						</article>
+  <article class="style7 reveal">
+    <span class="image">
+      <img src="images/main_page/fluid_sim.webp" alt="Real-Time Fluid Simulation project preview"
+           width="412" height="381" loading="lazy" fetchpriority="low">
+    </span>
+    <a href="fluid_sph.html">
+      <h2>Real-Time Fluid Simulation</h2>
+      <div class="content">
+        <p>Implemented with SPH in C++ and optimised through multithreading, rendered using Direct2D.</p>
+      </div>
+    </a>
+  </article>
 
-						<article class="style7 reveal">
-							<span class="image"><img src="images/main_page/fluid_sim.webp" alt="" /></span>
-							<a href="fluid_sph.html">
-								<h2>Real-Time Fluid Simulation</h2>
-								<div class="content">
-									<p>Implemented with SPH in C++ and optimised through multithreading, rendered using Direct2D.</p>
-								</div>
-							</a>
-						</article>
+  <article class="style8 reveal">
+    <span class="image">
+      <img src="images/main_page/salamander.webp" alt="Salamander AI Simulation project preview"
+           width="412" height="381" loading="lazy" fetchpriority="low">
+    </span>
+    <a href="salamander.html">
+      <h2>Salamander AI Simulation</h2>
+      <div class="content">
+        <p>Physics-based creature simulation built in C++ with raylib, featuring autonomous behaviour, inverse kinematics, and a physics-driven tail.</p>
+      </div>
+    </a>
+  </article>
 
-						<article class="style8 reveal">
-							<span class="image"><img src="images/main_page/salamander.webp" alt="" /></span>
-							<a href="salamander.html">
-								<h2>Salamander AI Simulation</h2>
-								<div class="content">
-									<p>Physics-based creature simulation built in C++ with raylib, featuring autonomous behaviour, inverse kinematics, and a physics-driven tail.</p>
-								</div>
-							</a>
-						</article>
+  <article class="style9 reveal">
+    <span class="image">
+      <img src="images/main_page/galaxian.webp" alt="Galaxian Remake project preview"
+           width="412" height="381" loading="lazy" fetchpriority="low">
+    </span>
+    <a href="galaxian.html">
+      <h2>Galaxian Remake</h2>
+      <div class="content">
+        <p>A polished recreation of the classic arcade shooter, featuring authentic enemy attack patterns, lives system, and scoring mechanics, built with a lightweight sprite library.</p>
+      </div>
+    </a>
+  </article>
 
-						<article class="style9 reveal">
-							<span class="image"><img src="images/main_page/galaxian.webp" alt="" /></span>
-							<a href="galaxian.html">
-								<h2>Galaxian Remake</h2>
-								<div class="content">
-									<p>A polished recreation of the classic arcade shooter, featuring authentic enemy attack patterns, lives system, and scoring mechanics, built with a lightweight sprite library.</p>
-								</div>
-							</a>
-						</article>
-					</section>
+</section>
+
 				</div>
 			</div>
 
