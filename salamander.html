@@ -1,15 +1,32 @@
 <!-- salamander.html -->
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
     <title>Procedural Salamander AI – Jaime Garrido</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
     <!-- SEO -->
-    <meta name="description" content="Procedural Salamander AI – A 2D simulation built with Raylib in C++ by Jaime Garrido and teammates, featuring procedural animation, inverse kinematics, and simple AI-driven agents." />
+    <meta name="description" content="Procedural Salamander AI is a 2D C++ simulation built with Raylib by Jaime Garrido and teammates. It features inverse kinematics, procedural animation, and simple AI behaviours for lifelike movement." />
     <meta name="author" content="Jaime Garrido" />
-  
+    <link rel="canonical" href="https://jaimegr23.github.io/salamander.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Procedural Salamander AI – Jaime Garrido" />
+    <meta property="og:description" content="A 2D simulation built in C++ using Raylib, featuring inverse kinematics, procedural motion, and reactive AI-driven behaviours." />
+    <meta property="og:image" content="images/salamander/hero.webp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jaimegr23.github.io/salamander.html" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Procedural Salamander AI – Jaime Garrido" />
+    <meta name="twitter:description" content="Procedural animation, inverse kinematics, and simple AI simulation built in C++ with Raylib by Jaime Garrido and teammates." />
+    <meta name="twitter:image" content="images/salamander/hero.webp" />
+
+    <!-- Preload -->
+    <link rel="preload" as="image" href="images/salamander/hero.webp">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/icon.png" />
 
@@ -48,7 +65,12 @@
             </p>
 
             <div class="image main hero-wrapper">
-              <img src="images/salamander/hero.jpeg" alt="Procedural Salamander AI — Hero Screenshot" loading="lazy" decoding="async" />
+              <img src="images/salamander/hero.webp"
+              alt="Procedural Salamander AI — Hero Screenshot"
+              width="1280" height="720"
+              decoding="async"
+              fetchpriority="high" />
+
             </div>
           </section>
 
@@ -83,7 +105,7 @@
             <!-- Feature 1 -->
             <div class="key-feature">
               <div class="col-3">
-                <video autoplay loop muted playsinline>
+                <video title="Inverse Kinematics Demo" autoplay loop muted playsinline>
                   <source src="images/salamander/ik.mp4" type="video/mp4">
                 </video>
               </div>
@@ -185,7 +207,7 @@
 
     <!-- Easter egg image -->
     <div class="footer-easter-egg">
-      <img src="images/salamander/easter_egg.png" alt="Salamander Easter Egg" />
+      <img src="images/salamander/easter_egg.webp" alt="Salamander Easter Egg" loading="lazy" decoding="async" />
     </div>
 
     <ul class="copyright">
@@ -201,12 +223,12 @@
 
     </div>
 
-    <!-- ================= SCRIPTS ================= -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+   <!-- ================= SCRIPTS ================= -->
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/browser.min.js" defer></script>
+    <script src="assets/js/breakpoints.min.js" defer></script>
+    <script src="assets/js/util.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 
     <!-- REVEAL ACTIVATION -->
     <script>

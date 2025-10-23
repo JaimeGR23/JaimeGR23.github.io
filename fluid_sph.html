@@ -1,14 +1,32 @@
 <!-- fluid_sph.html -->
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
     <title>Fluid Simulation (SPH) – Jaime Garrido</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
     <!-- SEO -->
-    <meta name="description" content="Fluid Simulation using multi-threaded Smooth Particle Hydrodynamics (SPH) in C++ with Direct2D. Focus on concurrency, optimisation, and interactive features such as reacting to window movement and dynamic particle management." />
+    <meta name="description" content="Fluid Simulation using multi-threaded Smooth Particle Hydrodynamics (SPH) implemented in C++ with Direct2D by Jaime Garrido. Features concurrency, thread pools, and interactive real-time particle behaviour." />
     <meta name="author" content="Jaime Garrido" />
+    <link rel="canonical" href="https://jaimegr23.github.io/fluid_sph.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fluid Simulation (SPH) – Jaime Garrido" />
+    <meta property="og:description" content="Multi-threaded Smooth Particle Hydrodynamics (SPH) simulation in C++ with Direct2D. Real-time interactive fluid behaviour and optimised thread pool system." />
+    <meta property="og:image" content="images/fluid_sph/hero.webp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jaimegr23.github.io/fluid_sph.html" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fluid Simulation (SPH) – Jaime Garrido" />
+    <meta name="twitter:description" content="C++ Direct2D real-time fluid simulation using multi-threaded SPH and thread pools. Developed by Jaime Garrido with a focus on concurrency and optimisation." />
+    <meta name="twitter:image" content="images/fluid_sph/hero.webp" />
+
+    <!-- Preload -->
+    <link rel="preload" as="image" href="images/fluid_sph/hero.webp">
+
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/icon.png" />
@@ -53,7 +71,7 @@
             </ul>
 
             <div class="image main hero-wrapper">
-              <img src="images/fluid_sph/hero.png" alt="SPH Simulation — Hero Screenshot" loading="lazy" decoding="async" />
+              <img src="images/fluid_sph/hero.webp" alt="SPH Simulation — Hero Screenshot" decoding="async" />
             </div>
           </section>
 
@@ -184,12 +202,12 @@ _ThreadPool.wait();
 
     </div>
 
-    <!-- ================= SCRIPTS ================= -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+   <!-- ================= SCRIPTS ================= -->
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/browser.min.js" defer></script>
+    <script src="assets/js/breakpoints.min.js" defer></script>
+    <script src="assets/js/util.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {

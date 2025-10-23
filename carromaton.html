@@ -1,16 +1,35 @@
 <!-- carromaton.html -->
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
     <title>Carromaton – Jaime Garrido</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
     <!-- SEO -->
-    <meta name="description" content="Carromaton – A Unity drift racing prototype controlled exclusively with two joysticks, developed by Jaime Garrido and teammate. Features polished driving feel, Cinemachine transitions, dynamic environments, and creative control constraints." />
+    <meta name="description" content="Carromaton is a Unity drift racing prototype developed by Jaime Garrido and teammate, controlled exclusively with two joysticks. It features Cinemachine cameras, drift mechanics, and atmospheric forest and city environments." />
     <meta name="author" content="Jaime Garrido" />
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/icon.png" />
+    <link rel="canonical" href="https://jaimegr23.github.io/carromaton.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Carromaton – Unity Drift Racing Prototype by Jaime Garrido" />
+    <meta property="og:description" content="A Unity drift racing prototype controlled only with two joysticks. Features Cinemachine transitions, responsive drift mechanics, and dynamic forest and city worlds." />
+    <meta property="og:image" content="images/carromaton/hero.webp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jaimegr23.github.io/carromaton.html" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Carromaton – Unity Drift Racing Prototype by Jaime Garrido" />
+    <meta name="twitter:description" content="Dual joystick control, Cinemachine cameras, and atmospheric drift tracks — a Unity project by Jaime Garrido." />
+    <meta name="twitter:image" content="images/carromaton/hero.webp" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/icon.png" />
+
+    <!-- Preload -->
+    <link rel="preload" as="image" href="images/carromaton/hero.webp">
+
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/carromaton.css" />
@@ -50,7 +69,10 @@
             </ul>
 
             <div class="image main hero-wrapper">
-              <img src="images/carromaton/hero.jpeg" alt="Carromaton — Hero Screenshot" loading="lazy" decoding="async" />
+              <img src="images/carromaton/hero.webp"
+                alt="Carromaton — Hero Screenshot"
+                width="1280" height="720"
+                decoding="async" fetchpriority="high" />
             </div>
           </section>
 
@@ -133,32 +155,32 @@
             <h2 class="accented"><a href="#media-gallery">Media Gallery</a></h2>
             <div class="row gtr-uniform gallery">
               <div class="col-6">
-                <div class="gallery-item" onclick="openModal('images/carromaton/forest_map.jpeg')">
-                  <img src="images/carromaton/forest_map.jpeg" alt="Carromaton — Forest Circuit" loading="lazy" decoding="async" />
+                <div class="gallery-item" onclick="openModal('images/carromaton/forest_map.webp')">
+                  <img src="images/carromaton/forest_map.webp" alt="Carromaton — Forest Circuit" loading="lazy" decoding="async" />
                   <div class="overlay">Forest Circuit</div>
                 </div>
               </div>
               <div class="col-6">
-                <div class="gallery-item" onclick="openModal('images/carromaton/skid_marks.jpeg')">
-                  <img src="images/carromaton/skid_marks.jpeg" alt="Carromaton — Skid Marks" loading="lazy" decoding="async" />
+                <div class="gallery-item" onclick="openModal('images/carromaton/skid_marks.webp')">
+                  <img src="images/carromaton/skid_marks.webp" alt="Carromaton — Skid Marks" loading="lazy" decoding="async" />
                   <div class="overlay">Skid Marks</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="gallery-item" onclick="openModal('images/carromaton/lobby1.jpeg')">
-                  <img src="images/carromaton/lobby1.jpeg" alt="Carromaton — Lobby" loading="lazy" decoding="async" />
+                <div class="gallery-item" onclick="openModal('images/carromaton/lobby1.webp')">
+                  <img src="images/carromaton/lobby1.webp" alt="Carromaton — Lobby" loading="lazy" decoding="async" />
                   <div class="overlay">Lobby</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="gallery-item" onclick="openModal('images/carromaton/night_map.jpeg')">
-                  <img src="images/carromaton/night_map.jpeg" alt="Carromaton — Night City" loading="lazy" decoding="async" />
+                <div class="gallery-item" onclick="openModal('images/carromaton/night_map.webp')">
+                  <img src="images/carromaton/night_map.webp" alt="Carromaton — Night City" loading="lazy" decoding="async" />
                   <div class="overlay">Night City</div>
                 </div>
               </div>
               <div class="col-4">
-                <div class="gallery-item" onclick="openModal('images/carromaton/lobby2.jpeg')">
-                  <img src="images/carromaton/lobby2.jpeg" alt="Carromaton — Lobby" loading="lazy" decoding="async" />
+                <div class="gallery-item" onclick="openModal('images/carromaton/lobby2.webp')">
+                  <img src="images/carromaton/lobby2.webp" alt="Carromaton — Lobby" loading="lazy" decoding="async" />
                   <div class="overlay">Lobby</div>
                 </div>
               </div>
@@ -175,11 +197,11 @@
 
           <script>
             const images = [
-              "images/carromaton/forest_map.jpeg",
-              "images/carromaton/skid_marks.jpeg",
-              "images/carromaton/lobby1.jpeg",
-              "images/carromaton/lobby2.jpeg",
-              "images/carromaton/night_map.jpeg"
+              "images/carromaton/forest_map.webp",
+              "images/carromaton/skid_marks.webp",
+              "images/carromaton/lobby1.webp",
+              "images/carromaton/lobby2.webp",
+              "images/carromaton/night_map.webp"
             ];
             let currentIndex = 0;
             function openModal(src) {
@@ -255,11 +277,11 @@
     </div>
 
     <!-- ================= SCRIPTS ================= -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/browser.min.js" defer></script>
+    <script src="assets/js/breakpoints.min.js" defer></script>
+    <script src="assets/js/util.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 
     <!-- REVEAL ACTIVATION -->
     <script>
