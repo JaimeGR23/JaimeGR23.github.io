@@ -3738,3 +3738,107 @@ h2.accented a::after {
 h2.accented a:hover::after {
   width: 100%;
 }
+
+/* ========================================= */
+/*   Featured tiles (wide cards on the grid) */
+/* ========================================= */
+
+/* Overlay color for the engine tile */
+.tiles article.style10 > .image:before {
+  background-color: rgba(180, 83, 9, 0.42);
+}
+
+/* Wide tiles: the image fills whatever height the row gives it */
+.tiles article.tile-full {
+  width: calc(100% - 2.5em);
+}
+.tiles article.tile-full > .image {
+  aspect-ratio: 2.6 / 1;
+}
+.tiles article.tile-full > .image img,
+.tiles article.tile-double > .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tiles article.tile-full h2 {
+  font-size: 1.8em;
+}
+
+/* Two-column tile: stretches to the height of its row neighbour */
+.tiles article.tile-double {
+  width: calc(66.66667% - 2.5em);
+}
+.tiles article.tile-double > .image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+
+/* Wide tiles show their description without hover */
+.tiles article.tile-full > a .content {
+  max-height: none;
+  opacity: 1;
+  max-width: 44em;
+}
+
+@media screen and (max-width: 1280px) {
+  .tiles article.tile-full   { width: calc(100% - 1.25em); }
+  .tiles article.tile-double { width: calc(66.66667% - 1.25em); }
+}
+
+/* Two columns: the double tile becomes a normal tile so the grid stays even */
+@media screen and (max-width: 980px) {
+  .tiles article.tile-full { width: calc(100% - 2.5em); }
+  .tiles article.tile-full > .image { aspect-ratio: 16 / 9; }
+  .tiles article.tile-double { width: calc(50% - 2.5em); }
+  .tiles article.tile-double > .image {
+    position: relative;
+    inset: auto;
+    aspect-ratio: 412 / 381;
+  }
+}
+@media screen and (max-width: 736px) {
+  .tiles article.tile-full   { width: calc(100% - 1.25em); }
+  .tiles article.tile-double { width: calc(50% - 1.25em); }
+  .tiles article.tile-full h2 { font-size: 1.4em; }
+}
+@media screen and (max-width: 480px) {
+  .tiles article.tile-full,
+  .tiles article.tile-double { width: 100%; }
+  .tiles article.tile-full > .image { aspect-ratio: 412 / 381; }
+}
+
+/* Hero role line and quick contact buttons */
+#main .inner > header .location {
+  margin: 0.2em 0 1em 0;
+  opacity: 0.8;
+}
+.hero-actions {
+  margin: 0.5em 0 0 0;
+  padding: 0;
+}
+.hero-actions li {
+  padding: 0 0.5em 0.5em 0;
+}
+
+.tiles article > .image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Phones: shorter engine card text and a 2x2 grid of hero buttons */
+@media screen and (max-width: 736px) {
+  .tiles article.tile-full > a .content p:last-child { display: none; }
+}
+@media screen and (max-width: 480px) {
+  ul.actions.hero-actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6em;
+    margin-left: 0;
+  }
+  ul.actions.hero-actions li { padding: 0; width: auto !important; }
+  .hero-actions .button { width: 100%; }
+}

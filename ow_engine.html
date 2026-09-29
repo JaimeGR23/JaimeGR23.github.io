@@ -1,0 +1,427 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Open-World Multiplayer Engine (C++, OpenGL) | Jaime Garrido</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <meta name="description" content="Networked C++ and OpenGL 4.5 engine built from scratch for an open-world multiplayer game: deferred PBR, DDGI global illumination, LOD, ECS, dedicated server and ImGui editor. Work in progress." />
+  <meta name="author" content="Jaime Garrido" />
+  <link rel="canonical" href="https://jaimegr23.github.io/ow_engine.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Open-World Multiplayer Engine | Jaime Garrido" />
+  <meta property="og:description" content="C++ and OpenGL 4.5 engine built from scratch: client-server architecture, deferred PBR, DDGI global illumination and an in-engine editor." />
+  <meta property="og:image" content="https://jaimegr23.github.io/images/ow_engine/og_preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Same scene with global illumination off and on, rendered in the engine" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jaimegr23.github.io/ow_engine.html" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Open-World Multiplayer Engine | Jaime Garrido" />
+  <meta name="twitter:description" content="C++ and OpenGL 4.5 engine built from scratch: client-server architecture, deferred PBR, DDGI global illumination and an in-engine editor." />
+  <meta name="twitter:image" content="https://jaimegr23.github.io/images/ow_engine/og_preview.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/icon.png" />
+
+  <!-- Preload -->
+  <link rel="preload" as="image" href="images/ow_engine/ddgi_off_on.webp">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/ow_engine.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+  <body class="is-preload">
+    <div id="wrapper">
+
+      <!-- Header -->
+      <header id="header">
+        <div class="inner">
+          <a href="index.html" class="button small" style="margin:0;">Back to Portfolio</a>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
+
+          <!-- Hero -->
+          <section class="reveal hero-section">
+            <h1 class="accented">
+              <a href="ow_engine.html" class="title-link">Open-World Multiplayer Engine</a>
+            </h1>
+            <p class="subtitle" style="margin:0;">C++ | OpenGL 4.5 | Client-Server | Global Illumination</p>
+            <p class="subtitle" style="margin:0; color:var(--accent-color); font-weight:600;">
+              Work in progress, built from scratch since June 2026
+            </p>
+
+            <div class="image main hero-wrapper">
+              <img src="images/ow_engine/ddgi_off_on.webp"
+                   alt="The same courtyard rendered twice: on the left with direct lighting only and dark shadows, on the right with DDGI global illumination filling the scene with bounced light"
+                   width="1920" height="807"
+                   fetchpriority="high" decoding="async">
+            </div>
+            <p class="hero-caption">Same camera, same frame. Left: direct lighting only. Right: our probe-based global illumination (DDGI).</p>
+
+            <ul class="quick-facts">
+              <li><span class="label">Role</span>Engine and Graphics Programmer</li>
+              <li><span class="label">Team</span>2 engineers, co-developed with <a href="https://www.linkedin.com/in/acarrilloc/" target="_blank" rel="noopener">my teammate</a></li>
+              <li><span class="label">Timeline</span>06/2026 to present</li>
+              <li><span class="label">Stack</span>C++, OpenGL 4.5, GLSL, EnTT, Dear ImGui, Tracy</li>
+            </ul>
+          </section>
+
+          <hr />
+
+          <!-- Overview -->
+          <section id="overview" class="reveal">
+            <h2 class="accented"><a href="#overview">Overview</a></h2>
+            <p>
+              An independent project we are building as the foundation for an <strong>open-world multiplayer survival game</strong>.
+              The game targets runtime building and destruction, a day-night cycle and procedural terrain, so the engine is
+              designed around a world that changes while people play in it.
+            </p>
+            <ul>
+              <li><strong>Client-server architecture.</strong> One CMake codebase builds the dedicated server, the game client, the editor and a profiling build.</li>
+              <li><strong>Modern renderer.</strong> Deferred pipeline with physically based shading, shadow mapping and real-time global illumination.</li>
+              <li><strong>Built to scale.</strong> Automatic level of detail, frustum culling and lighting that only updates where it changes.</li>
+              <li><strong>Measured, not guessed.</strong> Every optimization is profiled with Tracy before and after, and kept only if it improves the numbers.</li>
+            </ul>
+          </section>
+
+          <hr />
+
+          <!-- Video (hidden until a YouTube ID is set in data-youtube-id) -->
+          <section id="video" class="reveal" data-youtube-id="_0Fblj3KBNY">
+            <h2 class="accented"><a href="#video">Video</a></h2>
+            <p>Lighting converging from a cold start, then day and night scenes with global illumination toggled on and off.</p>
+            <div class="video-embed"></div>
+          </section>
+
+          <hr id="video-separator" />
+
+          <!-- Key results -->
+          <section id="results" class="reveal">
+            <h2 class="accented"><a href="#results">Key Results</a></h2>
+            <div class="stats">
+              <div class="stat">
+                <span class="value">93%</span>
+                <span class="desc">lower global illumination cost per frame</span>
+                <span class="detail">0.78 ms down to 0.05 ms</span>
+              </div>
+              <div class="stat">
+                <span class="value">~3 s</span>
+                <span class="desc">for lighting to fully settle from a cold start</span>
+                <span class="detail">then it only updates when something changes</span>
+              </div>
+              <div class="stat">
+                <span class="value">4,500</span>
+                <span class="desc">light probes covering the scene</span>
+                <span class="detail">25 x 12 x 15 grid</span>
+              </div>
+            </div>
+            <p class="footnote">
+              Measured with Tracy on an AMD Radeon RX 7700 XT and Ryzen 5 5600X at 1920x1080, Sponza scene.
+              Figures are for the global illumination pass only, not the full frame.
+            </p>
+          </section>
+
+          <hr />
+
+          <!-- What we built -->
+          <section id="contributions" class="reveal">
+            <h2 class="accented"><a href="#contributions">What We Built</a></h2>
+
+            <!-- Feature 1 -->
+            <div class="feature-card">
+              <div class="feature-video">
+                <img src="images/ow_engine/ddgi_on.webp" loading="lazy" decoding="async" width="1920" height="1080"
+                     alt="Courtyard lit by the sun with bounced red light from floating cubes spreading across the walls">
+              </div>
+              <div class="feature-text">
+                <h3>Real-Time Global Illumination</h3>
+                <p>
+                  A deferred renderer with <strong>Cook-Torrance PBR</strong>, hardware PCF shadows and
+                  <strong>DDGI</strong>, a probe-based technique that lets light bounce around the scene in real time.
+                  Compute shaders handle probe encoding and atlas updates, and each probe is captured in a single
+                  pass using layered cubemap rendering instead of geometry shaders.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+              <div class="feature-video">
+                <img src="images/ow_engine/tracy_gpu.webp" loading="lazy" decoding="async" width="1919" height="611"
+                     alt="Tracy profiler GPU timeline of one frame, broken down into shadow, global illumination, geometry and lighting passes">
+              </div>
+              <div class="feature-text">
+                <h3>Lighting That Settles</h3>
+                <p>
+                  Updating thousands of probes every frame is expensive. Probes now stop updating once their lighting
+                  has converged and only refresh when it changes, with a smooth crossfade between updates.
+                  This cut the global illumination cost by <strong>93%</strong>.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+              <div class="feature-video">
+                <img src="images/ow_engine/lod_render_wire.webp" loading="lazy" decoding="async" width="1920" height="807"
+                     alt="Final render next to a wireframe view where each object is colored by its level of detail, from LOD0 to LOD3">
+              </div>
+              <div class="feature-text">
+                <h3>Automatic Level of Detail</h3>
+                <p>
+                  A LOD system built on <strong>meshoptimizer</strong> that picks the right mesh detail based on how much
+                  of the screen an object covers. Shadow and lighting capture passes use their own, more aggressive LOD
+                  rules, and objects outside the camera are culled per submesh.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-card">
+              <div class="feature-video">
+                <img src="images/ow_engine/editor.webp" loading="lazy" decoding="async" width="1920" height="1009"
+                     alt="In-engine editor built with Dear ImGui showing the scene viewport, hierarchy, component inspector, profiling graph and console">
+              </div>
+              <div class="feature-text">
+                <h3>In-Engine Editor and Tooling</h3>
+                <p>
+                  A <strong>Dear ImGui</strong> editor with docking and multiple viewports: scene hierarchy, component
+                  inspector, material editor, console, and profiling and network panels. The network panel graphs
+                  incoming packets by type and bandwidth in real time.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature-card">
+              <div class="feature-video">
+                <img src="images/ow_engine/night.webp" loading="lazy" decoding="async" width="1920" height="1080"
+                     alt="The courtyard at night under a starry sky, softly lit by global illumination">
+              </div>
+              <div class="feature-text">
+                <h3>Architecture and Workflow</h3>
+                <p>
+                  Built on an <strong>Entity-Component-System</strong> (EnTT) with a client-server split using
+                  GameNetworkingSockets. We profile every change and keep only what the numbers support. For example, we
+                  implemented multi-draw indirect rendering, measured it, and removed it for now because the current
+                  scene is too small to benefit. It stays on the roadmap for larger worlds.
+                </p>
+              </div>
+            </div>
+
+            <details class="tech-details">
+              <summary>Technical details for engineers</summary>
+              <ul>
+                <li>Renderer: deferred, Cook-Torrance PBR, hardware PCF shadow mapping, reflective shadow maps (RSM), DDGI with octahedral irradiance and distance atlases.</li>
+                <li>Probe capture uses single-pass layered cubemap rendering (instancing writes gl_Layer from the vertex shader).</li>
+                <li>Probe settling: 8 probes per frame while converging, then updates stop until lighting changes. GI update 0.78 ms to 0.05 ms per frame on a 25x12x15 grid.</li>
+                <li>Probe encoding: replaced a brute-force convolution with mipmap-based sampling, 665 &micro;s to 14 &micro;s per probe.</li>
+                <li>LOD: meshoptimizer, screen-space error selection with world-scale correction, separate LOD policies for shadow and GI capture passes.</li>
+                <li>Culling: per-submesh frustum culling for the main and GI capture passes.</li>
+                <li>Libraries: EnTT, Dear ImGui, GameNetworkingSockets, spdlog, tinygltf, meshoptimizer, Tracy, GLM, GLFW, vcpkg.</li>
+              </ul>
+            </details>
+          </section>
+
+          <hr />
+
+          <!-- Media Gallery -->
+          <section id="media-gallery" class="reveal">
+            <h2 class="accented"><a href="#media-gallery">Media Gallery</a></h2>
+            <div class="row gtr-uniform gallery">
+              <div class="col-6 col-12-small">
+                <div class="gallery-item" onclick="openModal('images/ow_engine/ddgi_off.webp')">
+                  <img src="images/ow_engine/ddgi_off.webp" alt="Courtyard with direct lighting only, most of the scene in dark shadow" loading="lazy"/>
+                  <div class="overlay">Global illumination off</div>
+                </div>
+              </div>
+              <div class="col-6 col-12-small">
+                <div class="gallery-item" onclick="openModal('images/ow_engine/ddgi_on.webp')">
+                  <img src="images/ow_engine/ddgi_on.webp" alt="Same courtyard with global illumination on, bounced light filling the shadows" loading="lazy"/>
+                  <div class="overlay">Global illumination on</div>
+                </div>
+              </div>
+              <div class="col-4 col-12-small">
+                <div class="gallery-item" onclick="openModal('images/ow_engine/night.webp')">
+                  <img src="images/ow_engine/night.webp" alt="Night scene lit with global illumination" loading="lazy"/>
+                  <div class="overlay">Night lighting</div>
+                </div>
+              </div>
+              <div class="col-4 col-12-small">
+                <div class="gallery-item" onclick="openModal('images/ow_engine/editor.webp')">
+                  <img src="images/ow_engine/editor.webp" alt="Dear ImGui editor with viewport and panels" loading="lazy"/>
+                  <div class="overlay">In-engine editor</div>
+                </div>
+              </div>
+              <div class="col-4 col-12-small">
+                <div class="gallery-item" onclick="openModal('images/ow_engine/lod_render_wire.webp')">
+                  <img src="images/ow_engine/lod_render_wire.webp" alt="Render and wireframe view colored by level of detail" loading="lazy"/>
+                  <div class="overlay">Automatic LOD selection</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <hr />
+
+          <!-- Roadmap -->
+          <section id="roadmap" class="reveal">
+            <h2 class="accented"><a href="#roadmap">Roadmap</a></h2>
+            <ul>
+              <li>Cascaded probe grids that follow the player, so lighting scales to a large open world.</li>
+              <li>Cascaded shadow maps for sharper shadows near the camera.</li>
+              <li>Multi-draw indirect with bindless textures for scenes with many more objects.</li>
+              <li>Compressed GPU textures (KTX2 / BC7).</li>
+              <li>Temporal anti-aliasing (TAA).</li>
+            </ul>
+            <p>The source code is private. I am happy to walk through it in an interview.</p>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <section>
+            <h2>Get in Touch</h2>
+            <ul class="contact-list">
+              <li><i class="icon solid fa-envelope"></i>
+                <a href="mailto:garridoramirezjaime@gmail.com">garridoramirezjaime@gmail.com</a></li>
+              <li><i class="icon brands fa-github"></i>
+                <a href="https://github.com/JaimeGR23" target="_blank" rel="noopener">github.com/JaimeGR23</a></li>
+              <li><i class="icon brands fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/jaimegr23/" target="_blank" rel="noopener">linkedin.com/in/jaimegr23</a></li>
+            </ul>
+            <a href="jaime_resume.pdf" target="_blank" class="button small">
+              <i class="icon solid fa-file"></i> View Resume
+            </a>
+          </section>
+          <ul class="copyright">
+            <li>&copy; 2026 Jaime Garrido</li>
+          </ul>
+        </div>
+      </footer>
+
+      <!-- Back to Top -->
+      <a href="#wrapper" class="back-to-top" title="Back to top">
+        <i class="icon solid fa-arrow-up"></i>
+      </a>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/browser.min.js" defer></script>
+    <script src="assets/js/breakpoints.min.js" defer></script>
+    <script src="assets/js/util.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+
+    <!-- YouTube embed: only shown once an ID is set on the #video section -->
+    <script>
+      (function () {
+        const section = document.getElementById("video");
+        const id = (section.dataset.youtubeId || "").trim();
+        if (!id) {
+          section.style.display = "none";
+          document.getElementById("video-separator").style.display = "none";
+          return;
+        }
+        const iframe = document.createElement("iframe");
+        iframe.src = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(id) + "?rel=0";
+        iframe.title = "Open-World Multiplayer Engine: global illumination demo";
+        iframe.loading = "lazy";
+        iframe.allow = "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        iframe.allowFullscreen = true;
+        section.querySelector(".video-embed").appendChild(iframe);
+      })();
+    </script>
+
+    <!-- Reveal on scroll -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add("active");
+          });
+        }, { threshold: 0.1 });
+        reveals.forEach(r => observer.observe(r));
+      });
+    </script>
+
+    <!-- Back to Top toggle -->
+    <script>
+      document.addEventListener("scroll", () => {
+        const btn = document.querySelector(".back-to-top");
+        if (!btn) return;
+        if (window.scrollY > 400) btn.classList.add("visible");
+        else btn.classList.remove("visible");
+      });
+    </script>
+
+<!-- Image modal -->
+<div id="imageModal" class="modal" onclick="closeModal(event)">
+  <span class="close">&times;</span>
+  <span class="prev" onclick="prevImage(event)">&#10094;</span>
+  <img class="modal-content" id="modalImage" alt="">
+  <span class="next" onclick="nextImage(event)">&#10095;</span>
+</div>
+
+<script>
+  const images = [
+    "images/ow_engine/ddgi_off.webp",
+    "images/ow_engine/ddgi_on.webp",
+    "images/ow_engine/night.webp",
+    "images/ow_engine/editor.webp",
+    "images/ow_engine/lod_render_wire.webp"
+  ];
+  let currentIndex = 0;
+
+  function openModal(src) {
+    currentIndex = images.indexOf(src);
+    const modalImg = document.getElementById("modalImage");
+    modalImg.src = src;
+    document.getElementById("imageModal").classList.add("show");
+  }
+
+  function closeModal(e) {
+    if (e.target.id === "modalImage") return;
+    document.getElementById("imageModal").classList.remove("show");
+  }
+
+  function nextImage(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById("modalImage").src = images[currentIndex];
+  }
+
+  function prevImage(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById("modalImage").src = images[currentIndex];
+  }
+
+  document.addEventListener("keydown", (e) => {
+    const modal = document.getElementById("imageModal");
+    if (!modal.classList.contains("show")) return;
+    if (e.key === "ArrowRight") nextImage(e);
+    if (e.key === "ArrowLeft") prevImage(e);
+    if (e.key === "Escape") closeModal(e);
+  });
+</script>
+
+  </body>
+</html>

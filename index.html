@@ -1,22 +1,30 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title>Jaime Garrido – C++ Graphics Programmer Portfolio</title>
+  <title>Jaime Garrido | Engine &amp; Graphics Programmer (C++)</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- SEO -->
-  <meta name="description" content="Portfolio of Jaime Garrido, C++ Graphics Programmer. Showcasing custom engines, OpenGL/Vulkan projects, PS5 devkit work, and published games on Steam." />
+  <meta name="description" content="Portfolio of Jaime Garrido, Engine and Graphics Programmer (C++). Custom engines, real-time global illumination, PS5 devkit work and a Steam release. Based in Spain, open to relocation across Europe." />
   <meta name="author" content="Jaime Garrido" />
   <link rel="canonical" href="https://jaimegr23.github.io/" />
 
-
   <!-- Open Graph -->
-  <meta property="og:title" content="Jaime Garrido – C++ Graphics Programmer Portfolio" />
-  <meta property="og:description" content="Explore Jaime Garrido’s portfolio: custom engines in C++ OpenGL/Vulkan, PS5 devkit projects, Unreal Engine games, and advanced rendering techniques." />
-  <meta property="og:image" content="images/portfolio_preview.png" />
+  <meta property="og:title" content="Jaime Garrido | Engine &amp; Graphics Programmer (C++)" />
+  <meta property="og:description" content="C++ engines and real-time rendering: global illumination, client-server architecture, PS5 devkit work and a Steam release." />
+  <meta property="og:image" content="https://jaimegr23.github.io/images/ow_engine/og_preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Same scene with global illumination off and on, rendered in a custom C++ engine" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="index.html" />
+  <meta property="og:url" content="https://jaimegr23.github.io/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jaime Garrido | Engine &amp; Graphics Programmer (C++)" />
+  <meta name="twitter:description" content="C++ engines and real-time rendering: global illumination, client-server architecture, PS5 devkit work and a Steam release." />
+  <meta name="twitter:image" content="https://jaimegr23.github.io/images/ow_engine/og_preview.jpg" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/icon.png" />
@@ -26,15 +34,13 @@
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
-
-
 	<body class="is-preload">
 		<div id="wrapper">
 
 			<!-- Header -->
 			<header id="header">
 			<div class="inner">
-				
+
 			</div>
 			</header>
 
@@ -47,127 +53,159 @@
 						<a href="index.html" class="reload-title">Jaime Garrido</a>
 						</h1>
 
-						<p class="subtitle">C++ Graphics Programmer — Real-Time Rendering | Engine Development | PS5 Devkit Experience</p>
-						<p class="tagline">Building efficient engines and polished gameplay experiences.</p>
-						<div class="social-icons">
-							<a href="jaime_resume.pdf" target="_blank" title="Download CV"><i class="icon solid fa-file"></i></a>
-							<a href="https://github.com/JaimeGR23" target="_blank" title="GitHub"><i class="icon brands fa-github"></i></a>
-							<a href="https://www.linkedin.com/in/jaimegr23/" target="_blank" title="LinkedIn"><i class="icon brands fa-linkedin"></i></a>
-						</div>
+						<p class="subtitle">Engine &amp; Graphics Programmer (C++)</p>
+						<p class="tagline">I build game engines and real-time rendering systems, from global illumination to multiplayer architecture.</p>
+						<p class="location"><i class="icon solid fa-map-marker-alt"></i> Alicante, Spain. Open to relocation across Europe.</p>
+						<ul class="actions hero-actions">
+							<li><a href="jaime_resume.pdf" target="_blank" class="button primary small"><i class="icon solid fa-file"></i> Download CV</a></li>
+							<li><a href="https://www.linkedin.com/in/jaimegr23/" target="_blank" rel="noopener" class="button small"><i class="icon brands fa-linkedin"></i> LinkedIn</a></li>
+							<li><a href="https://github.com/JaimeGR23" target="_blank" rel="noopener" class="button small"><i class="icon brands fa-github"></i> GitHub</a></li>
+							<li><a href="mailto:garridoramirezjaime@gmail.com" class="button small"><i class="icon solid fa-envelope"></i> Email</a></li>
+						</ul>
 					</header>
 
 					<!-- Projects -->
 <section class="tiles">
 
-  <!-- Primera fila: visibles al abrir la página (prioridad alta) -->
-  <article class="style1 reveal">
+  <!-- Flagship project, full width -->
+  <article class="style10 tile-full reveal">
     <span class="image">
-      <img src="images/main_page/katto.webp" alt="Katto: Rising Tides project preview"
-           width="412" height="381" fetchpriority="high">
+      <picture>
+        <source media="(max-width: 980px)" srcset="images/ow_engine/tile.webp">
+        <img src="images/ow_engine/tile_wide.webp"
+             alt="Open-World Multiplayer Engine: the same scene with global illumination off and on"
+             width="1400" height="588" fetchpriority="high">
+      </picture>
     </span>
-    <a href="katto.html">
-      <h2>Katto: Rising Tides</h2>
-      <span class="badge steam">Steam Release</span>
+    <a href="ow_engine.html">
+      <h2>Open-World Multiplayer Engine</h2>
+      <span class="badge featured">Latest</span>
       <div class="content">
-        <p>Unreal Engine 5 project released on Steam, finalist at GDWC 2024 (Best Hobby Game).</p>
-      </div>
-    </a>
-  </article>
-
-  <article class="style2 reveal">
-    <span class="image">
-      <img src="images/main_page/ps5.webp" alt="Che22 – PS5 Devkit project preview"
-           width="412" height="381" fetchpriority="high">
-    </span>
-    <a href="ps5.html">
-      <h2>Che22 – PS5 Devkit</h2>
-      <span class="badge featured">Featured</span>
-      <div class="content">
-        <p>A PS5 game built from scratch with a custom engine, expanding traditional chess with new pieces and dynamic maps.</p>
+        <p><strong>Engine &amp; Graphics Programmer</strong> | C++, OpenGL 4.5, EnTT</p>
+        <p>Networked engine built from scratch with real-time global illumination, now 93% cheaper to update per frame.</p>
       </div>
     </a>
   </article>
 
   <article class="style3 reveal">
     <span class="image">
-      <img src="images/main_page/gussi.webp" alt="Custom Game Engine project preview"
+      <img src="images/main_page/gussi.webp" alt="GUSSI Engine editor preview"
            width="412" height="381" fetchpriority="high">
     </span>
     <a href="custom_engine.html">
-      <h2>Custom Game Engine</h2>
-      <span class="badge featured">Featured</span>
+      <h2>GUSSI Engine</h2>
       <div class="content">
-        <p>Built in C++ with OpenGL, featuring an advanced editor, real-time lighting and shadows, and a wide range of shader techniques.</p>
+        <p><strong>Engine Programmer</strong> | C++, OpenGL</p>
+        <p>Custom engine with deferred rendering, SSAO, a multithreaded job system and an ImGui editor.</p>
       </div>
     </a>
   </article>
 
-  <!-- Segunda y tercera fila: lazy loading -->
   <article class="style4 reveal">
     <span class="image">
-      <img src="images/main_page/interior.webp" alt="Interior Mapping project preview"
-           width="412" height="381" loading="lazy" fetchpriority="low">
+      <img src="images/main_page/interior.webp" alt="Interior Mapping technique preview"
+           width="412" height="381" fetchpriority="high">
     </span>
     <a href="interior_mapping.html">
       <h2>Interior Mapping</h2>
       <div class="content">
-        <p>A graphics technique that simulates detailed 3D interiors inside simple geometry using cubemaps and parallax.</p>
+        <p><strong>Graphics Programmer</strong> | C++, GLSL</p>
+        <p>Replaced 350k+ vertices of room geometry with a shader, raising the frame rate from 335 to 4,400 FPS.</p>
       </div>
     </a>
   </article>
 
-  <article class="style5 reveal">
+  <article class="style2 reveal">
     <span class="image">
-      <img src="images/main_page/encestoide.webp" alt="Encestoide Unity basketball game preview"
-           width="412" height="381" loading="lazy" fetchpriority="low">
+      <img src="images/main_page/ps5.webp" alt="Chee22, a PS5 devkit game, preview"
+           width="412" height="381" fetchpriority="high">
     </span>
-    <a href="encestoide.html">
-      <h2>Encestoide</h2>
+    <a href="ps5.html">
+      <h2>Chee22</h2>
+      <span class="badge featured">PS5 Devkit</span>
       <div class="content">
-        <p>A clean and polished Unity basketball game about precision shooting and quick, accessible fun.</p>
+        <p><strong>Graphics &amp; Gameplay Programmer</strong> | C++, PS5 SDK</p>
+        <p>Chess-like game built from scratch on PlayStation 5 devkits. Graded First Class.</p>
       </div>
     </a>
   </article>
 
-  <article class="style6 reveal">
+  <!-- Double-width tile -->
+  <article class="style1 tile-double reveal">
     <span class="image">
-      <img src="images/main_page/carromaton.webp" alt="Carromaton Unity drifting game preview"
-           width="412" height="381" loading="lazy" fetchpriority="low">
+      <picture>
+        <source media="(max-width: 980px)" srcset="images/main_page/katto.webp">
+        <img src="images/main_page/katto_wide.webp" alt="Katto: Rising Tides, Unreal Engine 5 platformer, preview"
+             width="1000" height="455" loading="lazy">
+      </picture>
     </span>
-    <a href="carromaton.html">
-      <h2>Carromaton</h2>
+    <a href="katto.html">
+      <h2>Katto: Rising Tides</h2>
+      <span class="badge steam">Steam Release</span>
       <div class="content">
-        <p>A polished Unity game focused on smooth drifting mechanics with simple yet engaging gameplay.</p>
+        <p><strong>Gameplay Programmer</strong> | Unreal Engine 5, C++</p>
+        <p>3D platformer made by a 17-person team, released on Steam and finalist at GDWC 2024 (Best Hobby Game).</p>
       </div>
     </a>
   </article>
 
   <article class="style7 reveal">
     <span class="image">
-      <img src="images/main_page/fluid_sim.webp" alt="Real-Time Fluid Simulation project preview"
+      <img src="images/main_page/fluid_sim.webp" alt="Real-time fluid simulation preview"
            width="412" height="381" loading="lazy" fetchpriority="low">
     </span>
     <a href="fluid_sph.html">
       <h2>Real-Time Fluid Simulation</h2>
       <div class="content">
-        <p>Implemented with SPH in C++ and optimised through multithreading, rendered using Direct2D.</p>
+        <p><strong>Solo</strong> | C++, Direct2D</p>
+        <p>SPH fluid simulation optimized with multithreading.</p>
       </div>
     </a>
   </article>
 
   <article class="style8 reveal">
     <span class="image">
-      <img src="images/main_page/salamander.webp" alt="Salamander AI Simulation project preview"
+      <img src="images/main_page/salamander.webp" alt="Salamander AI simulation preview"
            width="412" height="381" loading="lazy" fetchpriority="low">
     </span>
     <a href="salamander.html">
       <h2>Salamander AI Simulation</h2>
       <div class="content">
-        <p>Physics-based creature simulation built in C++ with raylib, featuring autonomous behaviour, inverse kinematics, and a physics-driven tail.</p>
+        <p><strong>Solo</strong> | C++, raylib</p>
+        <p>Physics-based creature with autonomous behavior, inverse kinematics and a physics-driven tail.</p>
       </div>
     </a>
   </article>
 
+  <article class="style5 reveal">
+    <span class="image">
+      <img src="images/main_page/encestoide.webp" alt="Encestoide, a Unity basketball game, preview"
+           width="412" height="381" loading="lazy" fetchpriority="low">
+    </span>
+    <a href="encestoide.html">
+      <h2>Encestoide</h2>
+      <div class="content">
+        <p><strong>Solo</strong> | Unity, C#</p>
+        <p>Polished basketball game about precision shooting and quick, accessible fun.</p>
+      </div>
+    </a>
+  </article>
+
+  <article class="style6 reveal">
+    <span class="image">
+      <img src="images/main_page/carromaton.webp" alt="Carromaton, a Unity drifting game, preview"
+           width="412" height="381" loading="lazy" fetchpriority="low">
+    </span>
+    <a href="carromaton.html">
+      <h2>Carromaton</h2>
+      <div class="content">
+        <p><strong>Solo</strong> | Unity, C#</p>
+        <p>Arcade drifting game focused on smooth, responsive car handling.</p>
+      </div>
+    </a>
+  </article>
+
+  <!-- Hidden for now, page still available at galaxian.html
   <article class="style9 reveal">
     <span class="image">
       <img src="images/main_page/galaxian.webp" alt="Galaxian Remake project preview"
@@ -176,10 +214,11 @@
     <a href="galaxian.html">
       <h2>Galaxian Remake</h2>
       <div class="content">
-        <p>A polished recreation of the classic arcade shooter, featuring authentic enemy attack patterns, lives system, and scoring mechanics, built with a lightweight sprite library.</p>
+        <p>A recreation of the classic arcade shooter, built in C with a lightweight sprite library.</p>
       </div>
     </a>
   </article>
+  -->
 
 </section>
 
@@ -193,22 +232,23 @@
 					<h2>About Me</h2>
 					<div class="row aln-top">
 						<div class="col-8 col-12-medium">
-							<p>I'm Jaime Garrido, a graphics programmer passionate about real-time rendering,
-							mathematics, and optimisation. I specialise in C++ and OpenGL, and have built
-							custom engines with advanced editors, shader techniques, and real-time lighting
-							and shadows. I also work fluently with both Unreal Engine (4 & 5) and Unity,
-							and have hands-on experience with the PS5 devkit.</p>
-							<p>My work includes published projects, such as a Steam release that reached the
-							finals of the GDWC Hobby Game category. Regardless of scope, I take pride in
-							delivering polished results — even in the simplest prototypes, I dedicate time
-							to refinement so they feel complete and enjoyable.</p>
+							<p>I'm Jaime Garrido, an engine and graphics programmer. I have been building game engines and
+							real-time rendering systems in C++ since 2021. Right now I'm co-developing a networked open-world
+							engine with real-time global illumination, where every change is profiled before it is kept.</p>
+							<p>Since November 2025 I have worked professionally in C and C++ as a Software Verification Engineer
+							on safety-critical aerospace software (DO-178C). It taught me to write code that is tested, reviewed
+							and easy to reason about.</p>
+							<p>I hold a First Class BSc (Hons) in Computer Science for Games from Sheffield Hallam University.
+							I'm looking for Graphics, Engine or Gameplay Programmer roles, and I'm open to relocating across Europe
+							or working remotely.</p>
 						</div>
 						<div class="col-4 col-12-medium">
 							<ul class="alt">
-								<li><strong>C++ & OpenGL</strong> specialist</li>
-								<li><strong>PS5 Devkit</strong> experience</li>
-								<li><strong>Steam release</strong> finalist GDWC 2024</li>
-								<li><strong>Engines</strong>: Unity & Unreal 4/5</li>
+								<li><strong>C++ engines</strong> and real-time rendering since 2021</li>
+								<li><strong>Professional C/C++</strong> since 2025</li>
+								<li><strong>PS5 devkit</strong> experience</li>
+								<li><strong>Steam release</strong>, GDWC 2024 finalist</li>
+								<li><strong>Languages:</strong> Spanish (native), English (C1)</li>
 							</ul>
 						</div>
 					</div>
@@ -217,44 +257,45 @@
 
 			<!-- Skills -->
 			<section id="skills" class="reveal">
-				
+
 				<div class="inner">
 					<h2>Skills</h2>
 					<div class="skills-grid">
 						<div>
-							<h3><i class="icon solid fa-code"></i> Programming</h3>
+							<h3><i class="icon solid fa-code"></i> Languages</h3>
 							<ul>
-								<li>C, C++</li>
-								<li>Multithreading</li>
-								<li>Algorithms & Mathematics</li>
-								<li>HLSL & Shader Programming</li>
+								<li>C++ (17/20/23), C</li>
+								<li>C#, Python</li>
+								<li>GLSL, HLSL, PSSL</li>
 							</ul>
 						</div>
 						<div>
-							<h3><i class="icon solid fa-cogs"></i> Engines & APIs</h3>
+							<h3><i class="icon solid fa-lightbulb"></i> Rendering</h3>
 							<ul>
-								<li>OpenGL</li>
-								<li>PS5 Devkit</li>
-								<li>Custom Engines</li>
-								<li>Unity & Unreal Engine 4/5</li>
+								<li>OpenGL 4.5, compute shaders</li>
+								<li>PBR, deferred and forward</li>
+								<li>Global illumination (DDGI)</li>
+								<li>Shadow mapping, SSAO</li>
+								<li>LOD, frustum culling</li>
+							</ul>
+						</div>
+						<div>
+							<h3><i class="icon solid fa-cogs"></i> Engine &amp; Gameplay</h3>
+							<ul>
+								<li>Engine architecture, ECS (EnTT)</li>
+								<li>Multithreading, job systems</li>
+								<li>Client-server networking</li>
+								<li>Unreal Engine 5 (C++), Unity</li>
+								<li>PlayStation 5 SDK</li>
 							</ul>
 						</div>
 						<div>
 							<h3><i class="icon solid fa-wrench"></i> Tools</h3>
 							<ul>
-								<li>Visual Studio</li>
-								<li>RenderDoc</li>
-								<li>Git & Perforce</li>
-								<li>NVIDIA Nsight</li>
-							</ul>
-						</div>
-						<div>
-							<h3><i class="icon solid fa-star"></i> Strengths</h3>
-							<ul>
-								<li>Optimisation</li>
-								<li>Real-Time Rendering</li>
-								<li>Clean & Maintainable Code</li>
-								<li>Game Polish & Refinement</li>
+								<li>Tracy, RenderDoc</li>
+								<li>NVIDIA Nsight, Razor</li>
+								<li>Visual Studio, CMake</li>
+								<li>Git, Perforce, Jira</li>
 							</ul>
 						</div>
 					</div>
@@ -266,7 +307,7 @@
 				<div class="inner">
 					<section>
 						<h2>Get in Touch</h2>
-						<p>Actively seeking opportunities in programming and software development. Let’s connect!</p>
+						<p>Open to Graphics, Engine and Gameplay Programmer roles across Europe. Let's talk.</p>
 						<ul class="contact-list">
 							<li>
 								<i class="icon solid fa-envelope"></i>
@@ -274,11 +315,11 @@
 							</li>
 							<li>
 								<i class="icon brands fa-github"></i>
-								<a href="https://github.com/JaimeGR23" target="_blank">github.com/JaimeGR23</a>
+								<a href="https://github.com/JaimeGR23" target="_blank" rel="noopener">github.com/JaimeGR23</a>
 							</li>
 							<li>
 								<i class="icon brands fa-linkedin"></i>
-								<a href="https://linkedin.com/in/JaimeGR23" target="_blank">linkedin.com/in/JaimeGR23</a>
+								<a href="https://www.linkedin.com/in/jaimegr23/" target="_blank" rel="noopener">linkedin.com/in/jaimegr23</a>
 							</li>
 						</ul>
 						<a href="jaime_resume.pdf" target="_blank" class="button small">
@@ -286,7 +327,7 @@
 						</a>
 					</section>
 					<ul class="copyright">
-						<li>&copy; 2025 Jaime Garrido</li>
+						<li>&copy; 2026 Jaime Garrido</li>
 					</ul>
 				</div>
 			</footer>
@@ -317,7 +358,7 @@
 		<script>
 		document.addEventListener("scroll", () => {
 			const btn = document.querySelector(".back-to-top");
-			if (window.scrollY > 400) { // aparece tras hacer scroll
+			if (window.scrollY > 400) {
 			btn.classList.add("visible");
 			} else {
 			btn.classList.remove("visible");
