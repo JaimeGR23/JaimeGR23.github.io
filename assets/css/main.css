@@ -3842,3 +3842,53 @@ h2.accented a:hover::after {
   ul.actions.hero-actions li { padding: 0; width: auto !important; }
   .hero-actions .button { width: 100%; }
 }
+
+/* ===== Recruiter pass: clearer hero and always-visible tile info ===== */
+#main > .inner > header .subtitle {
+  font-size: 1.45em;
+  font-weight: 700;
+  color: #3a3a3a;
+  margin: 0.2em 0 0.35em 0;
+}
+#main > .inner > header .tagline {
+  font-size: 1.1em;
+  font-style: italic;
+  color: var(--accent-color);
+  max-width: 40em;
+  margin-bottom: 0.5em;
+}
+
+/* Remove the template's diagonal cross lines over the tile images */
+.tiles article > .image:after {
+  display: none;
+}
+
+/* Role and tech line, always visible under the tile title */
+.tiles article > a .tile-meta {
+  display: block;
+  margin: 0.45em 0 0 0;
+  font-size: 0.85em;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  opacity: 0.95;
+}
+.tiles article.tile-full > a .tile-meta {
+  font-size: 1em;
+}
+
+/* Featured tiles: lighter tint so the screenshots read as screenshots */
+.tiles article.tile-full > .image:before,
+.tiles article.tile-double > .image:before {
+  opacity: 0.55;
+}
+.tiles article.tile-full > a h2,
+.tiles article.tile-double > a h2,
+.tiles article > a .tile-meta {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Fluid and Salamander: their thumbnails carry their own color, so a lighter tint */
+.tiles article.style7 > .image:before,
+.tiles article.style8 > .image:before {
+  opacity: 0.35;
+}

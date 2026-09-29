@@ -344,3 +344,113 @@ details.tech-details ul {
 
 .hero-wrapper { margin-bottom: 0.5em !important; }
 .hero-wrapper img { height: auto; display: block; }
+
+/* Before / after comparison slider */
+.compare {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  user-select: none;
+  touch-action: pan-y;
+}
+.compare img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.compare .compare-top {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: cover;
+  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+}
+.compare-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  width: 3px;
+  margin-left: -1.5px;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  pointer-events: none;
+}
+.compare-handle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.compare input[type=range] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.compare-label {
+  position: absolute;
+  top: 12px;
+  padding: 0.25em 0.7em;
+  border-radius: 4px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+.compare-label.left  { left: 12px; }
+.compare-label.right { right: 12px; }
+
+/* Video thumbnail with play button */
+.video-facade {
+  position: absolute;
+  inset: 0;
+  display: block;
+  border: 0;
+  cursor: pointer;
+}
+.video-facade img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s ease;
+}
+.video-facade:hover img { filter: brightness(0.85); }
+.video-facade .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 76px;
+  height: 54px;
+  margin: -27px 0 0 -38px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.7);
+  transition: background 0.3s ease;
+}
+.video-facade:hover .play-button { background: #e62117; }
+.video-facade .play-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -11px 0 0 -7px;
+  border-style: solid;
+  border-width: 11px 0 11px 19px;
+  border-color: transparent transparent transparent #fff;
+}

@@ -2,17 +2,17 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title>Distance Based Interior Mapping (DBIM) – Jaime Garrido</title>
+  <title>Distance Based Interior Mapping (DBIM) | Jaime Garrido</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
   <!-- SEO -->
-  <meta name="description" content="C++ OpenGL project implementing Distance Based Interior Mapping with LOD, optimising performance while maintaining visual fidelity." />
+  <meta name="description" content="C++ OpenGL project implementing Distance Based Interior Mapping with LOD, optimizing performance while maintaining visual fidelity." />
   <meta name="author" content="Jaime Garrido" />
   <link rel="canonical" href="https://jaimegr23.github.io/interior_mapping.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Distance Based Interior Mapping (DBIM) – Jaime Garrido" />
+  <meta property="og:title" content="Distance Based Interior Mapping (DBIM) | Jaime Garrido" />
   <meta property="og:description" content="Custom OpenGL engine project showcasing Interior Mapping with LOD to increase FPS while preserving detail." />
   <meta property="og:image" content="https://jaimegr23.github.io/images/interior_mapping/hero.webp" />
   <meta property="og:type" content="website" />
@@ -73,7 +73,7 @@
 
   <!-- Hero caption -->
   <p class="caption" style="text-align:center; margin-top:0.8em; font-size:0.95em; color:#666;">
-    50×50 quads using Interior Mapping vs a single fully rendered room – same visual fidelity, radically different cost.
+    50x50 quads using Interior Mapping vs a single fully rendered room. Same visual fidelity, radically different cost.
   </p>
 </section>
 
@@ -97,7 +97,7 @@
     <li><strong>Platform:</strong> PC</li>
     <li><strong>Engine:</strong> Custom (C++ / OpenGL)</li>
     <li><strong>Development time:</strong> ~2 months</li>
-    <li><strong>Key result:</strong> ~15× performance improvement (300 FPS → 4,500+ FPS)</li>
+    <li><strong>Key result:</strong> about 13x faster, from 335 FPS to 4,400 FPS on the main test scene</li>
   </ul>
 </section>
 
@@ -186,36 +186,36 @@ color = texture(cubemap, pos.xyz);
     <!-- Fully Rendered (base) -->
     <div style="position:relative;">
       <img class="comparison-base" src="images/custom_engine/interior_before.webp" alt="Fully Rendered (Room A)" />
-      <span class="fps-label fps-left">300 FPS · 350,622 vertices</span>
+      <span class="fps-label fps-left">335 FPS | 350,622 vertices</span>
     </div>
     <!-- Interior Mapping (overlay) -->
     <div class="comparison-overlay">
       <div style="position:relative;">
         <img src="images/custom_engine/interior_after.webp" alt="Interior Mapping (Room A)" />
-        <span class="fps-label fps-right">4,482 FPS · 6 vertices</span>
+        <span class="fps-label fps-right">4,400 FPS | 6 vertices</span>
       </div>
     </div>
     <div class="comparison-slider"><div class="comparison-handle"></div></div>
   </div>
-  <p class="caption">Room A – <strong>Real Geometry</strong> (350k vertices) vs <strong>Interior Mapping</strong> (6 vertices)</p>
+  <p class="caption">Room A: <strong>Real Geometry</strong> (350k vertices) vs <strong>Interior Mapping</strong> (6 vertices)</p>
 
   <!-- Room B -->
   <div class="comparison-container" style="--pos:50%; margin-top:2em;">
     <!-- Fully Rendered (base) -->
     <div style="position:relative;">
       <img class="comparison-base" src="images/interior_mapping/space_before.webp" alt="Fully Rendered (Room B)" />
-      <span class="fps-label fps-left">1,152 FPS · 7,392 vertices</span>
+      <span class="fps-label fps-left">1,152 FPS | 7,392 vertices</span>
     </div>
     <!-- Interior Mapping (overlay) -->
     <div class="comparison-overlay">
       <div style="position:relative;">
         <img src="images/interior_mapping/space_after.webp" alt="Interior Mapping (Room B)" />
-        <span class="fps-label fps-right">4,497 FPS · 6 vertices</span>
+        <span class="fps-label fps-right">4,497 FPS | 6 vertices</span>
       </div>
     </div>
     <div class="comparison-slider"><div class="comparison-handle"></div></div>
   </div>
-  <p class="caption">Room B – <strong>Real Geometry</strong> (7.3k vertices) vs <strong>Interior Mapping</strong> (6 vertices)</p>
+  <p class="caption">Room B: <strong>Real Geometry</strong> (7.3k vertices) vs <strong>Interior Mapping</strong> (6 vertices)</p>
 
   <!-- Technical Note -->
    

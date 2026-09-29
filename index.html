@@ -10,6 +10,22 @@
   <meta name="author" content="Jaime Garrido" />
   <link rel="canonical" href="https://jaimegr23.github.io/" />
 
+  <!-- Structured data for search engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jaime Garrido",
+    "jobTitle": "Engine & Graphics Programmer (C++)",
+    "url": "https://jaimegr23.github.io/",
+    "email": "mailto:garridoramirezjaime@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Alicante", "addressCountry": "ES" },
+    "alumniOf": "Sheffield Hallam University",
+    "knowsAbout": ["C++", "OpenGL", "Real-time rendering", "Global illumination", "Game engine architecture", "Gameplay programming", "Unreal Engine 5"],
+    "sameAs": ["https://www.linkedin.com/in/jaimegr23/", "https://github.com/JaimeGR23"]
+  }
+  </script>
+
   <!-- Open Graph -->
   <meta property="og:title" content="Jaime Garrido | Engine &amp; Graphics Programmer (C++)" />
   <meta property="og:description" content="C++ engines and real-time rendering: global illumination, client-server architecture, PS5 devkit work and a Steam release." />
@@ -73,15 +89,15 @@
       <picture>
         <source media="(max-width: 980px)" srcset="images/ow_engine/tile.webp">
         <img src="images/ow_engine/tile_wide.webp"
-             alt="Open-World Multiplayer Engine: the same scene with global illumination off and on"
-             width="1400" height="588" fetchpriority="high">
+             alt="Open-World Multiplayer Engine: sunlit stone arcade with colorful banners, rendered in real time"
+             width="1600" height="615" fetchpriority="high">
       </picture>
     </span>
     <a href="ow_engine.html">
       <h2>Open-World Multiplayer Engine</h2>
-      <span class="badge featured">Latest</span>
+      <span class="tile-meta"><strong>Engine &amp; Graphics Programmer</strong> | C++, OpenGL 4.5, EnTT</span>
+      <span class="badge featured">In Development</span>
       <div class="content">
-        <p><strong>Engine &amp; Graphics Programmer</strong> | C++, OpenGL 4.5, EnTT</p>
         <p>Networked engine built from scratch with real-time global illumination, now 93% cheaper to update per frame.</p>
       </div>
     </a>
@@ -94,8 +110,8 @@
     </span>
     <a href="custom_engine.html">
       <h2>GUSSI Engine</h2>
+      <span class="tile-meta"><strong>Engine Programmer</strong> | C++, OpenGL</span>
       <div class="content">
-        <p><strong>Engine Programmer</strong> | C++, OpenGL</p>
         <p>Custom engine with deferred rendering, SSAO, a multithreaded job system and an ImGui editor.</p>
       </div>
     </a>
@@ -108,8 +124,8 @@
     </span>
     <a href="interior_mapping.html">
       <h2>Interior Mapping</h2>
+      <span class="tile-meta"><strong>Graphics Programmer</strong> | C++, GLSL</span>
       <div class="content">
-        <p><strong>Graphics Programmer</strong> | C++, GLSL</p>
         <p>Replaced 350k+ vertices of room geometry with a shader, raising the frame rate from 335 to 4,400 FPS.</p>
       </div>
     </a>
@@ -122,9 +138,9 @@
     </span>
     <a href="ps5.html">
       <h2>Chee22</h2>
+      <span class="tile-meta"><strong>Graphics &amp; Gameplay Programmer</strong> | C++, PS5 SDK</span>
       <span class="badge featured">PS5 Devkit</span>
       <div class="content">
-        <p><strong>Graphics &amp; Gameplay Programmer</strong> | C++, PS5 SDK</p>
         <p>Chess-like game built from scratch on PlayStation 5 devkits. Graded First Class.</p>
       </div>
     </a>
@@ -134,16 +150,16 @@
   <article class="style1 tile-double reveal">
     <span class="image">
       <picture>
-        <source media="(max-width: 980px)" srcset="images/main_page/katto.webp">
-        <img src="images/main_page/katto_wide.webp" alt="Katto: Rising Tides, Unreal Engine 5 platformer, preview"
-             width="1000" height="455" loading="lazy">
+        <source media="(max-width: 980px)" srcset="images/main_page/katto_tile.webp">
+        <img src="images/main_page/katto_wide.webp" alt="Katto: Rising Tides, sunlit temple courtyard from the Unreal Engine 5 platformer"
+             width="1100" height="500" loading="lazy">
       </picture>
     </span>
     <a href="katto.html">
       <h2>Katto: Rising Tides</h2>
+      <span class="tile-meta"><strong>Gameplay Programmer</strong> | Unreal Engine 5, C++</span>
       <span class="badge steam">Steam Release</span>
       <div class="content">
-        <p><strong>Gameplay Programmer</strong> | Unreal Engine 5, C++</p>
         <p>3D platformer made by a 17-person team, released on Steam and finalist at GDWC 2024 (Best Hobby Game).</p>
       </div>
     </a>
@@ -151,13 +167,13 @@
 
   <article class="style7 reveal">
     <span class="image">
-      <img src="images/main_page/fluid_sim.webp" alt="Real-time fluid simulation preview"
+      <img src="images/main_page/fluid_sim_v2.webp" alt="Real-time fluid simulation preview"
            width="412" height="381" loading="lazy" fetchpriority="low">
     </span>
     <a href="fluid_sph.html">
       <h2>Real-Time Fluid Simulation</h2>
+      <span class="tile-meta"><strong>Solo</strong> | C++, Direct2D</span>
       <div class="content">
-        <p><strong>Solo</strong> | C++, Direct2D</p>
         <p>SPH fluid simulation optimized with multithreading.</p>
       </div>
     </a>
@@ -165,13 +181,13 @@
 
   <article class="style8 reveal">
     <span class="image">
-      <img src="images/main_page/salamander.webp" alt="Salamander AI simulation preview"
+      <img src="images/main_page/salamander_v2.webp" alt="Salamander AI simulation preview"
            width="412" height="381" loading="lazy" fetchpriority="low">
     </span>
     <a href="salamander.html">
       <h2>Salamander AI Simulation</h2>
+      <span class="tile-meta"><strong>Team of 3</strong> | C++, raylib</span>
       <div class="content">
-        <p><strong>Solo</strong> | C++, raylib</p>
         <p>Physics-based creature with autonomous behavior, inverse kinematics and a physics-driven tail.</p>
       </div>
     </a>
@@ -184,8 +200,8 @@
     </span>
     <a href="encestoide.html">
       <h2>Encestoide</h2>
+      <span class="tile-meta"><strong>Solo</strong> | Unity, C#</span>
       <div class="content">
-        <p><strong>Solo</strong> | Unity, C#</p>
         <p>Polished basketball game about precision shooting and quick, accessible fun.</p>
       </div>
     </a>
@@ -198,8 +214,8 @@
     </span>
     <a href="carromaton.html">
       <h2>Carromaton</h2>
+      <span class="tile-meta"><strong>Team of 2</strong> | Unity, C#</span>
       <div class="content">
-        <p><strong>Solo</strong> | Unity, C#</p>
         <p>Arcade drifting game focused on smooth, responsive car handling.</p>
       </div>
     </a>
